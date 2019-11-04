@@ -1,7 +1,6 @@
 {
   "name": "tetherred",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -17,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/Kalamath/tetherred/issues"
   },
-  "homepage": "https://github.com/Kalamath/tetherred#readme"
+  "homepage": "https://github.com/Kalamath/tetherred#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.7.7"
+  }
 }
