@@ -8,9 +8,9 @@
 
 ### GIF - The App
 
-![login](https://github.com/Kalamath/tetherred/blob/master/src/Login.png)
-![home](https://github.com/Kalamath/tetherred/blob/master/src/Home.png)
-![profile](https://github.com/Kalamath/tetherred/blob/master/src/Profile.png)
+![login](https://github.com/Kalamath/tetherred/blob/master/client/src/Login.png)
+![home](https://github.com/Kalamath/tetherred/blob/master/client/src/Home.png)
+![profile](https://github.com/Kalamath/tetherred/blob/master/client/src/Profile.png)
 
 ### What Was Used
 
@@ -18,12 +18,12 @@
 
 ### Components To Be Added
 
-* Other Cool Biz
+* Some Cool Biz
 
 ### Coders
 
-* Martell Harding
 * Gabriel de Leon
+* Martell Harding
 * Ashton Roth
 * Syeda Zaidi
 
