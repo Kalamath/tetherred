@@ -4,7 +4,7 @@
 
 1. Check It Out Here -- (Link)
 
-![GIF](https://github.com/Kalamath/tetherred/blob/master/src/BMO.gif)
+![GIF](https://github.com/Kalamath/tetherred/blob/master/client/src/needMore.gif)
 
 ### GIF - The App
 
@@ -27,4 +27,4 @@
 * Ashton Roth
 * Syeda Zaidi
 
-![GIF2](https://github.com/Kalamath/tetherred/blob/master/src/crazyGuys.gif)
+![GIF2](https://github.com/Kalamath/tetherred/blob/master/client/src/plugged.gif)
