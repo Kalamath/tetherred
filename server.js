@@ -26,17 +26,22 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 
-const routes = require("./routes");
-app.use(routes);
+// Models
+var db = require("./db");
+//load passport strategies
+require('./config/passport/passport.js')(passport, db.User); 
+
+// Auth Routes
+var authRoute = require('./routes/authRoutes.js')(app, passport); 
 
 
+// const routes = require("./routes");
+// app.use(routes);
 
 //Serve up static assets
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 }
-
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tetherredDB");
 
 app.listen(PORT, () => {
     console.log(`🌎 ==> API server listening on port ${PORT}!`);
