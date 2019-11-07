@@ -1,7 +1,7 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
+var bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 3001;
 
@@ -32,7 +32,7 @@ var db = require("./db");
 require('./config/passport/passport.js')(passport, db.User); 
 
 // Auth Routes
-var authRoute = require('./routes/authRoutes.js')(app, passport); 
+require('./routes/authRoutes.js')(app, passport); 
 
 
 // const routes = require("./routes");

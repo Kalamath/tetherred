@@ -23,9 +23,9 @@ module.exports = function (passport, user) {
             };
 
             User.findOne({
-                where: {
+                
                     email: email
-                }
+                
             }).then(function (user) {
 
                 if (user) {
@@ -111,9 +111,9 @@ module.exports = function (passport, user) {
             }
 
             User.findOne({
-                where: {
+                
                     email: email
-                }
+                
             }).then(function (user) {
 
                 if (!user) {

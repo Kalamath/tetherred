@@ -1,5 +1,4 @@
-const express = require("express");
-const router = express.Router();
+// const express = require("express");
 
 module.exports = function (app, passport) {
 
@@ -19,9 +18,9 @@ module.exports = function (app, passport) {
             }
             // Generate a JSON response reflecting signup
             if (req.session.isLoggedIn = false) {
-                return res.send({ success: false, message: 'signupfailed' });
+                return res.json({ success: false, message: 'signup failed' });
             }
-            return res.send({ success: true, message: 'signup succeeded' });
+            return res.json({ success: true, message: 'signup succeeded' });
         })(req, res, next);
     });
 
@@ -34,9 +33,9 @@ module.exports = function (app, passport) {
             }
             // Generate a JSON response reflecting signup
             if (req.session.isLoggedIn = false) {
-                return res.send({ success: false, message: 'signupfailed' });
+                return res.send({ success: false, message: 'signin failed' });
             }
-            return res.send({ success: true, message: 'signup succeeded' });
+            return res.send({ success: true, message: 'signin succeeded' });
         })(req, res, next);
     });
 
