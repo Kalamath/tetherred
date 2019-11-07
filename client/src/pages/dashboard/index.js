@@ -1,5 +1,9 @@
 import React from "./node_modules/react";
 import { useAuth } from "../../utils/customHooks";
+import Carousel from "../../components/Carousel"
+import Header from "../../components/Header"
+import Home from "../Home"
+
 
 function Dashboard() {
   const [userState] = useAuth();
@@ -14,14 +18,13 @@ function Dashboard() {
   }
 
   return (
-    <div className="container">
-      <div className="row">
-        <h1>Dashboard</h1>
-      </div>
-      <div className="row">
-        <p>I am an amazing dashboard</p>
-      </div>
-    </div>
+    <div>
+    <Header />
+    <br />
+    <Carousel />
+    <br />
+    <Home />
+  </div>
   );
 }
 

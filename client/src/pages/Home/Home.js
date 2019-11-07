@@ -64,7 +64,9 @@ class Home extends Component {
 
     render() {
         return (
-            <Container fluid>
+            <Container>
+
+
                 <Row>
                     <Col size="md-3 sm-12">
                         <Form>

@@ -1,57 +1,54 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var Carousel = require('react-responsive-carousel').Carousel;
+import React from "react";
+import Carousel from 'react-bootstrap/Carousel'
+import Container from 'react-bootstrap/Container'
+import Jumbotron from 'react-bootstrap/Jumbotron'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-class Carousel extends React.Component {
-    constructor (props) {
-        super(props);
-    
-        this.state = {
-          currentImageIndex: 0
-        };
-        this.nextSlide = this.nextSlide.bind(this);
-        this.previousSlide = this.previousSlide.bind(this);
-      }
-      previousSlide () {
-        const lastIndex = imgUrls.length - 1;
-        const { currentImageIndex } = this.state;
-        const shouldResetIndex = currentImageIndex === 0;
-        const index =  shouldResetIndex ? lastIndex : currentImageIndex - 1;
-    
-        this.setState({
-          currentImageIndex: index
-        });
-      }
-    
-      nextSlide () {
-        const lastIndex = imgUrls.length - 1;
-        const { currentImageIndex } = this.state;
-        const shouldResetIndex = currentImageIndex === lastIndex;
-        const index =  shouldResetIndex ? 0 : currentImageIndex + 1;
-    
-        this.setState({
-          currentImageIndex: index
-        });
-      }
-    render () {
-      return (
-        <div className="carousel">
-          <Arrow
-            direction="left"
-            clickFunction={ this.previousSlide }
-            glyph="&#9664;" />
-  
-             <ImageSlide url={ imgUrls[this.state.currentImageIndex] } />
-  
-          <Arrow
-            direction="right"
-            clickFunction={ this.nextSlide }
-            glyph="&#9654;" />
-        </div>
-      );
-    }
-  }
-ReactDOM.render(
-    <Carousel />,
-    document.getElementById('container')
+
+function TopCarousel() {
+  return (
+    <Jumbotron>
+      
+        <Carousel>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src=".\imgs\bike.jpg"
+              alt="First slide"
+            />
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src=".\imgs\lift.jpg"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Second slide label</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src=".\imgs\swim.jpg"
+              alt="Third slide"
+            />
+
+            <Carousel.Caption>
+              <h3>Third slide label</h3>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+   
+    </Jumbotron>
   );
+}
+
+export default TopCarousel;
