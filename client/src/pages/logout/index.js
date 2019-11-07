@@ -1,5 +1,5 @@
-import React, {useEffect} from './node_modules/react';
-import axios from './node_modules/axios';
+import React, {useEffect} from 'react';
+import axios from 'axios';
 import {useAuth} from '../../utils/customHooks';
 
 function Logout({history}) {
