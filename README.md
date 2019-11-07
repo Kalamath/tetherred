@@ -4,13 +4,13 @@
 
 1. Check It Out Here -- (Link)
 
-![GIF](https://github.com/Kalamath/tetherred/blob/master/client/src/imgs/needMore.gif)
+![GIF](https://github.com/Kalamath/tetherred/blob/master/client/public/imgs/needMore.gif)
 
 ### GIF - The App
 
-![login](https://github.com/Kalamath/tetherred/blob/master/client/src/imgs/Login.png)
-![home](https://github.com/Kalamath/tetherred/blob/master/client/src/imgs/Home.png)
-![profile](https://github.com/Kalamath/tetherred/blob/master/client/src/imgs/Profile.png)
+![login](https://github.com/Kalamath/tetherred/blob/master/client/public/imgs/Login.png)
+![home](https://github.com/Kalamath/tetherred/blob/master/client/public/imgs/Home.png)
+![profile](https://github.com/Kalamath/tetherred/blob/master/client/public/imgs/Profile.png)
 
 ### What Was Used
 
@@ -27,4 +27,4 @@
 * Ashton Roth
 * Syeda Zaidi
 
-![GIF2](https://github.com/Kalamath/tetherred/blob/master/client/src/imgs/plugged.gif)
+![GIF2](https://github.com/Kalamath/tetherred/blob/master/client/public/imgs/plugged.gif)
