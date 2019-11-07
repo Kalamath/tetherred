@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from "./components/Nav";
 import Jumbotron from 'react-bootstrap/Jumbotron'
+import Carousel from 'react-bootstrap/Carousel'
 import { Container } from "./components/Grid";
 import Home from "./pages/Home"
 
@@ -43,14 +44,52 @@ function App() {
   // }, 
   // // By passing an empty array of dependencies as the second parameter, this ensures that `useEffect` only runs once
   // [runOnce]); 
-  
+
 
   return (
     <div>
       <Nav />
-      <br></br> 
-      <Container fluid>
-      <Jumbotron />
+      <br></br>
+      <Container >
+        <Jumbotron>
+          <Carousel>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src=".\imgs\bike.jpg"
+                alt="First slide"
+              />
+              <Carousel.Caption>
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src=".\imgs\lift.jpg"
+                alt="Second slide"
+              />
+
+              <Carousel.Caption>
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+              <img
+                className="d-block w-100"
+                src=".\imgs\swim.jpg"
+                alt="Third slide"
+              />
+
+              <Carousel.Caption>
+                <h3>Third slide label</h3>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          </Carousel>
+        </Jumbotron>
       </Container>
       <Home />
     </div>
