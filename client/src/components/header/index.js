@@ -11,11 +11,11 @@ function Header() {
       </Link>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
+          {/* <li className="nav-item active">
             <Link className="nav-link" to="/">
               Home
             </Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             {state.isLoggedIn ? (
               <Link className="nav-link" to="/dashboard">
@@ -23,7 +23,7 @@ function Header() {
               </Link>
             ) : (
                 <div>
-                  <Link className="nav-link" to="/signin">
+                  <Link className="nav-link" to="/">
                     Login
                 </Link>
                   <Link className="nav-link" to="/signup">

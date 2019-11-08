@@ -13,7 +13,7 @@ function Logout({history}) {
                 isLoggedIn: false
             })
             // Simluate a delay of 2 seconds before going to the homepage
-            setTimeout(() => history.push('/'), 2000);
+            setTimeout(() => history.push('/'), 500);
         }).catch(err => {
             console.log(err)
         })

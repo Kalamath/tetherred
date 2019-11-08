@@ -1,5 +1,4 @@
 const express = require("express");
-const router = express.Router();
 
 module.exports = function (app, passport) {
 
@@ -47,28 +46,6 @@ module.exports = function (app, passport) {
             res.json({ success: true });
         });
     });
-
-
-    // app.post('/api/sessions/signin', (req, res) => {
-    //     /**
-    //      * CHANGE THIS BELOW TO LOOKUP THE USER BY EMAIL AND VERIFY THEIR PASSWORD HASH
-    //      * USING BCRYPT
-    //      */
-    //     const SECRET_EMAIL = 'secret@email.com';
-    //     const SECRET_PASSWORD = 'test123';
-
-    //     if (req.body.email === SECRET_EMAIL && req.body.password === SECRET_PASSWORD) {
-    //         req.session.isLoggedIn = true;
-    //         res.json({
-    //             success: true
-    //         })
-    //     } else {
-    //         req.session.isLoggedIn = false;
-    //         res.json({
-    //             success: false
-    //         })
-    //     }
-    // });
 
     function isLoggedIn(req, res, next) {
 
