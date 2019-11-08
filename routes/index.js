@@ -1,12 +1,14 @@
 const path = require("path");
 const router = require("express").Router();
-const chirpRoutes = require("./chirpRoutes");
+// const chirpRoutes = require("./chirpRoutes");
 
 
-router.use("/api/chirps", chirpRoutes);
+// API Routes
+// router.use("/api/chirps", chirpRoutes);
 
-router.use(function(req, res) {
-    res.sendfile(path.join(__dirname, "../client/build/index.html"));
+// If no API routes are hit, send the React app
+router.use(function (req, res) {
+    res.sendFile(path.join(__dirname, "../client/build/index.html"));
 });
 
 module.exports = router;

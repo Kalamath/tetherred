@@ -32,17 +32,18 @@ var db = require("./db");
 require('./config/passport/passport.js')(passport, db.User); 
 
 // Auth Routes
-var authRoute = require('./routes/authRoutes.js')(app, passport); 
+require('./routes/authRoutes.js')(app, passport); 
 
+//chirps routes 
+require("./routes/chirpRoutes")(app);
 
-// const routes = require("./routes");
-// app.use(routes);
 
 
 
 // router.use(function(req, res) {
 //     res.sendfile(path.join(__dirname, "../client/build/index.html"));
 // });
+
 
 
 //Serve up static assets
