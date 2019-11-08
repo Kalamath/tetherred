@@ -1,4 +1,5 @@
-import React from "./node_modules/react";
+// import React from "./node_modules/react";
+import React from "react";
 import { Link } from "./node_modules/react-router-dom";
 import { useAuth } from "../../utils/customHooks";
 
