@@ -1,4 +1,4 @@
-import React from "./node_modules/react";
+import React from "react";
 import { useAuth } from "../../utils/customHooks";
 import Carousel from "../../components/Carousel"
 import Header from "../../components/Header"
