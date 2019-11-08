@@ -1,4 +1,3 @@
-// import React from 'react';
 import Nav from "./components/Nav";
 // import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Carousel from 'react-bootstrap/Carousel'
