@@ -1,9 +1,9 @@
-import Nav from "./components/Nav";
+// import Nav from "./components/Nav";
 // import Jumbotron from 'react-bootstrap/Jumbotron'
 // import Carousel from 'react-bootstrap/Carousel'
-import Carousel from "./components/Carousel"
-import { Container } from "./components/Grid";
-import Home from "./pages/Home"
+// import Carousel from "./components/Carousel"
+// import { Container } from "./components/Grid";
+// import Home from "./pages/Home"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, { useEffect } from 'react';
@@ -50,9 +50,8 @@ function App() {
     <Router>
         <Header />
         <Switch>
-          <Route path="/" exact={true} component={Homepage} />
+          <Route path="/" exact={true} component={Login} />
           <Route path="/dashboard" exact={true} component={Dashboard} />
-          <Route path="/signin" exact={true} component={Login} />
           <Route path="/signup" exact={true} component={Signup} />
           <Route path="/logout" exact={true} component={Logout} />
         </Switch>
