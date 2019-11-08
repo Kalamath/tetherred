@@ -7,7 +7,7 @@ const ChirpsSchema = new mongoose.Schema({
         required: true
     },
 
-    chirpBody: {
+    body: {
         type: String,
         required: true
     },
