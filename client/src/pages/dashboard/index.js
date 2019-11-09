@@ -20,8 +20,6 @@ function Dashboard() {
   return (
     <div>
       <br />
-      <Carousel />
-      <br />
       <Home />
     </div>
   );
