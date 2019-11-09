@@ -19,7 +19,6 @@ function Dashboard() {
 
   return (
     <div>
-      <Header />
       <br />
       <Carousel />
       <br />
