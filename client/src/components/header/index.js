@@ -22,7 +22,7 @@ function Header() {
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Nav className="justify-content-end">
-          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/dashboard">Home</Nav.Link>
           <Nav.Link href="/profile">Profile</Nav.Link>
           <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="/logout">Logout</Nav.Link>
