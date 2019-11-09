@@ -13,7 +13,7 @@ function TopCarousel() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src=".\imgs\bike.jpg"
+              src="../imgs/bike.jpg"
               alt="First slide"
             />
             <Carousel.Caption>
@@ -24,7 +24,7 @@ function TopCarousel() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src=".\imgs\lift.jpg"
+              src=".\assets\imgs\lift.jpg"
               alt="Third slide"
             />
 

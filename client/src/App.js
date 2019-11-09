@@ -3,7 +3,7 @@
 // import Carousel from 'react-bootstrap/Carousel'
 // import Carousel from "./components/Carousel"
 // import { Container } from "./components/Grid";
-// import Home from "./pages/Home"
+import Home from "./pages/Home"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, { useEffect } from 'react';
@@ -52,7 +52,8 @@ function App() {
         <Header />
         <br />
         <Switch>
-          <Route path="/" exact={true} component={UserProfile} />
+          <Route path="/" exact={true} component={Home} />
+          <Route path="/profile" exact={true} component={UserProfile} />
           <Route path="/dashboard" exact={true} component={Dashboard} />
           <Route path="/signup" exact={true} component={Signup} />
           <Route path="/logout" exact={true} component={Logout} />
