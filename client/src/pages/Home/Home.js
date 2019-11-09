@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form'
 import Carousel from "../../components/Carousel";
 // import Container from "react-bootstrap/Container";
 // import API from "../../utils/API";
-import { Col, Row, Container } from "../../components/Grid";
+import { Col, Row, Container } from "../../components/Grid2";
 // import { List, ListItem } from "../../components/List";
 // import { Input, TextArea, FormBtn } from "../../components/Form";
 
