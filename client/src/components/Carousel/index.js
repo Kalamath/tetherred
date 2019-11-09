@@ -4,6 +4,10 @@ import Carousel from 'react-bootstrap/Carousel'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import bike from "../../assets/imgs/bike.jpg";
+import lift from "../../assets/imgs/lift.jpg";
+import swim from "../../assets/imgs/swim.jpg";
+
 
 function TopCarousel() {
   return (
@@ -13,7 +17,7 @@ function TopCarousel() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src="../imgs/bike.jpg"
+              src={bike}
               alt="First slide"
             />
             <Carousel.Caption>
@@ -24,7 +28,7 @@ function TopCarousel() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src=".\assets\imgs\lift.jpg"
+              src={lift}
               alt="Third slide"
             />
 
@@ -36,7 +40,7 @@ function TopCarousel() {
           <Carousel.Item>
             <img
               className="d-block w-100"
-              src=".\imgs\swim.jpg"
+              src={swim}
               alt="Third slide"
             />
 
