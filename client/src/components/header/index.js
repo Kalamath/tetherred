@@ -4,11 +4,21 @@ import { useAuth } from "../../utils/customHooks";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
+import logo from '../../assets/imgs/TetherredFullBlack.png'
+
 function Header() {
   const [state] = useAuth();
   return (
     <Navbar>
-      <Navbar.Brand href="/">Tetherred</Navbar.Brand>
+      <Navbar.Brand href="#home">
+      <img
+        alt=""
+        src={logo}
+        width="300"
+        height="62.5"
+        className="d-inline-block align-top"
+      />
+    </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Nav className="justify-content-end">
