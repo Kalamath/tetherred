@@ -19,11 +19,12 @@ function Dashboard() {
 
   return (
     <div>
-    <br />
-    <Carousel />
-    <br />
-    <Home />
-  </div>
+      <Header />
+      <br />
+      <Carousel />
+      <br />
+      <Home />
+    </div>
   );
 }
 
