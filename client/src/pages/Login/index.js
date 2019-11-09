@@ -4,7 +4,7 @@ import {useAuth} from '../../utils/customHooks';
 
 // Because we're using the react-router-dom, we have a special "history" property 
 // passed to child components. This will let us redirect the user later
-function LoginPage({history}) {
+function Login({history}) {
     // Here we have a local hook for the state of the email and password
     const [emailInput, setEmail] = useState("");
     const [passwordInput, setPassword] = useState("");
@@ -92,6 +92,6 @@ function LoginPage({history}) {
         </form>
       </div>
     )
-}
+};
 
-export default LoginPage;
+export default Login;

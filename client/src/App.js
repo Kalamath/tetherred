@@ -13,12 +13,12 @@ import {
   Route
 } from 'react-router-dom';
 import axios from 'axios';
-import Header from './components/Header';
+import Header from './components/header';
 // import Homepage from './pages/Homepage';
-import Dashboard from './pages/Dashboard';
-// import Login from './pages/Login';
-import Logout from './pages/Logout';
-import Signup from './pages/Signup';
+import Dashboard from './pages/dashboard';
+import Login from './pages/Login';
+import Logout from './pages/logout';
+import Signup from './pages/signup';
 import { useAuth } from './utils/customHooks';
 import UserProfile from "./pages/UserProfile";
 
@@ -56,6 +56,7 @@ function App() {
           <Route path="/profile" exact={true} component={UserProfile} />
           <Route path="/dashboard" exact={true} component={Dashboard} />
           <Route path="/signup" exact={true} component={Signup} />
+          <Route path="/login" exact={true} component={Login} />
           <Route path="/logout" exact={true} component={Logout} />
         </Switch>
     </Router>

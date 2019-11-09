@@ -1,7 +1,7 @@
 import React from "react";
 import { useAuth } from "../../utils/customHooks";
 import Carousel from "../../components/Carousel"
-import Header from "../../components/Header"
+import Header from "../../components/header"
 import Home from "../Home"
 
 
