@@ -14,7 +14,7 @@ function Header() {
         <Nav className="justify-content-end">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/profile">Profile</Nav.Link>
-          <Nav.Link href="/signin">Login</Nav.Link>
+          <Nav.Link href="/signup">Sign Up</Nav.Link>
           <Nav.Link href="/logout">Logout</Nav.Link>
         </Nav>
       </Navbar.Collapse>
