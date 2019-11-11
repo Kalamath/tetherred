@@ -1,8 +1,9 @@
+require('dotenv').config(); 
 const express = require("express");
 // const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
-
+const newsroute = require("./routes/newsRoutes"); 
 const PORT = process.env.PORT || 3001;
 
 // passport js 
@@ -37,12 +38,14 @@ require('./routes/authRoutes.js')(app, passport);
 //chirps routes 
 require("./routes/chirpRoutes")(app);
 
-
+//newsapi route
+require("./routes/newsRoutes")(app); 
 
 
 // router.use(function(req, res) {
 //     res.sendfile(path.join(__dirname, "../client/build/index.html"));
 // });
+
 
 
 
