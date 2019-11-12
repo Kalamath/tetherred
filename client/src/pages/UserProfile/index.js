@@ -41,117 +41,7 @@ export default function UserProfile() {
   return (
     <div>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={8}>
-          <Card>
-            <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Edit Profile</h4>
-              <p className={classes.cardCategoryWhite}>Complete your profile</p>
-            </CardHeader>
-            <CardBody>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={5}>
-                  <CustomInput
-                    labelText="Company (disabled)"
-                    id="company-disabled"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                    inputProps={{
-                      disabled: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={3}>
-                  <CustomInput
-                    labelText="Username"
-                    id="username"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="Email address"
-                    id="email-address"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="First Name"
-                    id="first-name"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={6}>
-                  <CustomInput
-                    labelText="Last Name"
-                    id="last-name"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="City"
-                    id="city"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="Country"
-                    id="country"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
-                  <CustomInput
-                    labelText="Postal Code"
-                    id="postal-code"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-              <GridContainer>
-                <GridItem xs={12} sm={12} md={12}>
-                  <InputLabel style={{ color: "#AAAAAA" }}>About me</InputLabel>
-                  <CustomInput
-                    labelText="Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo."
-                    id="about-me"
-                    formControlProps={{
-                      fullWidth: true
-                    }}
-                    inputProps={{
-                      multiline: true,
-                      rows: 5
-                    }}
-                  />
-                </GridItem>
-              </GridContainer>
-            </CardBody>
-            <CardFooter>
-              <Button color="primary">Update Profile</Button>
-            </CardFooter>
-          </Card>
-        </GridItem>
-        <GridItem xs={12} sm={12} md={4}>
+        <GridItem xs={12} sm={12} md={12}>
           <Card profile>
             <CardAvatar profile>
               <a href="#pablo" onClick={e => e.preventDefault()}>
@@ -165,10 +55,137 @@ export default function UserProfile() {
                 Don{"'"}t be scared of the truth because we need to restart the
                 human foundation in truth And I love you like Kanye loves Kanye
                 I love Rick Owens’ bed design but the back is...
-              </p>
+          </p>
               <Button color="primary" round>
                 Follow
-              </Button>
+          </Button>
+            </CardBody>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card style={{ width: "100%" }}>
+            <img
+              className={classes.cardImgTop}
+              data-src="holder.js/100px180/"
+              alt="100%x180"
+              style={{ height: "180px", width: "100%", display: "block" }}
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22320%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163df23d717%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163df23d717%22%3E%3Crect%20width%3D%22320%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22119.0859375%22%20y%3D%2297.35%22%3E320x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true"
+            />
+            <CardBody>
+              <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="100%" height="600" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </CardBody>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card style={{ width: "100%" }}>
+            <img
+              className={classes.cardImgTop}
+              data-src="holder.js/100px180/"
+              alt="100%x180"
+              style={{ height: "180px", width: "100%", display: "block" }}
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22320%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163df23d717%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163df23d717%22%3E%3Crect%20width%3D%22320%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22119.0859375%22%20y%3D%2297.35%22%3E320x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true"
+            />
+            <CardBody>
+              <h4>Card title</h4>
+              <p>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+                    </p>
+              <Button color="primary">Go somewhere</Button>
+            </CardBody>
+          </Card>
+          <Card style={{ width: "100%" }}>
+            <img
+              className={classes.cardImgTop}
+              data-src="holder.js/100px180/"
+              alt="100%x180"
+              style={{ height: "180px", width: "100%", display: "block" }}
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22320%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163df23d717%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163df23d717%22%3E%3Crect%20width%3D%22320%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22119.0859375%22%20y%3D%2297.35%22%3E320x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true"
+            />
+            <CardBody>
+              <h4>Card title</h4>
+              <p>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+                    </p>
+              <Button color="primary">Go somewhere</Button>
+            </CardBody>
+          </Card>
+          <Card style={{ width: "100%" }}>
+            <img
+              className={classes.cardImgTop}
+              data-src="holder.js/100px180/"
+              alt="100%x180"
+              style={{ height: "180px", width: "100%", display: "block" }}
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22320%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163df23d717%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163df23d717%22%3E%3Crect%20width%3D%22320%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22119.0859375%22%20y%3D%2297.35%22%3E320x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true"
+            />
+            <CardBody>
+              <h4>Card title</h4>
+              <p>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+                    </p>
+              <Button color="primary">Go somewhere</Button>
+            </CardBody>
+          </Card>
+          <Card style={{ width: "100%" }}>
+            <img
+              className={classes.cardImgTop}
+              data-src="holder.js/100px180/"
+              alt="100%x180"
+              style={{ height: "180px", width: "100%", display: "block" }}
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22320%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163df23d717%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163df23d717%22%3E%3Crect%20width%3D%22320%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22119.0859375%22%20y%3D%2297.35%22%3E320x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true"
+            />
+            <CardBody>
+              <h4>Card title</h4>
+              <p>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+                    </p>
+              <Button color="primary">Go somewhere</Button>
+            </CardBody>
+          </Card>
+          <Card style={{ width: "100%" }}>
+            <img
+              className={classes.cardImgTop}
+              data-src="holder.js/100px180/"
+              alt="100%x180"
+              style={{ height: "180px", width: "100%", display: "block" }}
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22320%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163df23d717%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163df23d717%22%3E%3Crect%20width%3D%22320%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22119.0859375%22%20y%3D%2297.35%22%3E320x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true"
+            />
+            <CardBody>
+              <h4>Card title</h4>
+              <p>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+                    </p>
+              <Button color="primary">Go somewhere</Button>
+            </CardBody>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card style={{ width: "100%" }}>
+            <img
+              className={classes.cardImgTop}
+              data-src="holder.js/100px180/"
+              alt="100%x180"
+              style={{ height: "180px", width: "100%", display: "block" }}
+              src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22320%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20320%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_163df23d717%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A16pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_163df23d717%22%3E%3Crect%20width%3D%22320%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22119.0859375%22%20y%3D%2297.35%22%3E320x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+              data-holder-rendered="true"
+            />
+            <CardBody>
+              <h4>Card title</h4>
+              <p>
+                Some quick example text to build on the card title and make up the
+                bulk of the card's content.
+                    </p>
+              <Button color="primary">Go somewhere</Button>
             </CardBody>
           </Card>
         </GridItem>
