@@ -6,7 +6,8 @@ import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
-import Container from 'react-bootstrap/Container'
+import CardHeader from "../../components/Card/CardHeader.js";
+import Container from 'react-bootstrap/Container';
 // import CardFooter from "../../components/Card/CardFooter.js";
 // import CardHeader from "../../components/Card/CardHeader.js";
 // import CustomInput from "../../components/CustomInput/CustomInput.js";
@@ -175,13 +176,15 @@ export default function UserProfile() {
           </GridItem>
           <GridItem xs={12} sm={12} md={3}>
             <Card style={{ width: "100%" }}>
+              <CardHeader color="danger">
+                <h4>Chirp Box</h4>
+              </CardHeader>
               <CardBody>
-                <h4>Send a Chirp</h4>
                 <TextField
                   id="outlined-multiline-static"
                   label="ChirpBox"
                   multiline
-                  rows="4"
+                  rows="5"
                   defaultValue=""
                   className={classes.textField}
                   margin="normal"

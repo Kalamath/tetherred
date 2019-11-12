@@ -5,7 +5,7 @@
 // import { Container } from "./components/Grid";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Homepage from './pages/Homepage';
-// import Home from "./pages/Home";
+import Home from "./pages/Home";
 import './App.css';
 
 import React, { useEffect } from 'react';
@@ -17,7 +17,7 @@ import {
 import axios from 'axios';
 import Dashboard from './pages/Dashboard';
 import Header from './components/Header';
-import Login from './pages/Login';
+// import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
 import { useAuth } from './utils/customHooks';
@@ -53,7 +53,7 @@ function App() {
         <Header />
         <br />
         <Switch>
-          <Route path="/" exact={true} component={Login} />
+          <Route path="/" exact={true} component={Home} />
           <Route path="/profile" exact={true} component={UserProfile} />
           <Route path="/dashboard" exact={true} component={Dashboard} />
           <Route path="/signup" exact={true} component={Signup} />
