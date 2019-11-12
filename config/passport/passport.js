@@ -44,14 +44,20 @@ module.exports = function (passport, user) {
 
                         lastname: req.body.lastname
                     };
-                    User.create(data).then(function (newUser, created) {
-                        if (!newUser) {
+
+                    const user = new User(data); 
+                    user.save(function(error, user) {
+                        if (error) {
                             return done(null, false);
                         }
-                        if (newUser) {
-                            return done(null, newUser);
+                        if (user) {
+                            return done(null, user);
                         }
-                    });
+
+                    }); 
+                    // User.create(data).then(function (newUser, created) {
+                        
+                    // });
                 }
             });
         }));
