@@ -3,7 +3,7 @@
 // import Carousel from 'react-bootstrap/Carousel'
 // import Carousel from "./components/Carousel"
 // import { Container } from "./components/Grid";
-import Home from "./pages/Home"
+// import Home from "./pages/Home"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, { useEffect } from 'react';
