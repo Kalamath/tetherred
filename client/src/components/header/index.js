@@ -4,12 +4,13 @@ import { useAuth } from "../../utils/customHooks";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import logo from '../../assets/imgs/TetherredFullBlack.png'
+import logo from '../../assets/imgs/TetherredFullWhite.png'
+import './Header.css'
 
 function Header() {
   const [state] = useAuth();
   return (
-    <Navbar>
+    <Navbar variant="dark">
       <Navbar.Brand href="#home">
       <img
         alt=""
