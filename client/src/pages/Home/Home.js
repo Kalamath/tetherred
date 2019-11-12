@@ -21,11 +21,9 @@ import CardBody from "../../components/Card/CardBody.js";
 import TextField from '@material-ui/core/TextField';
 
 import paperMario from "../../assets/imgs/paper-mario.webp";
-import footBallPlayers from "../../assets/imgs/football-players.jpg";
+import newsBanner from "../../assets/imgs/latestNews.jpg";
 
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
-
-import './Home.css';
 import GridContainer from "../../components/Grid/GridContainer.js";
 
 const styles = {
@@ -51,19 +49,18 @@ export default function CardBasic() {
                 <div className={classes.cardImgOverlay}>
                     <CardHeader color="danger">
                         <h4>News Title</h4>
+                        <p>
+                            This is a wider card with supporting text below as a natural lead-in
+                            to additional content. This content is a little bit longer.</p>
+                        <p>Last updated 3 mins ago</p>
                     </CardHeader>
-                    <p>
-                        This is a wider card with supporting text below as a natural lead-in
-                        to additional content. This content is a little bit longer.
-          </p>
-                    <p>Last updated 3 mins ago</p>
                 </div>
                 <img
                     className={classes.cardImg}
                     data-src="holder.js/100px270/#55595c:#373a3c/text:Card image"
                     alt="100%x270"
                     style={{ height: "270px", width: "100%", display: "block" }}
-                    src={footBallPlayers}
+                    src={newsBanner}
                     data-holder-rendered="true"
                 />
             </Card>
