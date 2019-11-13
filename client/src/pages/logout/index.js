@@ -1,29 +1,54 @@
-import React, {useEffect} from 'react';
+import React from 'react';
+import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-import {useAuth} from '../../utils/customHooks';
 
-function Logout({history}) {
-    const [, setUserState] = useAuth();
-    useEffect(() => {
 
-        axios.get('/api/sessions/logout', {
-            withCredentials: true
-        }).then(resp => {
-            setUserState({
-                isLoggedIn: false
-            })
-            // Simluate a delay of 2 seconds before going to the homepage
-            setTimeout(() => history.push('/'), 500);
-        }).catch(err => {
-            console.log(err)
+class Logout extends React.Component {
+
+    constructor() {
+        super();
+        this.state = {
+            redirectTo: null
+        }
+        this.logout = this.logout.bind(this)
+    };
+
+    componentDidMount() {
+        this.logout()
+    }
+
+    logout() {
+        console.log('logging out');
+        axios.post('/api/sessions/logout').then(response => {
+            console.log(response.data)
+            if (response.status === 200) {
+                this.props.updateUser({
+                    loggedIn: false,
+                    email: null
+                })
+                // update the state to redirect to home
+                this.setState({
+                    redirectTo: '/'
+                })
+            }
+        }).catch(error => {
+            console.log('Logout error' + error);
         })
-    }, []);
-    
-    return (
-        <div>
-            Logging you out...
-        </div>
-    )
+    }
+
+
+    render() {
+        if (this.state.redirectTo) {
+            return <Redirect to={{ pathname: this.state.redirectTo }} />
+        } else {
+            return (
+
+                <div>
+                    Logging you out...
+        </div >
+            )
+        }
+    }
 }
 
 export default Logout;
