@@ -46,8 +46,8 @@ class Profile extends React.Component {
         })
     };
 
-    getUserProfile() {
-        axios.get("/api/profile/" + this.state.email, 
+    getUserProfile = () => {
+        axios.get(`/api/profile/${this.state.email}`, 
         ).then(res => {
             console.log(res);
         }).catch(err => {
@@ -55,12 +55,11 @@ class Profile extends React.Component {
         });
     };
 
-    updateProfile() {
-        axios.post("/api/profile", {
-            email: this.state.email,
-            name: "neil armstrong",
-            description: "The inventor of actual moonwalk"
-        }).then(response => {
+    updateProfile = () => {
+        const url = `/api/profile/${this.state.email}`;
+        console.log(url);
+        axios.post(url)
+        .then(response => {
             console.log(`resp from profile post call ${response}`)
         }).catch(err => {
             console.log(err)
