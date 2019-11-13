@@ -1,13 +1,15 @@
 const express = require("express");
-// const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
+const dbconnection = require("./db");
 
 const PORT = process.env.PORT || 3001;
 
-// passport js 
-var passport = require('passport'); //
-var session = require('express-session'); //
+// passport js and session
+var passport = require('./config/passport/passport'); 
+var session = require('express-session'); 
+const MongoStore = require("connect-mongo")(session);
+
 
 //middleware 
 app.use(express.urlencoded({ extended: true }));
@@ -17,27 +19,17 @@ app.use(express.json());
 // For Passport
 app.use(session({ 
     secret: 'keyboard cat', 
-    resave: true, 
-    saveUninitialized: true 
+    store: new MongoStore({ mongooseConnection: dbconnection }),
+    resave: false, 
+    saveUninitialized: false 
 })); 
 
 app.use(passport.initialize());
-
 app.use(passport.session()); // persistent login sessions
 
 
-// Models
-var db = require("./db");
-//load passport strategies
-require('./config/passport/passport.js')(passport, db.User); 
-
-// Auth Routes
-require('./routes/authRoutes.js')(app, passport); 
-
-//chirps routes 
-require("./routes/chirpRoutes")(app);
-
-
+const routes = require("./routes");
+app.use(routes);
 
 
 // router.use(function(req, res) {
