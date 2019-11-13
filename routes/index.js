@@ -5,9 +5,9 @@ const chirpRoutes = require("./chirpRoutes");
 
 
 // API Routes
-router.use("/api/chirps", chirpRoutes);
-
 router.use("/api/sessions", userRoutes);
+
+router.use("/api/chirps", chirpRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function (req, res) {
