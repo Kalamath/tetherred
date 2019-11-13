@@ -45,25 +45,41 @@ export default function UserProfile() {
   const classes = useStyles();
   return (
     <div>
-      <Card profile>
-        <CardAvatar profile>
-          <a href="#pablo" onClick={e => e.preventDefault()}>
-            <img src={avatar} alt="..." />
-          </a>
-        </CardAvatar>
-        <CardBody profile>
-          <h6 className={classes.cardCategory}>CEO / CO-FOUNDER</h6>
-          <h4 className={classes.cardTitle}>Alec Thompson</h4>
-          <p className={classes.description}>
-            Don{"'"}t be scared of the truth because we need to restart the
-            human foundation in truth And I love you like Kanye loves Kanye
-            I love Rick Owens’ bed design but the back is...
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={1}>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={10}>
+          <Card profile>
+            <img
+              className={classes.cardImgTop}
+              data-src="holder.js/100px180/"
+              alt="100%x180"
+              style={{ height: "180px", width: "100%", display: "block" }}
+              src={paperMario}
+              data-holder-rendered="true"
+            />
+            <CardAvatar profile>
+              <a href="#pablo" onClick={e => e.preventDefault()}>
+                <img src={avatar} alt="..." />
+              </a>
+            </CardAvatar>
+            <CardBody profile>
+              <h6 className={classes.cardCategory}>OVO</h6>
+              <h4 className={classes.cardTitle}>Aubrey Graham</h4>
+              <p className={classes.description}>
+                Don{"'"}t be scared of the truth because we need to restart the
+                human foundation in truth And I love you like Kanye loves Kanye
+                I love Rick Owens’ bed design but the back is...
           </p>
-          <Button color="primary" round>
-            Follow
+              <Button color="success" round>
+                Follow
           </Button>
-        </CardBody>
-      </Card>
+            </CardBody>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={1}>
+        </GridItem>
+      </GridContainer>
       {/* Feed Section */}
       <Container>
         <GridContainer>
@@ -98,7 +114,7 @@ export default function UserProfile() {
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
                     </p>
-                <Button color="primary">Go somewhere</Button>
+                <Button color="success">Go somewhere</Button>
               </CardBody>
             </Card>
             <Card style={{ width: "100%" }}>
@@ -116,7 +132,7 @@ export default function UserProfile() {
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
                     </p>
-                <Button color="primary">Go somewhere</Button>
+                <Button color="success">Go somewhere</Button>
               </CardBody>
             </Card>
             <Card style={{ width: "100%" }}>
@@ -134,7 +150,7 @@ export default function UserProfile() {
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
                     </p>
-                <Button color="primary">Go somewhere</Button>
+                <Button color="success">Go somewhere</Button>
               </CardBody>
             </Card>
             <Card style={{ width: "100%" }}>
@@ -152,7 +168,7 @@ export default function UserProfile() {
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
                     </p>
-                <Button color="primary">Go somewhere</Button>
+                <Button color="success">Go somewhere</Button>
               </CardBody>
             </Card>
             <Card style={{ width: "100%" }}>
@@ -170,13 +186,13 @@ export default function UserProfile() {
                   Some quick example text to build on the card title and make up the
                   bulk of the card's content.
                     </p>
-                <Button color="primary">Go somewhere</Button>
+                <Button color="success">Go somewhere</Button>
               </CardBody>
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={3}>
             <Card style={{ width: "100%" }}>
-              <CardHeader color="danger">
+              <CardHeader color="info">
                 <h4>Chirp Box</h4>
               </CardHeader>
               <CardBody>
@@ -190,7 +206,7 @@ export default function UserProfile() {
                   margin="normal"
                   variant="outlined"
                 />
-                <Button color="primary">Chirp</Button>
+                <Button color="info">Chirp</Button>
               </CardBody>
             </Card>
           </GridItem>

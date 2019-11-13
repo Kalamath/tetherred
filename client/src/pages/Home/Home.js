@@ -6,6 +6,7 @@ import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 // import InputLabel from "@material-ui/core/InputLabel";
 // import Grid from "@material-ui/core/Grid";
 // import Language from "@material-ui/icons/Language";
+
 // core components
 import GridItem from "../../components/Grid/GridItem.js";
 import Container from 'react-bootstrap/Container';
@@ -26,6 +27,7 @@ import newsBanner from "../../assets/imgs/latestNews.jpg";
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 
+
 const styles = {
     ...dashboardStyle,
     cardTitle: {
@@ -45,25 +47,33 @@ export default function CardBasic() {
     const [selectedValue, setSelectedValue] = React.useState(null);
     return (
         <React.Fragment>
-            <Card className={classes.textWhite}>
-                <div className={classes.cardImgOverlay}>
-                    <CardHeader color="danger">
-                        <h4>News Title</h4>
-                        <p>
-                            This is a wider card with supporting text below as a natural lead-in
+            <GridContainer>
+                <GridItem xs={12} sm={12} md={1}>
+                </GridItem>
+                <GridItem xs={12} sm={12} md={10}>
+                    <Card className={classes.textWhite}>
+                        <div className={classes.cardImgOverlay}>
+                            <CardHeader color="danger">
+                                <h4>News Title</h4>
+                                <p>
+                                    This is a wider card with supporting text below as a natural lead-in
                             to additional content. This content is a little bit longer.</p>
-                        <p>Last updated 3 mins ago</p>
-                    </CardHeader>
-                </div>
-                <img
-                    className={classes.cardImg}
-                    data-src="holder.js/100px270/#55595c:#373a3c/text:Card image"
-                    alt="100%x270"
-                    style={{ height: "270px", width: "100%", display: "block" }}
-                    src={newsBanner}
-                    data-holder-rendered="true"
-                />
-            </Card>
+                                <p>Last updated 3 mins ago</p>
+                            </CardHeader>
+                        </div>
+                        <img
+                            className={classes.cardImg}
+                            data-src="holder.js/100px270/#55595c:#373a3c/text:Card image"
+                            alt="100%x270"
+                            style={{ height: "270px", width: "100%", display: "block" }}
+                            src={newsBanner}
+                            data-holder-rendered="true"
+                        />
+                    </Card>
+                </GridItem>
+                <GridItem xs={12} sm={12} md={1}>
+                </GridItem>
+            </GridContainer>
             <Container>
                 <GridContainer>
                     <GridItem xs={12} sm={12} md={3}>

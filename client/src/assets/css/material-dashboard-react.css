@@ -112,7 +112,7 @@ h6 {
 }
 
 body {
-  background-color: #000000;
+  background-color: #eeeeee;
   color: #3c4858;
 }
 
@@ -391,7 +391,7 @@ footer ul li a:hover {
 }
 
 .fixed-plugin .adjustments-line p {
-  float: left;
+  /* float: left; */
   display: inline-block;
   margin-bottom: 0;
   font-size: 1em;

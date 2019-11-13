@@ -51,7 +51,6 @@ function App() {
   return (
     <Router>
         <Header />
-        <br />
         <Switch>
           <Route path="/" exact={true} component={Home} />
           <Route path="/profile" exact={true} component={UserProfile} />
