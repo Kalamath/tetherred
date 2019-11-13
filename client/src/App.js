@@ -3,8 +3,10 @@
 // import Carousel from 'react-bootstrap/Carousel'
 // import Carousel from "./components/Carousel"
 // import { Container } from "./components/Grid";
-// import Home from "./pages/Home"
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import Homepage from './pages/Homepage';
+import Home from "./pages/Home";
+import './App.css';
 
 import React, { useEffect } from 'react';
 import {
@@ -13,10 +15,9 @@ import {
   Route
 } from 'react-router-dom';
 import axios from 'axios';
-import Header from './components/Header';
-// import Homepage from './pages/Homepage';
 import Dashboard from './pages/Dashboard';
-import Login from './pages/Login';
+import Header from './components/Header';
+// import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
 import { useAuth } from './utils/customHooks';
@@ -42,7 +43,7 @@ function App() {
       .catch(err => {
         console.log(err);
       });
-  },
+    },
     // By passing an empty array of dependencies as the second parameter, this ensures that `useEffect` only runs once
     [runOnce]);
 
@@ -50,9 +51,8 @@ function App() {
   return (
     <Router>
         <Header />
-        <br />
         <Switch>
-          <Route path="/" exact={true} component={Login} />
+          <Route path="/" exact={true} component={Home} />
           <Route path="/profile" exact={true} component={UserProfile} />
           <Route path="/dashboard" exact={true} component={Dashboard} />
           <Route path="/signup" exact={true} component={Signup} />
