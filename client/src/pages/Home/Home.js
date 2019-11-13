@@ -53,7 +53,7 @@ export default function CardBasic() {
                 <GridItem xs={12} sm={12} md={10}>
                     <Card className={classes.textWhite}>
                         <div className={classes.cardImgOverlay}>
-                            <CardHeader color="danger">
+                            <CardHeader color="primary">
                                 <h4>News Title</h4>
                                 <p>
                                     This is a wider card with supporting text below as a natural lead-in
@@ -132,7 +132,7 @@ export default function CardBasic() {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                     </p>
-                                <Button color="primary">Go somewhere</Button>
+                                <Button color="success">Go somewhere</Button>
                             </CardBody>
                         </Card>
                         <Card style={{ width: "100%" }}>
@@ -150,7 +150,7 @@ export default function CardBasic() {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                     </p>
-                                <Button color="primary">Go somewhere</Button>
+                                <Button color="success">Go somewhere</Button>
                             </CardBody>
                         </Card>
                         <Card style={{ width: "100%" }}>
@@ -168,7 +168,7 @@ export default function CardBasic() {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                     </p>
-                                <Button color="primary">Go somewhere</Button>
+                                <Button color="success">Go somewhere</Button>
                             </CardBody>
                         </Card>
                         <Card style={{ width: "100%" }}>
@@ -186,13 +186,13 @@ export default function CardBasic() {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                     </p>
-                                <Button color="primary">Go somewhere</Button>
+                                <Button color="success">Go somewhere</Button>
                             </CardBody>
                         </Card>
                     </GridItem>
                     <GridItem xs={12} sm={12} md={3}>
                         <Card style={{ width: "100%" }}>
-                            <CardHeader color="primary">
+                            <CardHeader color="info">
                                 <h4>Chirp Box</h4>
                             </CardHeader>
                             <CardBody>
@@ -206,7 +206,7 @@ export default function CardBasic() {
                                     margin="normal"
                                     variant="outlined"
                                 />
-                                <Button color="primary">Chirp</Button>
+                                <Button color="info">Chirp</Button>
                             </CardBody>
                         </Card>
                     </GridItem>
