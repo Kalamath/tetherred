@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import logo from '../../assets/imgs/TetherredFullBlack.png'
+import logo from '../../assets/imgs/TetherredFullWhite.png';
+
 
 class Header extends React.Component {
 
