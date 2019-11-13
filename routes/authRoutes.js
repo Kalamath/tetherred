@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const User = require("../db/user");
-const passport = require("../config/passport/passport");
+const passport = require("../passport");
 
 
 // Session start call
@@ -10,7 +10,6 @@ router.get('/start', (req, res) => {
         isLoggedIn: req.session.isLoggedIn || false
     })
 });
-
 
 router.get('/', (req, res, next) => {
     console.log('===== user!!======')
@@ -52,7 +51,7 @@ router.post('/signup', (req, res) => {
 })
 
 
-// post route for sign-in req 
+// post route for login req 
 router.post(
     '/signin',
     function (req, res, next) {
@@ -71,7 +70,6 @@ router.post(
     }
 )
 
-
 //logout route
 router.post('/logout', (req, res) => {
     if (req.user) {
@@ -83,43 +81,4 @@ router.post('/logout', (req, res) => {
     }
 });
 
-
-
-    // // post route for signing-up new user 
-    // app.post('/api/sessions/signup', function (req, res, next) {
-    //     passport.authenticate('local-signup', function (err, user, info) {
-    //         if (err) {
-    //             return next(err); // will generate a 500 error
-    //         }
-    //         // Generate a JSON response reflecting signup
-    //         if (req.session.isLoggedIn = false) {
-    //             return res.send({ success: false, message: 'signupfailed' });
-    //         }
-    //         return res.send({ success: true, message: 'signup succeeded' });
-    //     })(req, res, next);
-    // });
-
-
-    // // post route for login req 
-    // app.post('/api/sessions/signin', function (req, res, next) {
-    //     passport.authenticate('local-signin', function (err, user, info) {
-    //         if (err) {
-    //             return next(err); // will generate a 500 error
-    //         }
-    //         // Generate a JSON response reflecting signup
-    //         if (req.session.isLoggedIn = false) {
-    //             return res.send({ success: false, message: 'signupfailed' });
-    //         }
-    //         return res.send({ success: true, message: 'signup succeeded' });
-    //     })(req, res, next);
-    // });
-
-    function isLoggedIn(req, res, next) {
-
-        if (req.isAuthenticated())
-
-            return next();
-
-        res.redirect('/signin');
-
-    }
+module.exports = router;
