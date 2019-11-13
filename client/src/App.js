@@ -6,7 +6,7 @@
 // import Home from "./pages/Home"
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,52 +14,88 @@ import {
 } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header';
-// import Homepage from './pages/Homepage';
+
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
-import { useAuth } from './utils/customHooks';
+
 import UserProfile from "./pages/UserProfile";
 
-function App() {
-
-  const [, setUser] = useAuth();
-
-  const runOnce = true;
-  useEffect(() => {
-    axios
-      .get("/api/sessions/start", {
-        withCredentials: true
-      })
-      .then(resp => {
-        if (resp.data.isLoggedIn) {
-          setUser({ isLoggedIn: true });
-        } else {
-          setUser({ isLoggedIn: false });
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  },
-    // By passing an empty array of dependencies as the second parameter, this ensures that `useEffect` only runs once
-    [runOnce]);
+class App extends React.Component {
 
 
-  return (
-    <Router>
-        <Header />
+  constructor() {
+    super()
+    this.state = {
+      loggedIn: false,
+      email: null
+    }
+
+    this.getUser = this.getUser.bind(this)
+    this.componentDidMount = this.componentDidMount.bind(this)
+    this.updateUser = this.updateUser.bind(this)
+  }
+
+
+  componentDidMount() {
+    this.getUser()
+  }
+
+  updateUser(userObject) {
+    this.setState(userObject)
+  }
+
+  getUser() {
+    axios.get('/api/sessions').then(response => {
+      console.log('Get user response: ')
+      console.log(response.data)
+      if (response.data.user) {
+        console.log('Get User: There is a user saved in the server session: ')
+
+        this.setState({
+          loggedIn: true,
+          email: response.data.user.email
+        })
+      } else {
+        console.log('Get user: no user');
+        this.setState({
+          loggedIn: false,
+          email: null
+        })
+      }
+    })
+  }
+
+  render() {
+    return (
+      <Router>
+        <Header updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
+
         <br />
-        <Switch>
-          <Route path="/" exact={true} component={Login} />
-          <Route path="/profile" exact={true} component={UserProfile} />
-          <Route path="/dashboard" exact={true} component={Dashboard} />
-          <Route path="/signup" exact={true} component={Signup} />
-          <Route path="/logout" exact={true} component={Logout} />
-        </Switch>
-    </Router>
-  );
+        <Route path="/" exact={true} render={() =>
+          <Login
+            updateUser={this.updateUser}
+          />} />
+
+        <Route path="/profile" exact={true} component={UserProfile} />
+        <Route path="/dashboard" exact={true} component={Dashboard} />
+
+        <Route path="/signup" exact={true} 
+        render={() =>
+          <Signup
+            updateUser={this.updateUser}
+          />} />
+
+        <Route path="/logout" exact={true} 
+        render={() =>
+          <Logout
+            updateUser={this.updateUser}
+          />} />
+
+      </Router>
+    );
+  }
 }
 
 export default App;
