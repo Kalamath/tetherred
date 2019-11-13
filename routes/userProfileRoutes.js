@@ -14,9 +14,10 @@ router.post("/", function (req, res) {
     })
 });
 
-router.get("/", function( req, res) {
-    UserProfile.findOne({ email: req.user.email })
+router.get("/:email", function( req, res) {
+    UserProfile.findOne({ email: req.params.email })
     .then( dbProfile => {
+        console.log(dbProfile);
         res.json(dbProfile)
     }).catch( err => {
         console.log(err);
