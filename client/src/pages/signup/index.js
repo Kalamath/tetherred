@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import axios from "axios";
 import { Redirect } from 'react-router-dom';
 
 
-class SignUpPage extends Component {
+class SignUpPage extends React.Component {
 
   constructor() {
     super()
@@ -72,7 +72,7 @@ class SignUpPage extends Component {
           <div className="row">
             <h1>SignUP to Create a New Account</h1>
           </div>
-          {errorMessage ? <div className="alert alert-danger">{errorMessage}</div> : null}
+         
           <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="col-6">

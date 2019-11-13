@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 
-class Login extends Component {
+class LoginPage extends React.Component {
 
   constructor() {
     super()
