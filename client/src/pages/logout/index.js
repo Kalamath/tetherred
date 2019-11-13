@@ -20,8 +20,10 @@ function Logout({history}) {
     }, []);
     
     return (
-        <div>
-            Logging you out...
+        <div class="container text-center">
+            <h1>Logging you out...</h1>
+            <br></br>
+            <h4>See you next time!</h4>
         </div>
     )
 }
