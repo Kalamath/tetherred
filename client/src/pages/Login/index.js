@@ -28,10 +28,10 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const classes = useStyles();
 
 class BasicTextFields extends React.Component {
  
-  const classes = useStyles();
 
   constructor() {
     super()
@@ -180,9 +180,9 @@ class BasicTextFields extends React.Component {
 //           </form>
 //         </div >
 
-      )
+      // )
 
-    }
+    // }
   }
 
 }
