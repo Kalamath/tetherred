@@ -19,8 +19,8 @@ import axios from 'axios';
 import Header from './components/Header';
 
 import Dashboard from './pages/Dashboard';
-import Header from './components/Header';
-// import Login from './pages/Login';
+// import Header from './components/Header';
+import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
 
