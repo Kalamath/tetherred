@@ -19,7 +19,6 @@ import axios from 'axios';
 import Dashboard from './pages/Dashboard';
 
 import Header from './components/Header';
-
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
@@ -98,7 +97,7 @@ class App extends React.Component {
           <Logout
             updateUser={this.updateUser}
           />} />
-
+ 
       </Router>
     );
   }
