@@ -30,10 +30,8 @@ const useStyles = makeStyles(theme => ({
 
 
 
-const classes = useStyles();
+// const classes = useStyles();
 class BasicTextFields extends React.Component {
-
-  // const classes = useStyles();
 
   constructor() {
     super()
@@ -82,7 +80,6 @@ class BasicTextFields extends React.Component {
 
       })
   }
-
 
   // And return the JS
   render() {
@@ -183,9 +180,6 @@ class BasicTextFields extends React.Component {
         </div >
         </div>
 
-      // )
-
-    // }
       )
     }
   }

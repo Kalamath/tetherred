@@ -15,7 +15,7 @@ class chirps extends React.Component {
 
     getChirps() {
 
-        axiox.get("/api/chirps/all").then( response => {
+        axios.get("/api/chirps/all").then( response => {
             console.log(response);
         }).catch( err => {
             console.log(`error at API call ${err}`);
