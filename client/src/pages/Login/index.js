@@ -32,11 +32,8 @@ const useStyles = makeStyles(theme => ({
 
 const classes = useStyles();
 class BasicTextFields extends React.Component {
-<<<<<<< HEAD
-=======
 
   // const classes = useStyles();
->>>>>>> 8ddee9a8f0659242a91cf0e0c5727067d9372166
 
   constructor() {
     super()
@@ -186,14 +183,11 @@ class BasicTextFields extends React.Component {
         </div >
         </div>
 
-<<<<<<< HEAD
       // )
 
     // }
-=======
       )
     }
->>>>>>> 8ddee9a8f0659242a91cf0e0c5727067d9372166
   }
 }
 
