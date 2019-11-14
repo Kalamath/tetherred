@@ -3,36 +3,37 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
-import Container from 'react-bootstrap/Container';
-import Button from "../../components/CustomButtons/Button.js";
-import Card from "../../components/Card/Card.js";
-import CardBody from "../../components/Card/CardBody.js";
-import CardHeader from "../../components/Card/CardHeader.js";
-import GridContainer from "../../components/Grid/GridContainer.js";
-import GridItem from '../../components/Grid/GridItem';
+// import { makeStyles } from '@material-ui/core/styles';
+// import TextField from '@material-ui/core/TextField';
+// import Container from 'react-bootstrap/Container';
+// import Button from "../../components/CustomButtons/Button.js";
+// import Card from "../../components/Card/Card.js";
+// import CardBody from "../../components/Card/CardBody.js";
+// import CardHeader from "../../components/Card/CardHeader.js";
+// import GridContainer from "../../components/Grid/GridContainer.js";
+// import GridItem from '../../components/Grid/GridItem';
 // import Visibility from '@material-ui/icons/Visibility';
 // import VisibilityOff from '@material-ui/icons/VisibilityOff';
 
 
-const useStyles = makeStyles(theme => ({
-  container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 200,
-  },
-}));
+// const useStyles = makeStyles(theme => ({
+//   container: {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//   },
+//   textField: {
+//     marginLeft: theme.spacing(1),
+//     marginRight: theme.spacing(1),
+//     width: 200,
+//   },
+// }));
 
 
 
-// const classes = useStyles();
 class BasicTextFields extends React.Component {
 
+  // const classes = useStyles();
+  
   constructor() {
     super()
     this.state = {
@@ -125,19 +126,16 @@ class BasicTextFields extends React.Component {
     </div>
   ); */}
 
-
         < div className = "container" >
           <div className="row">
-            <h1>Login</h1>
+            <h1>Welcome To Tetherred</h1>
           </div>
 
           <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="col-6">
                 <div className="form-group">
-                  <label htmlFor="emailInput">
-                    Email
-                </label>
+                  <label htmlFor="emailInput">Email</label>
                   <input
                     type="email"
                     id="emailInput"
@@ -179,7 +177,6 @@ class BasicTextFields extends React.Component {
           </form>
         </div >
         </div>
-
       )
     }
   }
