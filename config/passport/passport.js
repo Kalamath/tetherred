@@ -12,12 +12,12 @@ passport.serializeUser((user, done) => {
 
 // user object attaches to the request as req.user
 passport.deserializeUser((id, done) => {
-	console.log('DeserializeUser called')
+	// console.log('\nDeserializeUser called')
 	User.findOne(
 		{ _id: id },
 		'email',
 		(err, user) => {
-			console.log('*** Deserialize user, user:')
+			console.log('\n*** Deserialize user, user:')
 			console.log(user)
 			console.log('--------------')
 			done(null, user)
