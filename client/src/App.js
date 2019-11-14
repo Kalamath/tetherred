@@ -5,26 +5,24 @@
 // import { Container } from "./components/Grid";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Homepage from './pages/Homepage';
-import Home from "./pages/Home";
+// import Home from "./pages/Home";
 import './App.css';
 
 import React from 'react';
 import {
   BrowserRouter as Router,
-  Switch,
+  // Switch,
   Route
 } from 'react-router-dom';
 import axios from 'axios';
 
-import Header from './components/Header';
-
 import Dashboard from './pages/Dashboard';
-// import Header from './components/Header';
+import Header from './components/Header';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
 
-import UserProfile from "./pages/UserProfile";
+// import UserProfile from "./pages/UserProfile";
 import Profile from "./pages/Profile";
 
 
