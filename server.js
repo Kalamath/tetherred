@@ -32,11 +32,6 @@ const routes = require("./routes");
 app.use(routes);
 
 
-// router.use(function(req, res) {
-//     res.sendfile(path.join(__dirname, "../client/build/index.html"));
-// });
-
-
 
 //Serve up static assets
 if (process.env.NODE_ENV === "production") {
