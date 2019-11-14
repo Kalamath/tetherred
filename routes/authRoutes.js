@@ -6,6 +6,7 @@ const passport = require("../config/passport/passport");
 
 // Session start call
 router.get('/start', (req, res) => {
+    console.log("req @ /start" + req.user);
     res.json({
         isLoggedIn: req.session.isLoggedIn || false
     })
@@ -13,7 +14,7 @@ router.get('/start', (req, res) => {
 
 router.get('/', (req, res, next) => {
     console.log('===== user!!======')
-    console.log("req.user @ / : " + req.user)
+    console.log("req.user @ / : " + req.user);
     if (req.user) {
         res.json({ user: req.user })
     } else {
@@ -56,7 +57,7 @@ router.post(
     '/signin',
     function (req, res, next) {
         console.log('routes/signin, req.body: ');
-        console.log(req.body)
+        console.log(req.body);
         next()
     },
     passport.authenticate('local'),
