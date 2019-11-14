@@ -20,7 +20,7 @@ class chirps extends React.Component {
         }).catch( err => {
             console.log(`error at API call ${err}`);
         });
-        setTimeout(this.getChirps, 5000);
+        // setTimeout(this.getChirps, 5000);
     };
 
     render() {
