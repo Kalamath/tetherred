@@ -15,7 +15,6 @@ router.post("/:email", function (req, res) {
         res.json(dbProfile)
     }).catch( err => {
         console.log(err);
-        res.sendStatus(500);
     })
 });
 
@@ -23,10 +22,9 @@ router.get("/:email", function( req, res) {
     UserProfile.findOne({ email: req.params.email })
     .then( dbProfile => {
         console.log(dbProfile);
-        res.json(dbProfile).sendStatus(200);
+        res.json(dbProfile);
     }).catch( err => {
         console.log(err);
-        res.sendStatus(500);
     })
 });
 
