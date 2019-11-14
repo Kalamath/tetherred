@@ -40,7 +40,8 @@ class BasicTextFields extends React.Component {
     this.state = {
       email: '',
       password: '',
-      redirectTo: null
+      redirectTo: null,
+      id: null
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -61,6 +62,8 @@ class BasicTextFields extends React.Component {
     axios.post('/api/sessions/signin', {
       email: this.state.email,
       password: this.state.password
+    }, {
+      withCredentials: true
     })
       .then(response => {
         console.log('login response: ')
@@ -69,7 +72,7 @@ class BasicTextFields extends React.Component {
           // update App.js state
           this.props.updateUser({
             loggedIn: true,
-            email: response.data.email
+            id: response.data._id
           })
           // update the state to redirect to home
           this.setState({

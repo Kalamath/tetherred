@@ -33,7 +33,7 @@ class App extends React.Component {
     super()
     this.state = {
       loggedIn: false,
-      email: null
+      id: null
     }
 
     this.getUser = this.getUser.bind(this)
@@ -51,21 +51,23 @@ class App extends React.Component {
   }
 
   getUser() {
-    axios.get('/api/sessions').then(response => {
-      console.log('Get user response: ')
+    axios.get('/api/sessions', {
+      withCredentials: true
+    }).then(response => {
+      console.log('Get user response: ');
       console.log(response.data)
       if (response.data.user) {
         console.log('Get User: There is a user saved in the server session: ')
 
         this.setState({
           loggedIn: true,
-          email: response.data.user.email
+          id: response.data.user._id
         })
       } else {
         console.log('Get user: no user');
         this.setState({
           loggedIn: false,
-          email: null
+          id: null
         })
       }
     })
