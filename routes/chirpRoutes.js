@@ -1,14 +1,15 @@
-const mongoose = require("mongoose");
-const db = require("../db");
+const express = require("express");
+const router = express.Router();
+const Chirps = require("../db/chirps");
 
-module.exports = function (app) {
+
 
     //get all chirps from db.Chirps 
     //routes to "/api/chirps"
-    app.get("/api/chirps/all", function (req, res) {
+    router.get("/all", function (req, res) {
 
-        db.Chirps.find({})
-            .sort({ date: -1 })
+        Chirps.find({})
+            .sort({ date: -1 }) // sorts by latest first 
             .then(dbchirps => {
                 res.json(dbchirps)
             }).catch(err => {
@@ -19,8 +20,8 @@ module.exports = function (app) {
 
     // posts new chirps from db.Chirps 
     //routes to "/api/chirps"
-    app.post("/api/chirps/post", function (req, res) {
-        db.Chirps.create(req.body)
+    router.post("/post", function (req, res) {
+        Chirps.create(req.body)
             .then(dbchirps => {
                 res.json(dbchirps);
             }).catch(err => {
@@ -28,4 +29,6 @@ module.exports = function (app) {
                 res.sendStatus(500);
             })
     });
-}
+
+
+module.exports = router;
