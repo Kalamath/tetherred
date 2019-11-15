@@ -1,14 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
+import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 import logo from '../../assets/imgs/TetherredFullWhite.png';
 
 
 class Header extends React.Component {
-
 
   render() {
 
@@ -33,16 +35,34 @@ class Header extends React.Component {
             {loggedIn ? (
 
               <div>
+
                 <Nav.Link href="/dashboard">Home</Nav.Link>
                 <Nav.Link href="/profile">Profile</Nav.Link>
                 <Nav.Link href="/logout">Logout</Nav.Link>
+
               </div>
 
             ) : (
 
                 <div>
-                  <Nav.Link href="/signin">login</Nav.Link>
-                  <Nav.Link href="/signup">Sign Up</Nav.Link>
+                  <Form>
+                    <Form.Row>
+                      <Col>
+                        <Form.Control type="text" placeholder="Search" className="mr-sm-2" />
+                        <Form.Label>Email</Form.Label>
+                      </Col>
+                      <Col>
+                        <Form.Control type="text" placeholder="Search" className="mr-sm-2" />
+                        <Form.Label>Password</Form.Label>
+                      </Col>
+                      <Col>
+                        <Form.Label></Form.Label>
+                        <Button variant="outline-success">Search</Button>
+                      </Col>
+                    </Form.Row>
+                  </Form>
+                  {/* <Nav.Link href="/signin">Login</Nav.Link>
+                  <Nav.Link href="/signup">Sign Up</Nav.Link> */}
                 </div>
 
               )}

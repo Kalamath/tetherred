@@ -1,39 +1,13 @@
-
 import React from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-// import { makeStyles } from '@material-ui/core/styles';
-// import TextField from '@material-ui/core/TextField';
-// import Container from 'react-bootstrap/Container';
-// import Button from "../../components/CustomButtons/Button.js";
-// import Card from "../../components/Card/Card.js";
-// import CardBody from "../../components/Card/CardBody.js";
-// import CardHeader from "../../components/Card/CardHeader.js";
-// import GridContainer from "../../components/Grid/GridContainer.js";
-// import GridItem from '../../components/Grid/GridItem';
-// import Visibility from '@material-ui/icons/Visibility';
-// import VisibilityOff from '@material-ui/icons/VisibilityOff';
-
-
-// const useStyles = makeStyles(theme => ({
-//   container: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//   },
-//   textField: {
-//     marginLeft: theme.spacing(1),
-//     marginRight: theme.spacing(1),
-//     width: 200,
-//   },
-// }));
-
-
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Logo from '../../assets/imgs/Logo.png';
 
 class BasicTextFields extends React.Component {
 
-  // const classes = useStyles();
-  
   constructor() {
     super()
     this.state = {
@@ -89,93 +63,104 @@ class BasicTextFields extends React.Component {
     } else {
 
       return (
-         <div>
-        {/* <Container>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={8}>
-          </GridItem>
-          <GridItem xs={12} sm={12} md={4}>
-            <Card style={{ width: "100%" }}>
-              <CardHeader color="primary">
-              <h4 className={classes.cardTitleWhite}>Welcome To Tetherred</h4>
-              <p className={classes.cardCategoryWhite}>Login Here</p>
-              </CardHeader>
-              <CardBody>
-                <TextField
-                  required
-                  id="standard-required"
-                  label="User Name (Required)"
-                  defaultValue=""
-                  className={classes.textField}
-                  margin="normal"
+        <div>
+          < div className="container" >
+            {/* <div className="row">
+              <h1>Welcome To Tetherred</h1>
+            </div> */}
+
+            {/* <form onSubmit={this.handleSubmit}>
+              <div className="form-group">
+                <label htmlFor="emailInput">Email</label>
+                <input
+                  type="email"
+                  id="emailInput"
+                  name="email"
+                  className="form-control"
+                  aria-describedby="emailHelp"
+                  value={this.state.email}
+                  onChange={this.handleChange}
                 />
-                <TextField
-                  id="standard-password-input"
-                  label="Password"
-                  className={classes.textField}
+                <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
+              </div>
+              <div className="form-group">
+                <label htmlFor="passwordInput">Password</label>
+                <input
                   type="password"
-                  autoComplete="current-password"
-                  margin="normal"
+                  id="passwordInput"
+                  name="password"
+                  className="form-control"
+                  aria-describedby="passwordHelp"
+                  value={this.state.password}
+                  onChange={this.handleChange}
                 />
-                <Button color="primary">Login</Button>
-              </CardBody>
-            </Card>
-          </GridItem>
-        </GridContainer>
-      </Container>
-    </div>
-  ); */}
-
-        < div className = "container" >
-          <div className="row">
-            <h1>Welcome To Tetherred</h1>
-          </div>
-
-          <form onSubmit={this.handleSubmit}>
-            <div className="row">
-              <div className="col-6">
-                <div className="form-group">
-                  <label htmlFor="emailInput">Email</label>
-                  <input
-                    type="email"
-                    id="emailInput"
-                    name="email"
-                    className="form-control"
-                    aria-describedby="emailHelp"
-                    value={this.state.email}
-                    onChange={this.handleChange}
-                  />
-                  <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
-                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-6">
-                <div className="form-group">
-                  <label htmlFor="passwordInput">
-                    Password
-               </label>
-                  <input
-                    type="password"
-                    id="passwordInput"
-                    className="form-control"
-                    name="password"
-                    aria-describedby="passwordHelp"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                  />
-                  <small id="passwordHelp" className="form-text text-muted">test123</small>
-                </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form> */}
+            {/* Sign-Up Form */}
+            <Form onSubmit={this.handleSubmit} className="form-signup">
+              <div className="text-center mb-4">
+                <img className="mb-4" src={Logo} alt width="72" height="72" />
+                <h1 className="h3 mb-3 font-weight-normal">Welcome to Tetherred</h1>
+                <p>All Your Favorite Places Here</p>
               </div>
-            </div>
 
-            <div className="row">
-              <div className="col">
-                <button type="submit">Login</button>
+              <div className="form-group">
+                <Form.Row>
+                  <Form.Group as={Col} md="6" controlId="">
+                    <Form.Label>First Name</Form.Label>
+                    <Form.Control
+                      required
+                      type="text"
+                      placeholder="First name"
+                      defaultValue="Mark"
+                      />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                  </Form.Group>
+                  <Form.Group as={Col} md="6" controlId="">
+                    <Form.Label>Last name</Form.Label>
+                    <Form.Control
+                      required
+                      type="text"
+                      placeholder="Last name"
+                      defaultValue="Otto"
+                    />
+                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                  </Form.Group>
+                </Form.Row>
               </div>
-            </div>
-          </form>
-        </div >
+              {/* Email */}
+              <div className="form-group">
+                <label htmlFor="emailInput">Email</label>
+                <input
+                  type="email"
+                  id="emailInput"
+                  name="email"
+                  className="form-control"
+                  aria-describedby="emailHelp"
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                />
+                <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
+              </div>
+              {/* Password */}
+              <div className="form-group">
+                <label htmlFor="passwordInput">Password</label>
+                <input
+                  type="password"
+                  id="passwordInput"
+                  name="password"
+                  className="form-control"
+                  aria-describedby="passwordHelp"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div></div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <p>© Tetherred 2019</p>
+            </Form>
+          </div >
         </div>
       )
     }

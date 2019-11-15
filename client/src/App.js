@@ -19,6 +19,7 @@ import axios from 'axios';
 import Dashboard from './pages/Dashboard';
 
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
@@ -76,7 +77,6 @@ class App extends React.Component {
     return (
       <Router>
         <Header updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-
         <br />
         <Route path="/" exact={true} render={() =>
           <Login
@@ -86,18 +86,17 @@ class App extends React.Component {
         <Route path="/profile" exact={true} component={Profile} />
         <Route path="/dashboard" exact={true} component={Dashboard} />
 
-        <Route path="/signup" exact={true} 
-        render={() =>
-          <Signup
-            updateUser={this.updateUser}
-          />} />
-
-        <Route path="/logout" exact={true} 
-        render={() =>
-          <Logout
-            updateUser={this.updateUser}
-          />} />
- 
+        <Route path="/signup" exact={true}
+          render={() =>
+            <Signup
+              updateUser={this.updateUser}
+            />} />
+        <Route path="/logout" exact={true}
+          render={() =>
+            <Logout
+              updateUser={this.updateUser}
+            />} />
+        <Footer />
       </Router>
     );
   }
