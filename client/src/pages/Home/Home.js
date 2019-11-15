@@ -27,6 +27,8 @@ import newsBanner from "../../assets/imgs/latestNews.jpg";
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 
+import Chirpbox from "../../components/chirp";
+
 
 const styles = {
     ...dashboardStyle,
@@ -190,7 +192,7 @@ export default function CardBasic() {
                             </CardBody>
                         </Card>
                     </GridItem>
-                    <GridItem xs={12} sm={12} md={3}>
+                    {/* <GridItem xs={12} sm={12} md={3}>
                         <Card style={{ width: "100%" }}>
                             <CardHeader color="info">
                                 <h4>Chirp Box</h4>
@@ -209,9 +211,12 @@ export default function CardBasic() {
                                 <Button color="info">Chirp</Button>
                             </CardBody>
                         </Card>
-                    </GridItem>
+                    </GridItem> */}
+                    <Chirpbox />
+                    
                 </GridContainer>
             </Container>
+
         </React.Fragment>
     );
 }

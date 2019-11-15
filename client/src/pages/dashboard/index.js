@@ -1,7 +1,7 @@
 import React from "react";
 
 import Carousel from "../../components/Carousel"
-import Header from "../../components/Header"
+import Header from "../../components/header"
 import Home from "../Home"
 import axios from "axios";
 
@@ -13,7 +13,7 @@ class Dashboard extends React.Component {
     super()
     this.state = {
       loggedIn: false,
-      email: null
+      id: null
     }
 
     this.getUser = this.getUser.bind(this)
@@ -30,7 +30,9 @@ class Dashboard extends React.Component {
   }
 
   getUser() {
-    axios.get('/api/sessions').then(response => {
+    axios.get('/api/sessions', {
+      withCredentials: true
+    }).then(response => {
       console.log('Get user response: ')
       console.log(response.data);
       if (response.data.user) {
@@ -38,13 +40,13 @@ class Dashboard extends React.Component {
 
         this.setState({
           loggedIn: true,
-          email: response.data.user.email
+          id: response.data.user._id
         })
       } else {
         console.log('Get user: no user');
         this.setState({
           loggedIn: false,
-          email: null
+          id: null
         })
       }
     })
