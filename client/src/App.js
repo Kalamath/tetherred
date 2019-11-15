@@ -16,12 +16,12 @@ import {
 } from 'react-router-dom';
 import axios from 'axios';
 
-import Dashboard from './pages/Dashboard';
+import Dashboard from './pages/dashboard';
 
-import Header from './components/Header';
+import Header from './components/header';
 import Login from './pages/Login';
-import Logout from './pages/Logout';
-import Signup from './pages/Signup';
+import Logout from './pages/logout';
+import Signup from './pages/signup';
 
 // import UserProfile from "./pages/UserProfile";
 import Profile from "./pages/Profile";
