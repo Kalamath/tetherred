@@ -56,7 +56,6 @@ class Profile extends React.Component {
             withCredentials: true
         }).then(response => {
             console.log(response.data);
-            // console.log(`get profile response ${response}`);
             this.setState({
                 name: response.data.name,
                 description: response.data.description
