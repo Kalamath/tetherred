@@ -8,14 +8,14 @@ import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 // import Language from "@material-ui/icons/Language";
 
 // core components
-// import Carousel from "../../components/Carousel"
+import Carousel from "../../components/Carousel"
 import GridItem from "../../components/Grid/GridItem.js";
 import Container from 'react-bootstrap/Container';
 // import GridContainer from "../../components/Grid/GridContainer.js";
 // import CustomInput from "../../components/CustomInput/CustomInput.js";
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
-import CardHeader from "../../components/Card/CardHeader.js";
+// import CardHeader from "../../components/Card/CardHeader.js";
 // import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
 // import CardIcon from "../../components/Card/CardIcon";
@@ -23,7 +23,7 @@ import CardBody from "../../components/Card/CardBody.js";
 // import TextField from '@material-ui/core/TextField';
 
 import paperMario from "../../assets/imgs/paper-mario.webp";
-import newsBanner from "../../assets/imgs/latestNews.jpg";
+// import newsBanner from "../../assets/imgs/latestNews.jpg";
 
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
@@ -50,8 +50,10 @@ export default function CardBasic() {
     const [selectedValue, setSelectedValue] = React.useState(null);
     return (
         <React.Fragment>
-            <GridContainer>
-                <GridItem xs={12} sm={12} md={1}>
+            
+             {/* <GridContainer>  */}
+             <Carousel />
+                {/* <GridItem xs={12} sm={12} md={1}>
                 </GridItem>
                 <GridItem xs={12} sm={12} md={10}>
                     <Card className={classes.textWhite}>
@@ -75,8 +77,8 @@ export default function CardBasic() {
                     </Card>
                 </GridItem>
                 <GridItem xs={12} sm={12} md={1}>
-                </GridItem>
-            </GridContainer>
+                </GridItem> */}
+            {/* </GridContainer>  */}
             <Container>
                 <GridContainer>
                     <GridItem xs={12} sm={12} md={3}>
