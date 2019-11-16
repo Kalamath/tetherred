@@ -12,6 +12,7 @@ class BasicTextFields extends React.Component {
     super()
     this.state = {
       email: '',
+      username: '',
       password: '',
       redirectTo: null,
       id: null
@@ -101,11 +102,84 @@ class BasicTextFields extends React.Component {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
       return (
-        <div>
-          <br />
-          <div className="container" >
+         <div>
+        {/* <Container>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={8}>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card style={{ width: "100%" }}>
+              <CardHeader color="primary">
+              <h4 className={classes.cardTitleWhite}>Welcome To Tetherred</h4>
+              <p className={classes.cardCategoryWhite}>Login Here</p>
+              </CardHeader>
+              <CardBody>
+                <TextField
+                  required
+                  id="standard-required"
+                  label="User Name (Required)"
+                  defaultValue=""
+                  className={classes.textField}
+                  margin="normal"
+                />
+                <TextField
+                  id="standard-password-input"
+                  label="Password"
+                  className={classes.textField}
+                  type="password"
+                  autoComplete="current-password"
+                  margin="normal"
+                />
+                <Button color="primary">Login</Button>
+              </CardBody>
+            </Card>
+          </GridItem>
+        </GridContainer>
+      </Container>
+    </div>
+  ); */}
+
+        < div className = "container" >
+          <div className="row">
+            <h1>Welcome To Tetherred</h1>
+          </div>
+
+          <form onSubmit={this.handleSubmit}>
             <div className="row">
-              <div className="col">
+              <div className="col-6">
+                <div className="form-group">
+                  <label htmlFor="emailInput">Email</label>
+                  <input
+                    type="email"
+                    id="emailInput"
+                    name="email"
+                    className="form-control"
+                    aria-describedby="emailHelp"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="row">
+              <div className="col-6">
+                <div className="form-group">
+                  <label htmlFor="passwordInput">
+                    Password
+               </label>
+                  <input
+                    type="password"
+                    id="passwordInput"
+                    className="form-control"
+                    name="password"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </div>
+            </div>
+
 
               </div>
               <div className="col">
