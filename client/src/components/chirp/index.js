@@ -1,18 +1,18 @@
 import React from "react";
-import { Redirect } from 'react-router-dom';
+// import { Redirect } from './node_modules/react-router-dom';
 import axios from "axios";
 
-import GridItem from "../../components/Grid/GridItem.js";
-import Container from 'react-bootstrap/Container';
-import GridContainer from "../../components/Grid/GridContainer.js";
-import Card from "../../components/Card/Card.js";
-import CardHeader from "../../components/Card/CardHeader.js";
-import CardBody from "../../components/Card/CardBody.js";
+import GridItem from "../Grid/GridItem.js";
+// import Container from './node_modules/react-bootstrap/Container';
+// import GridContainer from "../Grid/GridContainer.js";
+import Card from "../Card/Card.js";
+import CardHeader from "../Card/CardHeader.js";
+import CardBody from "../Card/CardBody.js";
 import TextField from '@material-ui/core/TextField';
-import Button from "../../components/CustomButtons/Button.js";
+import Button from "../CustomButtons/Button.js";
 
 
-class chirps extends React.Component {
+class Chirps extends React.Component {
 
     constructor() {
         super();
@@ -101,12 +101,8 @@ class chirps extends React.Component {
                     </CardBody>
                 </Card>
             </GridItem>
-
-
         )
     }
-
-
 }
 
-export default chirps;
+export default Chirps;

@@ -36,8 +36,6 @@ class SignUpPage extends React.Component {
       email: this.state.email,
       username: this.state.username,
       password: this.state.password
-    }, {
-      withCredentials: true
     })
       .then(response => {
         console.log("signup response : ");

@@ -3,7 +3,9 @@ const router = require("express").Router();
 const userRoutes = require("./authRoutes");
 const chirpRoutes = require("./chirpRoutes");
 const userProfileRoutes = require("./userProfileRoutes");
+
 // const newsRoutes = require("./newsRoutes");
+
 
 
 // API Routes
