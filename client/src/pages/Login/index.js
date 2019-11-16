@@ -29,35 +29,71 @@ class BasicTextFields extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    console.log('handleSubmit');
-    console.log(this.state.email);
+    console.log('sign-up handleSubmit, username: ')
+    console.log(this.state.email)
 
-    axios.post('/api/sessions/signin', {
+    //request to server to add a new username/password
+    axios.post('/api/sessions/signup', {
       email: this.state.email,
       password: this.state.password
-    }, {
-      withCredentials: true
     })
       .then(response => {
-        console.log('login response: ')
-        console.log(response)
+        console.log("signup response : ");
+        console.log(response);
+
         if (response.status === 200) {
+          console.log('successful signup');
+          console.log(response.data.email);
+
           // update App.js state
           this.props.updateUser({
             loggedIn: true,
-            id: response.data._id
+            email: response.data.email
           })
-          // update the state to redirect to home
           this.setState({
-            redirectTo: '/dashboard'
+            redirectTo: '/'
           })
+        } else {
+          console.log('username already taken')
         }
       }).catch(error => {
-        console.log('login error: ')
-        console.log(error);
+        console.log('signup error: ')
+        console.log(error)
 
       })
-  }
+  };
+  
+  // handleSubmit(event) {
+  //   event.preventDefault();
+  //   console.log('handleSubmit');
+  //   console.log(this.state.email);
+
+  //   axios.post('/api/sessions/signin', {
+  //     email: this.state.email,
+  //     password: this.state.password
+  //   }, {
+  //     withCredentials: true
+  //   })
+  //     .then(response => {
+  //       console.log('login response: ')
+  //       console.log(response)
+  //       if (response.status === 200) {
+  //         // update App.js state
+  //         this.props.updateUser({
+  //           loggedIn: true,
+  //           id: response.data._id
+  //         })
+  //         // update the state to redirect to home
+  //         this.setState({
+  //           redirectTo: '/dashboard'
+  //         })
+  //       }
+  //     }).catch(error => {
+  //       console.log('login error: ')
+  //       console.log(error);
+
+  //     })
+  // }
 
   // And return the JS
   render() {
@@ -111,6 +147,7 @@ class BasicTextFields extends React.Component {
                       type="email"
                       id="emailInput"
                       name="email"
+                      placeholder="Last name"
                       className="form-control"
                       aria-describedby="emailHelp"
                       value={this.state.email}

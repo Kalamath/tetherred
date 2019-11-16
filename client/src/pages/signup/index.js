@@ -14,8 +14,7 @@ class SignUpPage extends React.Component {
       redirectTo: null
 
     }
-    this.handleSignup = this.handleSignup.bind(this)
-    this.handleLogin = this.handleLogin.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
 
@@ -25,37 +24,8 @@ class SignUpPage extends React.Component {
     })
   };
 
-  handleLogin(event) {
-    event.preventDefault();
-    console.log('handleSubmit');
-    console.log(this.state.email);
 
-    axios.post('/api/sessions/signin', {
-      email: this.state.email,
-      password: this.state.password
-    })
-      .then(response => {
-        console.log('login response: ')
-        console.log(response)
-        if (response.status === 200) {
-          // update App.js state
-          this.props.updateUser({
-            loggedIn: true,
-            email: response.data.email
-          })
-          // update the state to redirect to home
-          this.setState({
-            redirectTo: '/dashboard'
-          })
-        }
-      }).catch(error => {
-        console.log('login error: ')
-        console.log(error);
-
-      })
-  }
-
-  handleSignup(event) {
+  handleSubmit(event) {
     event.preventDefault();
     console.log('sign-up handleSubmit, username: ')
     console.log(this.state.email)
@@ -64,8 +34,6 @@ class SignUpPage extends React.Component {
     axios.post('/api/sessions/signup', {
       email: this.state.email,
       password: this.state.password
-    }, {
-      withCredentials: true
     })
       .then(response => {
         console.log("signup response : ");
@@ -104,34 +72,52 @@ class SignUpPage extends React.Component {
           <div className="row">
             <h1>SignUP to Create a New Account</h1>
           </div>
-
+         
           <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-              <label htmlFor="emailInput">Email</label>
-              <input
-                type="email"
-                id="emailInput"
-                name="email"
-                className="form-control"
-                aria-describedby="emailHelp"
-                value={this.state.email}
-                onChange={this.handleChange}
-              />
-              <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
+            <div className="row">
+              <div className="col-6">
+                <div className="form-group">
+                  <label htmlFor="emailInput">
+                    Email
+                      </label>
+                  <input
+                    type="email"
+                    id="emailInput"
+                    name="email"
+                    className="form-control"
+                    aria-describedby="emailHelp"
+                    value={this.state.email}
+                    onChange={this.handleChange}
+                  />
+                  <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
+                </div>
+              </div>
             </div>
-            <div className="form-group">
-              <label htmlFor="passwordInput">Password</label>
-              <input
-                type="password"
-                id="passwordInput"
-                name="password"
-                className="form-control"
-                aria-describedby="passwordHelp"
-                value={this.state.password}
-                onChange={this.handleChange}
-              />
+            <div className="row">
+              <div className="col-6">
+                <div className="form-group">
+                  <label htmlFor="passwordInput">
+                    Password
+                      </label>
+                  <input
+                    type="password"
+                    id="passwordInput"
+                    className="form-control"
+                    name="password"
+                    aria-describedby="passwordHelp"
+                    value={this.state.password}
+                    onChange={this.handleChange}
+                  />
+                  <small id="passwordHelp" className="form-text text-muted">test123</small>
+                </div>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <div className="row">
+              <div className="col">
+                <button type="submit">Login</button>
+              </div>
+            </div>
           </form>
         </div>
       )
