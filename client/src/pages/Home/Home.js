@@ -19,7 +19,7 @@ import CardHeader from "../../components/Card/CardHeader.js";
 import CardBody from "../../components/Card/CardBody.js";
 // import CardIcon from "../../components/Card/CardIcon";
 // import CardFooter from "../../components/Card/CardFooter.js";
-import TextField from '@material-ui/core/TextField';
+// import TextField from '@material-ui/core/TextField';
 
 import paperMario from "../../assets/imgs/paper-mario.webp";
 import newsBanner from "../../assets/imgs/latestNews.jpg";
@@ -27,7 +27,7 @@ import newsBanner from "../../assets/imgs/latestNews.jpg";
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 
-import Chirpbox from "../../components/chirp";
+import Chirpbox from "../../components/Chirp";
 
 
 const styles = {
