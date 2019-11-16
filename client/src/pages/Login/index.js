@@ -62,7 +62,7 @@ class BasicTextFields extends React.Component {
 
       })
   };
-  
+
   // handleSubmit(event) {
   //   event.preventDefault();
   //   console.log('handleSubmit');
@@ -113,7 +113,7 @@ class BasicTextFields extends React.Component {
                   <div className="text-center mb-4">
                     <img className="mb-4" src={Logo} alt width="72" height="72" />
                     <h1 className="h3 mb-3 font-weight-normal">Welcome to Tetherred</h1>
-                    <p>All Your Favorite Places Here</p>
+                    <h2>Sign Up Here</h2>
                   </div>
 
                   <div className="form-group">
@@ -147,7 +147,7 @@ class BasicTextFields extends React.Component {
                       type="email"
                       id="emailInput"
                       name="email"
-                      placeholder="Last name"
+                      placeholder="Email"
                       className="form-control"
                       aria-describedby="emailHelp"
                       value={this.state.email}
@@ -162,6 +162,7 @@ class BasicTextFields extends React.Component {
                       type="password"
                       id="passwordInput"
                       name="password"
+                      placeholder="Password"
                       className="form-control"
                       aria-describedby="passwordHelp"
                       value={this.state.password}
