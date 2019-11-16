@@ -1,15 +1,15 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-import Col from 'react-bootstrap/Col';
+// import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 // import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
-import axios from "axios";
-import { Redirect } from 'react-router-dom';
+// import axios from "axios";
+// import { Redirect } from 'react-router-dom';
 
 
 import logo from '../../assets/imgs/TetherredFullBlack.png';
@@ -17,55 +17,55 @@ import logo from '../../assets/imgs/TetherredFullBlack.png';
 
 class Header extends React.Component {
 
-  constructor() {
-    super()
-    this.state = {
-      email: '',
-      password: '',
-      confirmPassword: '',
-      redirectTo: null
+  // constructor() {
+  //   super()
+  //   this.state = {
+  //     email: '',
+  //     password: '',
+  //     confirmPassword: '',
+  //     redirectTo: null
 
-    }
-    // this.handleSignup = this.handleSignup.bind(this)
-    this.handleLogin = this.handleLogin.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-  }
+  //   }
+  //   // this.handleSignup = this.handleSignup.bind(this)
+  //   this.handleLogin = this.handleLogin.bind(this)
+  //   this.handleChange = this.handleChange.bind(this)
+  // }
 
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  };
+  // handleChange(event) {
+  //   this.setState({
+  //     [event.target.name]: event.target.value
+  //   })
+  // };
 
-  handleLogin(event) {
-    event.preventDefault();
-    console.log('handleLogin');
-    console.log(this.state.email);
+  // handleLogin(event) {
+  //   event.preventDefault();
+  //   console.log('handleLogin');
+  //   console.log(this.state.email);
 
-    axios.post('/api/sessions/signin', {
-      email: this.state.email,
-      password: this.state.password
-    })
-      .then(response => {
-        console.log('login response: ')
-        console.log(response)
-        if (response.status === 200) {
-          // update App.js state
-          this.props.updateUser({
-            loggedIn: true,
-            id: response.data._id
-          })
-          // update the state to redirect to home
-          this.setState({
-            redirectTo: '/dashboard'
-          })
-        }
-      }).catch(error => {
-        console.log('login error: ')
-        console.log(error);
+  //   axios.post('/api/sessions/signin', {
+  //     email: this.state.email,
+  //     password: this.state.password
+  //   })
+  //     .then(response => {
+  //       console.log('login response: ')
+  //       console.log(response)
+  //       if (response.status === 200) {
+  //         // update App.js state
+  //         this.props.updateUser({
+  //           loggedIn: true,
+  //           id: response.data._id
+  //         })
+  //         // update the state to redirect to home
+  //         this.setState({
+  //           redirectTo: '/dashboard'
+  //         })
+  //       }
+  //     }).catch(error => {
+  //       console.log('login error: ')
+  //       console.log(error);
 
-      })
-  }
+  //     })
+  // }
 
   render() {
 
@@ -73,9 +73,9 @@ class Header extends React.Component {
     console.log('header render, props: ')
     console.log(this.props);
 
-    if (this.state.redirectTo) {
-      return <Redirect to={{ pathname: this.state.redirectTo }} />
-    } else {
+    // if (this.state.redirectTo) {
+    //   return <Redirect to={{ pathname: this.state.redirectTo }} />
+    // } else {
 
       return (
         <Navbar>
@@ -104,7 +104,7 @@ class Header extends React.Component {
               ) : (
 
                   <div>
-                    <Form onSubmit={this.handleLogin}>
+                    {/* <Form onSubmit={this.handleLogin}>
                       <Form.Row>
                         <Col>
                           <input
@@ -135,9 +135,9 @@ class Header extends React.Component {
                           <Button variant="outline-success" onClick={this.handleLogin}>Login</Button>
                         </Col>
                       </Form.Row>
-                    </Form>
-                    {/* <Nav.Link href="/signin">Login</Nav.Link>
-                  <Nav.Link href="/signup">Sign Up</Nav.Link> */}
+                    </Form> */}
+                    <Nav.Link href="/signin">Login</Nav.Link>
+                    <Nav.Link href="/signup">Sign Up</Nav.Link>
                   </div>
 
                 )}
@@ -148,6 +148,6 @@ class Header extends React.Component {
       );
     }
   }
-}
+// }
 
 export default Header;
