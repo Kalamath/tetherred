@@ -39,7 +39,7 @@ class Header extends React.Component {
 
   handleLogin(event) {
     event.preventDefault();
-    console.log('handleSubmit');
+    console.log('handleLogin');
     console.log(this.state.email);
 
     axios.post('/api/sessions/signin', {
@@ -53,7 +53,7 @@ class Header extends React.Component {
           // update App.js state
           this.props.updateUser({
             loggedIn: true,
-            email: response.data.email
+            id: response.data._id
           })
           // update the state to redirect to home
           this.setState({

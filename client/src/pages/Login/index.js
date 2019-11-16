@@ -111,7 +111,7 @@ class BasicTextFields extends React.Component {
               <div className="col">
                 <Form onSubmit={this.handleSubmit} className="form-signup">
                   <div className="text-center mb-4">
-                    <img className="mb-4" src={Logo} alt width="72" height="72" />
+                    <img className="mb-4" src={Logo} alt="" width="72" height="72" />
                     <h1 className="h3 mb-3 font-weight-normal">Welcome to Tetherred</h1>
                     <h2>Sign Up Here</h2>
                   </div>
@@ -170,7 +170,7 @@ class BasicTextFields extends React.Component {
                     />
                     <small id="emailHelp" className="form-text text-muted">Please enter a fake, simple password that you don't usually use.</small>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" className="btn btn-primary">Submit</button>
                   {/* <p>© Tetherred 2019</p> */}
                 </Form>
                 <br />
