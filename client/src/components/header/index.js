@@ -132,7 +132,7 @@ class Header extends React.Component {
                         </Col>
                         <Col>
                           <Form.Label></Form.Label>
-                          <Button variant="outline-success">Login</Button>
+                          <Button variant="outline-success" onClick={this.handleLogin}>Login</Button>
                         </Col>
                       </Form.Row>
                     </Form>

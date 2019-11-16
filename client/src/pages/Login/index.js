@@ -111,7 +111,7 @@ class BasicTextFields extends React.Component {
               <div className="col">
                 <Form onSubmit={this.handleSubmit} className="form-signup">
                   <div className="text-center mb-4">
-                    <img className="mb-4" src={Logo} alt="" width="72" height="72" />
+                    <img className="mb-4" src={Logo} width="72" height="72" />
                     <h1 className="h3 mb-3 font-weight-normal">Welcome to Tetherred</h1>
                     <h2>Sign Up Here</h2>
                   </div>
