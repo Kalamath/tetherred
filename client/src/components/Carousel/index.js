@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Carousel from 'react-bootstrap/Carousel'
 // import Container from 'react-bootstrap/Container'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+// import Jumbotron from 'react-bootstrap/Jumbotron'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import bike from "../../assets/imgs/bike.jpg";
-import lift from "../../assets/imgs/lift.jpg";
-import swim from "../../assets/imgs/swim.jpg";
+
 import axios from "axios"; 
 function makeRequest() {
   return axios.get('/api/news')

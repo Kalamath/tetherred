@@ -8,6 +8,7 @@ import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 // import Language from "@material-ui/icons/Language";
 
 // core components
+// import Carousel from "../../components/Carousel"
 import GridItem from "../../components/Grid/GridItem.js";
 import Container from 'react-bootstrap/Container';
 // import GridContainer from "../../components/Grid/GridContainer.js";
