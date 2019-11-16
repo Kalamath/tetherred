@@ -213,10 +213,8 @@ export default function CardBasic() {
                         </Card>
                     </GridItem> */}
                     <Chirpbox />
-                    
                 </GridContainer>
             </Container>
-
         </React.Fragment>
     );
 }
