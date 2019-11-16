@@ -81,6 +81,7 @@ class Profile extends React.Component {
 
 
     render() {
+        
         if (!this.state.loggedIn) {
             return (
                 <div className="container">
@@ -90,7 +91,6 @@ class Profile extends React.Component {
                 </div>
             );
         } else {
-
 
             return (
 
