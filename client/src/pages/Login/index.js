@@ -38,6 +38,7 @@ class BasicTextFields extends React.Component {
     super()
     this.state = {
       email: '',
+      username: '',
       password: '',
       redirectTo: null,
       id: null
@@ -148,10 +149,10 @@ class BasicTextFields extends React.Component {
                     value={this.state.email}
                     onChange={this.handleChange}
                   />
-                  <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
                 </div>
               </div>
             </div>
+
             <div className="row">
               <div className="col-6">
                 <div className="form-group">
@@ -163,11 +164,9 @@ class BasicTextFields extends React.Component {
                     id="passwordInput"
                     className="form-control"
                     name="password"
-                    aria-describedby="passwordHelp"
                     value={this.state.password}
                     onChange={this.handleChange}
                   />
-                  <small id="passwordHelp" className="form-text text-muted">test123</small>
                 </div>
               </div>
             </div>

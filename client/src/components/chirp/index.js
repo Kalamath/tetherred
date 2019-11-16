@@ -39,8 +39,10 @@ class chirps extends React.Component {
 
     getChirps() {
 
-        axios.get("/api/chirps/all").then(response => {
-            console.log(response);
+        axios.get("/api/chirps/all", {
+            withCredentials: true
+        }).then(response => {
+            console.log(response.data);
         }).catch(err => {
             console.log(`error at API call ${err}`);
         });
@@ -56,6 +58,15 @@ class chirps extends React.Component {
     handleSubmit(event) {
         event.preventDefault();
         console.log(this.state.postChirp);
+        axios.post("/api/chirps/post", {
+            body: this.state.postChirp
+        }, {
+            withCredentials: true
+        }).then( response => {
+            console.log(`chirp post response ${response}`);
+        }).catch( err => {
+            console.log(err)
+        });
        
     };
 

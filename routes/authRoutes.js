@@ -26,7 +26,7 @@ router.get('/', (req, res, next) => {
 router.post('/signup', (req, res) => {
     console.log('user signup');
 
-    const { email, password } = req.body;
+    const { email, username, password } = req.body;
     console.log("signup req.body :" + req);
     // ADD VALIDATION
     User.findOne({ email: email }, (err, user) => {
@@ -40,6 +40,7 @@ router.post('/signup', (req, res) => {
         else {
             const newUser = new User({
                 email: email,
+                username: username,
                 password: password
             })
             newUser.save((err, savedUser) => {
@@ -64,8 +65,9 @@ router.post(
     (req, res) => {
         console.log('logged in', req.user);
         var userInfo = {
+            id: req.user._id,
+            username: req.user.username,
             email: req.user.email,
-            id: req.user._id
         };
         res.send(userInfo);
     }

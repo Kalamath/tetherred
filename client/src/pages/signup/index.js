@@ -9,6 +9,7 @@ class SignUpPage extends React.Component {
     super()
     this.state = {
       email: '',
+      username: '',
       password: '',
       confirmPassword: '',
       redirectTo: null
@@ -33,6 +34,7 @@ class SignUpPage extends React.Component {
     //request to server to add a new username/password
     axios.post('/api/sessions/signup', {
       email: this.state.email,
+      username: this.state.username,
       password: this.state.password
     }, {
       withCredentials: true
@@ -74,7 +76,7 @@ class SignUpPage extends React.Component {
           <div className="row">
             <h1>SignUP to Create a New Account</h1>
           </div>
-         
+
           <form onSubmit={this.handleSubmit}>
             <div className="row">
               <div className="col-6">
@@ -87,14 +89,30 @@ class SignUpPage extends React.Component {
                     id="emailInput"
                     name="email"
                     className="form-control"
-                    aria-describedby="emailHelp"
                     value={this.state.email}
                     onChange={this.handleChange}
                   />
-                  <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
+                  
                 </div>
               </div>
             </div>
+
+            <div className="row">
+              <div className="col-6">
+                <div className="form-group">
+                  <label htmlFor="usernameInput">username</label>
+                  <input
+                    type="text"
+                    id="usernameInput"
+                    name="username"
+                    className="form-control"
+                    value={this.state.username}
+                    onChange={this.handleChange}
+                  />
+                </div>
+              </div>
+            </div>
+
             <div className="row">
               <div className="col-6">
                 <div className="form-group">
@@ -106,11 +124,9 @@ class SignUpPage extends React.Component {
                     id="passwordInput"
                     className="form-control"
                     name="password"
-                    aria-describedby="passwordHelp"
                     value={this.state.password}
                     onChange={this.handleChange}
                   />
-                  <small id="passwordHelp" className="form-text text-muted">test123</small>
                 </div>
               </div>
             </div>
