@@ -61,10 +61,83 @@ class BasicTextFields extends React.Component {
     if (this.state.redirectTo) {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
-
       return (
         <div>
-          < div className="container" >
+          <br />
+          <div className="container" >
+            <div className="row">
+              <div className="col">
+
+              </div>
+              <div className="col">
+                <Form onSubmit={this.handleSubmit} className="form-signup">
+                  <div className="text-center mb-4">
+                    <img className="mb-4" src={Logo} alt width="72" height="72" />
+                    <h1 className="h3 mb-3 font-weight-normal">Welcome to Tetherred</h1>
+                    <p>All Your Favorite Places Here</p>
+                  </div>
+
+                  <div className="form-group">
+                    <Form.Row>
+                      <Form.Group as={Col} md="6" controlId="">
+                        <Form.Label>First Name</Form.Label>
+                        <Form.Control
+                          required
+                          type="text"
+                          placeholder="First name"
+                        // defaultValue="Mark"
+                        />
+                        <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                      </Form.Group>
+                      <Form.Group as={Col} md="6" controlId="">
+                        <Form.Label>Last name</Form.Label>
+                        <Form.Control
+                          required
+                          type="text"
+                          placeholder="Last name"
+                        // defaultValue="Otto"
+                        />
+                        <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                      </Form.Group>
+                    </Form.Row>
+                  </div>
+                  {/* Email */}
+                  <div className="form-group">
+                    <label htmlFor="emailInput">Email</label>
+                    <input
+                      type="email"
+                      id="emailInput"
+                      name="email"
+                      className="form-control"
+                      aria-describedby="emailHelp"
+                      value={this.state.email}
+                      onChange={this.handleChange}
+                    />
+                    <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
+                  </div>
+                  {/* Password */}
+                  <div className="form-group">
+                    <label htmlFor="passwordInput">Password</label>
+                    <input
+                      type="password"
+                      id="passwordInput"
+                      name="password"
+                      className="form-control"
+                      aria-describedby="passwordHelp"
+                      value={this.state.password}
+                      onChange={this.handleChange}
+                    />
+                    <small id="emailHelp" className="form-text text-muted">Please enter a fake, simple password that you don't usually use.</small>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  {/* <p>© Tetherred 2019</p> */}
+                </Form>
+                <br />
+                <br />
+                <br />
+                <br />
+              </div>
+            </div>
             {/* <div className="row">
               <h1>Welcome To Tetherred</h1>
             </div> */}
@@ -98,68 +171,7 @@ class BasicTextFields extends React.Component {
               <button type="submit" class="btn btn-primary">Submit</button>
             </form> */}
             {/* Sign-Up Form */}
-            <Form onSubmit={this.handleSubmit} className="form-signup">
-              <div className="text-center mb-4">
-                <img className="mb-4" src={Logo} alt width="72" height="72" />
-                <h1 className="h3 mb-3 font-weight-normal">Welcome to Tetherred</h1>
-                <p>All Your Favorite Places Here</p>
-              </div>
 
-              <div className="form-group">
-                <Form.Row>
-                  <Form.Group as={Col} md="6" controlId="">
-                    <Form.Label>First Name</Form.Label>
-                    <Form.Control
-                      required
-                      type="text"
-                      placeholder="First name"
-                      defaultValue="Mark"
-                      />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                  </Form.Group>
-                  <Form.Group as={Col} md="6" controlId="">
-                    <Form.Label>Last name</Form.Label>
-                    <Form.Control
-                      required
-                      type="text"
-                      placeholder="Last name"
-                      defaultValue="Otto"
-                    />
-                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
-                  </Form.Group>
-                </Form.Row>
-              </div>
-              {/* Email */}
-              <div className="form-group">
-                <label htmlFor="emailInput">Email</label>
-                <input
-                  type="email"
-                  id="emailInput"
-                  name="email"
-                  className="form-control"
-                  aria-describedby="emailHelp"
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                />
-                <small id="emailHelp" className="form-text text-muted">secret@email.com</small>
-              </div>
-              {/* Password */}
-              <div className="form-group">
-                <label htmlFor="passwordInput">Password</label>
-                <input
-                  type="password"
-                  id="passwordInput"
-                  name="password"
-                  className="form-control"
-                  aria-describedby="passwordHelp"
-                  value={this.state.password}
-                  onChange={this.handleChange}
-                />
-              </div>
-              <div></div>
-              <button type="submit" class="btn btn-primary">Submit</button>
-              <p>© Tetherred 2019</p>
-            </Form>
           </div >
         </div>
       )

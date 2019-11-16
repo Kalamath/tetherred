@@ -7,7 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-import logo from '../../assets/imgs/TetherredFullWhite.png';
+import logo from '../../assets/imgs/TetherredFullBlack.png';
 
 
 class Header extends React.Component {
@@ -48,16 +48,14 @@ class Header extends React.Component {
                   <Form>
                     <Form.Row>
                       <Col>
-                        <Form.Control type="text" placeholder="Search" className="mr-sm-2" />
-                        <Form.Label>Email</Form.Label>
+                        <Form.Control type="text" placeholder="Email" className="mr-sm-2" />
                       </Col>
                       <Col>
-                        <Form.Control type="text" placeholder="Search" className="mr-sm-2" />
-                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="text" placeholder="Password" className="mr-sm-2" />
                       </Col>
                       <Col>
                         <Form.Label></Form.Label>
-                        <Button variant="outline-success">Search</Button>
+                        <Button variant="outline-success">Login</Button>
                       </Col>
                     </Form.Row>
                   </Form>

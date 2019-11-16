@@ -14,7 +14,7 @@ class Header extends React.Component {
 
     return (
         <Navbar sticky="bottom" bg="light">
-        <Navbar.Brand href="#home">Brand link</Navbar.Brand>
+        <Navbar.Brand href="#home">© Tetherred 2019</Navbar.Brand>
       </Navbar>
 
     );
