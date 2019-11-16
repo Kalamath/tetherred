@@ -18,15 +18,11 @@ import axios from 'axios';
 
 import Dashboard from './pages/dashboard';
 
-<<<<<<< HEAD
 import Header from './components/Header';
 import Footer from './components/Footer';
-=======
-import Header from './components/header';
->>>>>>> 11c9e409d0941a37127f1d4d1e8a67556dfa6871
 import Login from './pages/Login';
-import Logout from './pages/logout';
-import Signup from './pages/signup';
+import Logout from './pages/Logout';
+import Signup from './pages/Signup';
 
 // import UserProfile from "./pages/UserProfile";
 import Profile from "./pages/Profile";
