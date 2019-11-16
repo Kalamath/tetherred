@@ -7,7 +7,9 @@ class Profile extends React.Component {
         super()
         this.state = {
             loggedIn: false,
-            email: null
+            id: null,
+            name: null,
+            description: null
         }
 
         this.getUser = this.getUser.bind(this)
@@ -24,41 +26,53 @@ class Profile extends React.Component {
     }
 
     getUser() {
-        axios.get('/api/sessions').then(response => {
+        axios.get('/api/sessions', {
+            withCredentials: true
+          }).then(response => {
             console.log('Get user response: ')
             console.log(response.data);
+            // console.log("req.user "+ req.user);
             if (response.data.user) {
                 console.log('Get User: There is a user saved in the server session: ')
 
                 this.setState({
                     loggedIn: true,
-                    email: response.data.user.email
+                    id: response.data.user._id
                 });
-                console.log(`email from state ${this.state.email}`);
+                console.log(`id from state ${this.state.id}`);
                 this.getUserProfile();
             } else {
                 console.log('Get user: no user');
                 this.setState({
                     loggedIn: false,
-                    email: null
+                    id: null
                 })
             }
         })
     };
 
     getUserProfile = () => {
-        axios.get(`/api/profile/${this.state.email}`, 
-        ).then(res => {
-            console.log(res);
+        axios.get(`/api/profile/${this.state.id}`, {
+            withCredentials: true
+        }).then(response => {
+            console.log(response.data);
+            // console.log(`get profile response ${response}`);
+            this.setState({
+                name: response.data.name,
+                description: response.data.description
+            })
         }).catch(err => {
             console.log(err);
         });
     };
 
     updateProfile = () => {
-        const url = `/api/profile/${this.state.email}`;
+        const url = `/api/profile/${this.state.id}`;
         console.log(url);
-        axios.post(url)
+        
+        axios.post(url, {}, {
+            withCredentials: true
+        })
         .then(response => {
             console.log(`resp from profile post call ${response}`)
         }).catch(err => {
@@ -83,7 +97,8 @@ class Profile extends React.Component {
 
                 <div className="container">
                     <div className="alert alert-success">
-                        welcome to the profile page of {this.state.email}
+                        welcome to the profile page of {this.state.name}
+                        <p> Here's a short description "{this.state.description}"</p>
                     </div>
                     <button className="btn btn-info" onClick={this.updateProfile}> update profile </button>
                 </div>

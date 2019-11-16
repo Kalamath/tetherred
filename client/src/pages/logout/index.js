@@ -19,12 +19,14 @@ class Logout extends React.Component {
 
     logout() {
         console.log('logging out');
-        axios.post('/api/sessions/logout').then(response => {
+        axios.post('/api/sessions/logout', {
+                withCredentials: true
+        }).then(response => {
             console.log(response.data)
             if (response.status === 200) {
                 this.props.updateUser({
                     loggedIn: false,
-                    email: null
+                    id: null
                 })
                 // update the state to redirect to home
                 this.setState({

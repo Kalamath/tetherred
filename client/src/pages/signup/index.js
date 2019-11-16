@@ -64,6 +64,8 @@ class SignUpPage extends React.Component {
     axios.post('/api/sessions/signup', {
       email: this.state.email,
       password: this.state.password
+    }, {
+      withCredentials: true
     })
       .then(response => {
         console.log("signup response : ");
