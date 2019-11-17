@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import UserProfile from "../UserProfile";
 
 import UserProfile from "../UserProfile"
 import Button from "../../components/CustomButtons/Button.js";
@@ -147,6 +148,7 @@ class Profile extends React.Component {
                         <GridItem xs={12} sm={12} md={1}></GridItem>
                         </GridContainer>
                     </div>
+
                     <div>
                         <UserProfile />
                     </div>

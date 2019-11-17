@@ -42,7 +42,8 @@ class Chirps extends React.Component {
         axios.get("/api/chirps/all", {
             withCredentials: true
         }).then(response => {
-            console.log(response.data);
+            this.setState({ allChirps: response.data});
+            console.log(this.state.allChirps);
         }).catch(err => {
             console.log(`error at API call ${err}`);
         });
@@ -71,7 +72,7 @@ class Chirps extends React.Component {
     };
 
     render() {
-        // console.log(this.state.postChirp);
+        console.log(this.state.postChirp);
         return (
 
             <GridItem xs={12} sm={12} md={3}>

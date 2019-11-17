@@ -20,6 +20,7 @@ import TextField from '@material-ui/core/TextField';
 // import blue from "../../assets/imgs/blue.jpg";
 import paperMario from "../../assets/imgs/paper-mario.webp";
 import spotify from "../../assets/imgs/spotify.png";
+import Chirpbox from "../../components/Chirp";
 
 const styles = {
   cardCategoryWhite: {
@@ -191,7 +192,7 @@ export default function UserProfile() {
               </CardBody>
             </Card>
           </GridItem>
-          <GridItem xs={12} sm={12} md={3}>
+          {/* <GridItem xs={12} sm={12} md={3}>
             <Card style={{ width: "100%" }}>
               <CardHeader color="info">
                 <h4>Chirp Box</h4>
@@ -210,7 +211,8 @@ export default function UserProfile() {
                 <Button color="info">Chirp</Button>
               </CardBody>
             </Card>
-          </GridItem>
+          </GridItem> */}
+          <Chirpbox />
         </GridContainer>
       </Container>
     </div>

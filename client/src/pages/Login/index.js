@@ -51,8 +51,10 @@ class BasicTextFields extends React.Component {
       }).catch(error => {
         console.log('login error: ')
         console.log(error);
+
       })
   };
+
   // And return the JS
   render() {
     if (this.state.redirectTo) {
