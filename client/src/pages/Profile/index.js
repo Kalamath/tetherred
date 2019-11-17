@@ -1,6 +1,17 @@
 import React from "react";
 import axios from "axios";
 
+import UserProfile from "../UserProfile"
+import Button from "../../components/CustomButtons/Button.js";
+import Card from "../../components/Card/Card.js";
+import CardAvatar from "../../components/Card/CardAvatar.js";
+import CardBody from "../../components/Card/CardBody.js";
+
+import avatar from "../../assets/imgs/faces/face-3.jpg";
+import blue from "../../assets/imgs/blue.jpg";
+import GridContainer from "../../components/Grid/GridContainer";
+import GridItem from "../../components/Grid/GridItem.js";
+
 class Profile extends React.Component {
 
     constructor() {
@@ -28,7 +39,7 @@ class Profile extends React.Component {
     getUser() {
         axios.get('/api/sessions', {
             withCredentials: true
-          }).then(response => {
+        }).then(response => {
             console.log('Get user response: ')
             console.log(response.data);
             // console.log("req.user "+ req.user);
@@ -68,20 +79,20 @@ class Profile extends React.Component {
     updateProfile = () => {
         const url = `/api/profile/${this.state.id}`;
         console.log(url);
-        
+
         axios.post(url, {}, {
             withCredentials: true
         })
-        .then(response => {
-            console.log(`resp from profile post call ${response}`)
-        }).catch(err => {
-            console.log(err)
-        });
+            .then(response => {
+                console.log(`resp from profile post call ${response}`)
+            }).catch(err => {
+                console.log(err)
+            });
     };
 
 
     render() {
-        
+
         if (!this.state.loggedIn) {
             return (
                 <div className="container">
@@ -93,14 +104,53 @@ class Profile extends React.Component {
         } else {
 
             return (
-
-                <div className="container">
-                    <div className="alert alert-success">
-                        welcome to the profile page of {this.state.name}
-                        <p> Here's a short description "{this.state.description}"</p>
+                <React.Fragment>
+                    {/* <div className="container">
+                        <div className="alert alert-success">
+                            welcome to the profile page of {this.state.name}
+                            <p> Here's a short description "{this.state.description}"</p>
+                        </div>
+                        <button className="btn btn-info" onClick={this.updateProfile}> update profile </button>
+                    </div> */}
+                    <div>
+                        <GridContainer>
+                        <GridItem xs={12} sm={12} md={1}></GridItem>
+                        <GridItem xs={12} sm={12} md={10}>
+                        <Card profile>
+                            <img
+                                // className={classes.cardImgTop}
+                                data-src="holder.js/100px180/"
+                                alt="100%x180"
+                                style={{ height: "180px", width: "100%", display: "block" }}
+                                src={blue}
+                                data-holder-rendered="true"
+                            />
+                            <CardAvatar profile>
+                                <a href="#pablo" onClick={e => e.preventDefault()}>
+                                    <img src={avatar} alt="..." />
+                                </a>
+                            </CardAvatar>
+                            <CardBody profile>
+                                {/* <h6 className={classes.cardCategory}>OVO</h6> */}
+                                <h4 className={this.state.name}>Aubrey Graham</h4>
+                                <p className={this.state.description}>
+                                    Don{"'"}t be scared of the truth because we need to restart the
+                                    human foundation in truth And I love you like Kanye loves Kanye
+                                    I love Rick Owens’ bed design but the back is...
+                                </p>
+                                <Button color="success" round onClick={this.updateProfile}>
+                                    Update Profile
+                                </Button>
+                            </CardBody>
+                        </Card>
+                        </GridItem>
+                        <GridItem xs={12} sm={12} md={1}></GridItem>
+                        </GridContainer>
                     </div>
-                    <button className="btn btn-info" onClick={this.updateProfile}> update profile </button>
-                </div>
+                    <div>
+                        <UserProfile />
+                    </div>
+                </React.Fragment>
             );
         }
     }

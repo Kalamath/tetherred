@@ -24,8 +24,8 @@ import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
 
-import UserProfile from "./pages/UserProfile";
-// import Profile from "./pages/Profile";
+// import UserProfile from "./pages/UserProfile";
+import Profile from "./pages/Profile";
 
 
 class App extends React.Component {
@@ -85,7 +85,7 @@ class App extends React.Component {
             updateUser={this.updateUser}
           />} />
 
-        <Route path="/profile" exact={true} component={UserProfile} />
+        <Route path="/profile" exact={true} component={Profile} />
 
         <Route path="/dashboard" exact={true} component={Dashboard} />
 
