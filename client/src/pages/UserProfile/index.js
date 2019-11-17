@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
-import CardAvatar from "../../components/Card/CardAvatar.js";
+// import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
 import CardHeader from "../../components/Card/CardHeader.js";
 import Container from 'react-bootstrap/Container';
@@ -16,8 +16,8 @@ import GridItem from "../../components/Grid/GridItem.js";
 // import InputLabel from "@material-ui/core/InputLabel";
 import TextField from '@material-ui/core/TextField';
 
-import avatar from "../../assets/imgs/faces/face-3.jpg";
-import blue from "../../assets/imgs/blue.jpg";
+// import avatar from "../../assets/imgs/faces/face-3.jpg";
+// import blue from "../../assets/imgs/blue.jpg";
 import paperMario from "../../assets/imgs/paper-mario.webp";
 import spotify from "../../assets/imgs/spotify.png";
 import Chirpbox from "../../components/Chirp";
@@ -51,7 +51,7 @@ export default function UserProfile() {
         <GridItem xs={12} sm={12} md={1}>
         </GridItem>
         <GridItem xs={12} sm={12} md={10}>
-          <Card profile>
+          {/* <Card profile>
             <img
               className={classes.cardImgTop}
               data-src="holder.js/100px180/"
@@ -77,7 +77,7 @@ export default function UserProfile() {
                 Follow
           </Button>
             </CardBody>
-          </Card>
+          </Card> */}
         </GridItem>
         <GridItem xs={12} sm={12} md={1}>
         </GridItem>
