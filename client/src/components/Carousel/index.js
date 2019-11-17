@@ -16,25 +16,35 @@ function TopCarousel() {
   // should wrap inside try catch 
   // to prevent errors and you need a catch
   // async MUST appear before callback function
-  useEffect( async () => {
-    try {
-      const response = await makeRequest();
-      // not sure why but we had to create collection of components or we got
-      // stupid error...
-      const componentCollection = response.data.map((item, index) => {
-        return ( 
-          <Carousel.Item key={index}>
-            <img src={item.image} />
-            <Carousel.Caption>
-              <p>{item.title}</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        )
-      });
-      setData(componentCollection);
-    } catch(e) {
-      console.log(e);
-    } 
+  useEffect( () => {
+    
+      (async function() {
+
+        try {
+
+          const response = await makeRequest();
+          console.log(response);
+          // not sure why but we had to create collection of components or we got
+          // stupid error...
+          const componentCollection = response.data.map((item, index) => {
+            return ( 
+              <Carousel.Item key={index}>
+                <img src={item.image} />
+                <Carousel.Caption>
+                  <p>{item.title}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            )
+          });
+          setData(componentCollection);
+          console.log('balfldsjfljsk', componentCollection);
+        } catch(e) {
+          console.log(e);
+        } 
+
+      })();
+
+
   }, []);
 
   return (
