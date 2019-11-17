@@ -4,7 +4,7 @@ const userRoutes = require("./authRoutes");
 const chirpRoutes = require("./chirpRoutes");
 const userProfileRoutes = require("./userProfileRoutes");
 
-// const newsRoutes = require("./newsRoutes");
+const newsRoutes = require("./newsRoutes");
 
 
 
@@ -15,7 +15,8 @@ router.use("/api/chirps", chirpRoutes);
 
 router.use("/api/profile", userProfileRoutes);
 
-// router.use("/api/news", newsRoutes); 
+// please dont touch this code
+router.use("/api", newsRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function (req, res) {
