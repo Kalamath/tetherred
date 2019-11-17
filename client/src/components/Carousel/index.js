@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Carousel from 'react-bootstrap/Carousel'
 // import Container from 'react-bootstrap/Container'
-// import Jumbotron from 'react-bootstrap/Jumbotron'
+import Jumbotron from 'react-bootstrap/Jumbotron'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import axios from "axios"; 
 function makeRequest() {
   return axios.get('/api/news')
+  
 }
 function TopCarousel() {
   const [articles, setData] = useState([]); 
   // async await is the same as .then but prettier
   // should wrap inside try catch 
-  // to prevent errors and you need a freaking catch
+  // to prevent errors and you need a catch
   // async MUST appear before callback function
   useEffect( async () => {
     try {
@@ -37,7 +38,7 @@ function TopCarousel() {
   }, []);
 
   return (
-    // <Jumbotron>
+   <Jumbotron>
         
         <Carousel>
           
@@ -45,7 +46,7 @@ function TopCarousel() {
           
         </Carousel>
    
-    // </Jumbotron>
+     </Jumbotron> 
   );
 }
 
