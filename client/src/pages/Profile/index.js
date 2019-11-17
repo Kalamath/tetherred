@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import UserProfile from "../UserProfile";
 
 class Profile extends React.Component {
 
@@ -100,6 +101,7 @@ class Profile extends React.Component {
                         <p> Here's a short description "{this.state.description}"</p>
                     </div>
                     <button className="btn btn-info" onClick={this.updateProfile}> update profile </button>
+                    <UserProfile/>
                 </div>
             );
         }

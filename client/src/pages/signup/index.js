@@ -131,7 +131,7 @@ class SignUpPage extends React.Component {
 
             <div className="row">
               <div className="col">
-                <button type="submit">Login</button>
+                <button type="submit">signup</button>
               </div>
             </div>
           </form>
