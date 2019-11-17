@@ -2,12 +2,11 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Logo from '../../assets/imgs/Logo.png';
+// import Col from 'react-bootstrap/Col';
+// import Form from 'react-bootstrap/Form';
+// import Logo from '../../assets/imgs/Logo.png';
 
 class BasicTextFields extends React.Component {
-
   constructor() {
     super()
     this.state = {
@@ -19,20 +18,16 @@ class BasicTextFields extends React.Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
-
   }
-
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
     })
   }
-
   handleSubmit(event) {
     event.preventDefault();
     console.log('handleSubmit');
     console.log(this.state.email);
-
     axios.post('/api/sessions/signin', {
       email: this.state.email,
       password: this.state.password
@@ -71,7 +66,6 @@ class BasicTextFields extends React.Component {
             <div className="row">
               <h1>Welcome To Tetherred</h1>
             </div>
-
             <form onSubmit={this.handleSubmit}>
               <div className="row">
                 <div className="col-6">
@@ -89,7 +83,6 @@ class BasicTextFields extends React.Component {
                   </div>
                 </div>
               </div>
-
               <div className="row">
                 <div className="col-6">
                   <div className="form-group">
@@ -114,10 +107,6 @@ class BasicTextFields extends React.Component {
       )}
   }
 }
-
     
-
-
-
 export default BasicTextFields;
 

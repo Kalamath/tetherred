@@ -1,27 +1,27 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 
-import Col from 'react-bootstrap/Col';
+// import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
+// import Form from 'react-bootstrap/Form';
 // import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 
-import axios from "axios";
-import { Redirect } from 'react-router-dom';
+// import axios from "axios";
+// import { Redirect } from 'react-router-dom';
 
 
 import logo from '../../assets/imgs/TetherredFullBlack.png';
 
 
 class Header extends React.Component {
-
+  
   render() {
-
     const loggedIn = this.props.loggedIn;
     console.log('header render, props: ')
     console.log(this.props);
+
 
     return (
       <Navbar>
@@ -48,6 +48,7 @@ class Header extends React.Component {
               </div>
 
             ) : (
+
 
                 <div>
                   <Nav.Link href="/signin">Login</Nav.Link>
