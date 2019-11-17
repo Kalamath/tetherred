@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import UserProfile from "../UserProfile";
 
-import UserProfile from "../UserProfile"
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardAvatar from "../../components/Card/CardAvatar.js";

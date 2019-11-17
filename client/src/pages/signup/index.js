@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import { Redirect } from 'react-router-dom';
+import Logo from '../../assets/imgs/Logo.png';
+
 
 
 class SignUpPage extends React.Component {
@@ -70,76 +72,86 @@ class SignUpPage extends React.Component {
     } else {
 
       return (
-        <div className="container">
-          <div className="row">
-            <h1>SignUP to Create a New Account</h1>
-          </div>
 
-          <form onSubmit={this.handleSubmit}>
-            <div className="row">
+        <div>
+          <br />
+          <div className="container" >
+            <div className="row content-justify-center">
+              <div className="col-3">
+              </div>
+
               <div className="col-6">
-                <div className="form-group">
-                  <label htmlFor="emailInput">
-                    Email
-                      </label>
-                  <input
-                    type="email"
-                    id="emailInput"
-                    name="email"
-                    className="form-control"
-                    value={this.state.email}
-                    onChange={this.handleChange}
-                  />
-                  
-                </div>
-              </div>
-            </div>
+                <form className="form-signup">
+                  <div className="text-center mb-4">
+                    <img className="mb-4" src={Logo} alt="" width="72" height="72" />
+                    <h1 className="h3 mb-3 font-weight-normal"> Welcome to Tetherred</h1>
+                    <h2>Sign up to Create a New Account</h2>
+                  </div>
 
-            <div className="row">
-              <div className="col-6">
-                <div className="form-group">
-                  <label htmlFor="usernameInput">username</label>
-                  <input
-                    type="text"
-                    id="usernameInput"
-                    name="username"
-                    className="form-control"
-                    value={this.state.username}
-                    onChange={this.handleChange}
-                  />
-                </div>
-              </div>
-            </div>
+                  <div className="form-group">
+                    <form onSubmit={this.handleSubmit}>
+                      <div className="form-group">
+                        <label htmlFor="emailInput">Email</label>
+                        <input
+                          type="email"
+                          id="emailInput"
+                          name="email"
+                          className="form-control"
+                          aria-describedby="emailHelp"
+                          value={this.state.email}
+                          onChange={this.handleChange}
+                        />
+                      </div>
 
-            <div className="row">
-              <div className="col-6">
-                <div className="form-group">
-                  <label htmlFor="passwordInput">
-                    Password
-                      </label>
-                  <input
-                    type="password"
-                    id="passwordInput"
-                    className="form-control"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                  />
-                </div>
-              </div>
-            </div>
+                      <div className="form-group">
+                        <label htmlFor="usernameInput"> Username </label>
+                        <input
+                          type="text"
+                          id="usernameInput"
+                          name="username"
+                          className="form-control"
 
-            <div className="row">
-              <div className="col">
-                <button type="submit">signup</button>
+                          value={this.state.username}
+                          onChange={this.handleChange}
+                        />
+                      </div>
+
+                      <div className="form-group">
+                        <label htmlFor="passwordInput">
+                          Password
+                        </label>
+                        <input
+                          type="password"
+                          id="passwordInput"
+                          className="form-control"
+                          name="password"
+                          value={this.state.password}
+                          onChange={this.handleChange}
+                        />
+                        <small id="passwordHelp" className="form-text text-muted">Please enter a password of 6 or more charachters.</small>
+                      </div>
+                      <hr></hr>
+
+                      <button type="submit" className="btn btn-primary">Login</button>
+                    </form>
+
+                  </div>
+
+                  {/* <p>© Tetherred 2019</p>  */}
+                </form>
+                <br />
+                <br />
+                <br />
+                <br />
               </div>
             </div>
-          </form>
+          </div >
         </div>
-      )
-
+          )
+        }
+      }
     }
-  }
-}
 
+
+            
 export default SignUpPage;
