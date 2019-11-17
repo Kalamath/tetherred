@@ -86,6 +86,7 @@ class App extends React.Component {
           />} />
 
         <Route path="/profile" exact={true} component={Profile} />
+
         <Route path="/dashboard" exact={true} component={Dashboard} />
 
         <Route path="/signup" exact={true}

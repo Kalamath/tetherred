@@ -14,7 +14,6 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import logo from '../../assets/imgs/TetherredFullBlack.png';
 
-
 class Header extends React.Component {
   render() {
     const loggedIn = this.props.loggedIn;
@@ -52,4 +51,5 @@ class Header extends React.Component {
     );
   }
 }
+
 export default Header;
