@@ -14,7 +14,6 @@ import Navbar from 'react-bootstrap/Navbar';
 
 import logo from '../../assets/imgs/TetherredFullBlack.png';
 
-
 class Header extends React.Component {
 
   render() {
@@ -79,5 +78,5 @@ class Header extends React.Component {
   }
 }
 
-
 export default Header;
+
