@@ -16,7 +16,7 @@ import logo from '../../assets/imgs/TetherredFullBlack.png';
 
 
 class Header extends React.Component {
-  
+
   render() {
     const loggedIn = this.props.loggedIn;
     console.log('header render, props: ')
@@ -25,7 +25,8 @@ class Header extends React.Component {
 
     return (
       <Navbar>
-        <Navbar.Brand href="#home">
+        {loggedIn ? (
+        <Navbar.Brand href="/dashboard">
           <img
             alt=""
             src={logo}
@@ -34,30 +35,44 @@ class Header extends React.Component {
             className="d-inline-block align-top"
           />
         </Navbar.Brand>
+        
+        ) : ( 
+          <Navbar.Brand href="/">
+          <img
+            alt=""
+            src={logo}
+            width="300"
+            height="62.5"
+            className="d-inline-block align-top"
+          />
+        </Navbar.Brand>
+        )}
         <Navbar.Toggle />
-        <Navbar.Collapse className="justify-content-end">
-          <Nav className="justify-content-end">
-            {loggedIn ? (
+        {loggedIn ? (
 
-              <div>
+          <Navbar.Collapse className="justify-content-end">
+            <Nav className="justify-content-end">
 
-                <Nav.Link href="/dashboard">Home</Nav.Link>
-                <Nav.Link href="/profile">Profile</Nav.Link>
-                <Nav.Link href="/logout">Logout</Nav.Link>
+              <Nav.Link href="/dashboard">Home</Nav.Link>
+              <Nav.Link href="/profile">Profile</Nav.Link>
+              <Nav.Link href="/logout">Logout</Nav.Link>
 
-              </div>
-
-            ) : (
+            </Nav>
+          </Navbar.Collapse>
 
 
-                <div>
-                  <Nav.Link href="/signin">Login</Nav.Link>
-                  <Nav.Link href="/signup">Sign Up</Nav.Link>
-                </div>
+        ) : (
 
-              )}
-          </Nav>
-        </Navbar.Collapse>
+            <Navbar.Collapse className="justify-content-end">
+              <Nav className="justify-content-end">
+
+                <Nav.Link href="/signup">Sign Up</Nav.Link>
+
+              </Nav>
+            </Navbar.Collapse>
+
+          )}
+
       </Navbar>
 
     );
