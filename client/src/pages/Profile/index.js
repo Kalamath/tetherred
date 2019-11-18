@@ -11,6 +11,8 @@ import avatar from "../../assets/imgs/faces/face-3.jpg";
 import blue from "../../assets/imgs/blue.jpg";
 import GridContainer from "../../components/Grid/GridContainer";
 import GridItem from "../../components/Grid/GridItem.js";
+import Modal from "../../components/Modal";
+// import { Modal } from "@material-ui/core";
 
 class Profile extends React.Component {
 
@@ -139,8 +141,9 @@ class Profile extends React.Component {
                                     I love Rick Owens’ bed design but the back is...
                                 </p>
                                 <Button color="success" round onClick={this.updateProfile}>
-                                    Update Profile
+                                    Follow
                                 </Button>
+                                <Modal />
                             </CardBody>
                         </Card>
                         </GridItem>
