@@ -3,14 +3,15 @@ import Carousel from 'react-bootstrap/Carousel'
 // import Container from 'react-bootstrap/Container'
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Container from 'react-bootstrap/Container'
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
 
 import axios from "axios";
 function makeRequest() {
   return axios.get('/api/news')
 
 }
+
 function TopCarousel() {
   const [articles, setData] = useState([]);
   // async await is the same as .then but prettier
@@ -29,14 +30,19 @@ function TopCarousel() {
         // stupid error...
         const componentCollection = response.data.map((item, index) => {
           return (
-            <Carousel.Item key={index}>
+            <Carousel.Item key={index} className="containDiv"
+            // style={{ position: "relative", width: "100%" }}
+            >
               <img
-                className="d-inline-block w-100"
+                className="d-block w-100"
                 src={item.image}
+                style={{ width: 600, height: 600, objectFit: "cover", opacity: 1 }} 
                 alt=""
               />
               <Carousel.Caption>
-                <p>{item.title}</p>
+                  <h1
+                    className="text"
+                  >{item.title}</h1>
               </Carousel.Caption>
             </Carousel.Item>
           )
@@ -49,11 +55,14 @@ function TopCarousel() {
 
     })();
 
-
   }, []);
 
   return (
-    <Container>
+    <GridContainer>
+      <GridItem xs={12} sm={12} md={1}>
+        </GridItem>
+
+      <GridItem xs={12} sm={12} md={10}>
       <Jumbotron>
         <Carousel>
 
@@ -62,7 +71,11 @@ function TopCarousel() {
         </Carousel>
 
       </Jumbotron>
-    </Container>
+        </GridItem>
+
+      <GridItem xs={12} sm={12} md={1}>
+        </GridItem>
+    </GridContainer>
   );
 }
 
