@@ -79,8 +79,6 @@ class Login extends React.Component {
 
                   <div className="form-group">
                     <form onSubmit={this.handleSubmit}>
-                      {/* <div className="row"> */}
-                        {/* <div className="col-12"> */}
                           <div className="form-group">
                             <label htmlFor="emailInput">Email</label>
                             <input
@@ -92,11 +90,7 @@ class Login extends React.Component {
                               value={this.state.email}
                               onChange={this.handleChange}
                             />
-                          {/* </div> */}
-                        {/* </div> */}
                       </div>
-                      {/* <div className="row"> */}
-                        {/* <div className="col-12"> */}
                           <div className="form-group">
                             <label htmlFor="passwordInput">
                               Password
@@ -109,11 +103,8 @@ class Login extends React.Component {
                               value={this.state.password}
                               onChange={this.handleChange}
                             />
-                            <small id="emailHelp" className="form-text text-muted">Please enter a fake, simple password that you don't usually use.</small>
                           </div>
                           <hr></hr>
-                        {/* </div> */}
-                      {/* </div> */}
                       <button type="submit" className="btn btn-primary">Login</button>
                     </form>
 
