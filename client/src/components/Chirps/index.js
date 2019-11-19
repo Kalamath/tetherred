@@ -1,3 +1,4 @@
+// from tetherred branch 
 import React from "react";
 // import { Redirect } from './node_modules/react-router-dom';
 import axios from "axios";
@@ -14,17 +15,17 @@ import Button from "../CustomButtons/Button.js";
 
 class Chirps extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             postChirp: "",
-            allChirps: ""
+            allChirps: [],
+            loading: false
         }
 
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
 
-        this.componentDidMount = this.componentDidMount.bind(this)
         this.getChirps = this.getChirps.bind(this)
 
     }
@@ -33,21 +34,26 @@ class Chirps extends React.Component {
         this.getChirps();
     };
 
-    // componentWillUnmount() {
-    //     clearInterval();
-    // }
 
     getChirps() {
 
-        axios.get("/api/chirps/all", {
-            withCredentials: true
-        }).then(response => {
-            this.setState({ allChirps: response.data});
-            console.log(this.state.allChirps);
-        }).catch(err => {
-            console.log(`error at API call ${err}`);
-        });
-        // setInterval(this.getChirps, 2000);
+        if (this.state.loading) {
+            return;
+        }
+
+        this.setState({loading: true}, () => {
+            axios.get("/api/chirps/all", {
+                withCredentials: true
+            }).then(response => {
+                this.setState({ allChirps: response.data, loading: false }, () => {
+                    setTimeout(this.getChirps, 2000);
+                    console.log(this.state.allChirps);
+                });
+            }).catch(err => {
+                console.log(`error at API call ${err}`);
+            });
+        })
+
     };
 
     handleChange(event) {
@@ -63,16 +69,20 @@ class Chirps extends React.Component {
             body: this.state.postChirp
         }, {
             withCredentials: true
-        }).then( response => {
+        }).then(response => {
             console.log(`chirp post response ${response}`);
-        }).catch( err => {
+        }).catch(err => {
             console.log(err)
         });
-       
+
     };
 
     render() {
-        console.log(this.state.postChirp);
+
+        // console.log(this.state.postChirp);
+        console.log(this.state.allChirps);
+
+        
         return (
 
             <GridItem xs={12} sm={12} md={3}>
@@ -103,28 +113,29 @@ class Chirps extends React.Component {
                 </Card>
                 {/* Pop Up Chirp Here */}
                 <div>
-                <Card style={{ width: "100%" }}>
-                    <CardHeader color="primary">
-                        <h4>Drake's Chirp</h4>
-                    </CardHeader>
-                    <CardBody>
-                        <TextField
-                            id="outlined-multiline-static"
-                            label="Write Chirp Here"
-                            defaultValue={this.state.postChirp}
-                            multiline
-                            rows="5"
-                            // className={classes.textField}
-                            margin="normal"
-                            variant="outlined"
-                            name="chirpbox"
-                            onChange={event => {
-                                const { value } = event.target;
-                                this.setState({ postChirp: value });
-                            }}
-                        />
-                    </CardBody>
-                </Card>
+                    <Card style={{ width: "100%" }}>
+                        <CardHeader color="primary">
+                            <h4>what's Chirpin'</h4>
+                        </CardHeader>
+
+                        {this.state.allChirps ? this.state.allChirps.map(chirps => {
+                            return (
+                                <CardBody key={chirps._id}>
+                                    <TextField
+                                        id="outlined-multiline-static"
+                                        label={chirps.author}
+                                        defaultValue={chirps.body}
+                                        multiline
+                                        rows="5"
+                                        margin="normal"
+                                        variant="outlined"
+                                        name="chirpbox"
+                                    />
+                                </CardBody>
+                            )
+                        }) : 'not loaded'}
+
+                    </Card>
                 </div>
             </GridItem>
         )
