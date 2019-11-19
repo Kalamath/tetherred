@@ -12,12 +12,12 @@ import CardHeader from "../Card/CardHeader.js";
 import TextField from '@material-ui/core/TextField';
 
 
-export default function Trending() {
+export default function Advertisement() {
 
     return (
         // <GridItem xs={12} sm={12} md={4}>
             <Card style={{ width: "100%" }}>
-            <CardHeader color="danger"><h4>Trending</h4></CardHeader>
+            <CardHeader color="danger"><h4>Advertisement</h4></CardHeader>
                 <CardBody>
                     <TextField
                         id="outlined-multiline-static"

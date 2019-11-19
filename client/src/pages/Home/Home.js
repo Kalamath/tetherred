@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // import Language from "@material-ui/icons/Language";
 
 // core components
-import Carousel from "../../components/Carousel"
+// import Carousel from "../../components/Carousel"
 import GridItem from "../../components/Grid/GridItem.js";
 import Container from 'react-bootstrap/Container';
 // import GridContainer from "../../components/Grid/GridContainer.js";
@@ -31,6 +31,9 @@ import GridContainer from "../../components/Grid/GridContainer.js";
 import Chirpbox from "../../components/Chirp";
 import Trending from "../../components/Trending";
 import Advertisement from "../../components/Advertisement";
+import EntertainmentBox from "../../components/EntertainmentBox";
+import SportsBox from "../../components/SportsBox";
+import NewsBox from "../../components/NewsBox";
 
 
 const styles = {
@@ -53,7 +56,19 @@ export default function CardBasic() {
     return (
         <React.Fragment>
             {/* <GridContainer>  */}
-            <Carousel />
+            <GridContainer>
+
+            <NewsBox />
+            
+            <EntertainmentBox />
+
+            <SportsBox />
+
+            </GridContainer>
+
+            {/* Ashton's Carousel */}
+            {/* <Carousel /> */}
+
             {/* <GridItem xs={12} sm={12} md={1}>
                 </GridItem>
                 <GridItem xs={12} sm={12} md={10}>
