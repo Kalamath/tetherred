@@ -29,6 +29,7 @@ function TopCarousel() {
         // not sure why but we had to create collection of components or we got
         // stupid error...
         const componentCollection = response.data.map((item, index) => {
+          if(item.image){
           return (
             <Carousel.Item key={index} className="containDiv"
             // style={{ position: "relative", width: "100%" }}
@@ -46,7 +47,7 @@ function TopCarousel() {
               </Carousel.Caption>
             </Carousel.Item>
           )
-        });
+        }});
         setData(componentCollection);
         console.log('balfldsjfljsk', componentCollection);
       } catch (e) {
