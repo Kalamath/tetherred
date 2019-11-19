@@ -58,11 +58,11 @@ export default function CardBasic() {
             {/* <GridContainer>  */}
             <GridContainer>
 
-            <NewsBox />
-            
-            <EntertainmentBox />
+                <NewsBox />
 
-            <SportsBox />
+                <EntertainmentBox />
+
+                <SportsBox />
 
             </GridContainer>
 
@@ -112,12 +112,11 @@ export default function CardBasic() {
                                 data-holder-rendered="true"
                             />
                             <CardBody>
-                                <h4>Card title</h4>
+                                <h4>No way!</h4>
                                 <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    No one believes me, I swear!
                     </p>
-                                <Button color="success">Go somewhere</Button>
+                                <Button color="success">Link</Button>
                             </CardBody>
                         </Card>
                         <Card style={{ width: "100%" }}>
@@ -130,12 +129,11 @@ export default function CardBasic() {
                                 data-holder-rendered="true"
                             />
                             <CardBody>
-                                <h4>Card title</h4>
+                                <h4>There's a snake in my boot!</h4>
                                 <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    Find out why reptiles are the cause of this STD.
                     </p>
-                                <Button color="success">Go somewhere</Button>
+                                <Button color="success">Link</Button>
                             </CardBody>
                         </Card>
                         <Card style={{ width: "100%" }}>
@@ -148,12 +146,12 @@ export default function CardBasic() {
                                 data-holder-rendered="true"
                             />
                             <CardBody>
-                                <h4>Card title</h4>
+                                <h4>XBOX Project Scarlett</h4>
                                 <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    After an eventful XO19, more details have been revealed for Microsoft's
+                                    next big console.
                     </p>
-                                <Button color="success">Go somewhere</Button>
+                                <Button color="success">Link</Button>
                             </CardBody>
                         </Card>
                         <Card style={{ width: "100%" }}>
@@ -166,12 +164,12 @@ export default function CardBasic() {
                                 data-holder-rendered="true"
                             />
                             <CardBody>
-                                <h4>Card title</h4>
+                                <h4>The Mandalorian? More like the Manda-BORING!</h4>
                                 <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    While reviews were positive, this one reviewer's take on the
+                                    hit Disney+ series takes a toll when it gets viral infamy.
                     </p>
-                                <Button color="success">Go somewhere</Button>
+                                <Button color="success">Link</Button>
                             </CardBody>
                         </Card>
                     </GridItem>
