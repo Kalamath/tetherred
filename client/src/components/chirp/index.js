@@ -101,6 +101,31 @@ class Chirps extends React.Component {
                         </Button>
                     </CardBody>
                 </Card>
+                {/* Pop Up Chirp Here */}
+                <div>
+                <Card style={{ width: "100%" }}>
+                    <CardHeader color="primary">
+                        <h4>Drake's Chirp</h4>
+                    </CardHeader>
+                    <CardBody>
+                        <TextField
+                            id="outlined-multiline-static"
+                            label="Write Chirp Here"
+                            defaultValue={this.state.postChirp}
+                            multiline
+                            rows="5"
+                            // className={classes.textField}
+                            margin="normal"
+                            variant="outlined"
+                            name="chirpbox"
+                            onChange={event => {
+                                const { value } = event.target;
+                                this.setState({ postChirp: value });
+                            }}
+                        />
+                    </CardBody>
+                </Card>
+                </div>
             </GridItem>
         )
     }

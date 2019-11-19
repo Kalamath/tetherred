@@ -1,18 +1,11 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 
-// import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import Form from 'react-bootstrap/Form';
-// import FormControl from 'react-bootstrap/FormControl'
-// import Button from 'react-bootstrap/Button';
 
-// import axios from "axios";
-// import { Redirect } from 'react-router-dom';
+import logo from '../../assets/imgs/TetherredFullWhite.png';
 
 
-import logo from '../../assets/imgs/TetherredFullBlack.png';
 
 class Header extends React.Component {
 
@@ -52,9 +45,9 @@ class Header extends React.Component {
           <Navbar.Collapse className="justify-content-end">
             <Nav className="justify-content-end">
 
-              <Nav.Link href="/dashboard">Home</Nav.Link>
-              <Nav.Link href="/profile">Profile</Nav.Link>
-              <Nav.Link href="/logout">Logout</Nav.Link>
+              <Nav.Link className="text-white" href="/dashboard">Home</Nav.Link>
+              <Nav.Link className="text-white" href="/profile">Profile</Nav.Link>
+              <Nav.Link className="text-white" href="/logout">Logout</Nav.Link>
 
             </Nav>
           </Navbar.Collapse>
@@ -65,8 +58,8 @@ class Header extends React.Component {
             <Navbar.Collapse className="justify-content-end">
               <Nav className="justify-content-end">
 
-                <Nav.Link href="/">Login</Nav.Link>
-                <Nav.Link href="/signup">Sign Up</Nav.Link>
+                <Nav.Link className="text-white" href="/">Login</Nav.Link>
+                <Nav.Link className="text-white" href="/signup">Sign Up</Nav.Link>
 
               </Nav>
             </Navbar.Collapse>

@@ -63,7 +63,7 @@ function TopCarousel() {
         </GridItem>
 
       <GridItem xs={12} sm={12} md={10}>
-      <Jumbotron>
+      <Jumbotron className="bg-transparent">
         <Carousel>
 
           {articles}

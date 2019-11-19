@@ -86,6 +86,7 @@ export default function TransitionsModal() {
                                 <p id="transition-modal-description">Don{"'"}t be scared of the truth because we need to restart the
                                                         human foundation in truth And I love you like Kanye loves Kanye
                                     I love Rick Owens’ bed design but the back is...</p>
+                                    
                                 {/* Change the onClick to the proper route */}
                                 <Button color="primary" round onClick={handleClose}>
                                     Update
