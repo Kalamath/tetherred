@@ -17,7 +17,7 @@ export default function NewsBox() {
 
     return (
         <GridItem xs={12} sm={12} md={4}>
-            <Card className="bg-transparent" style={{ width: "100%" }}>
+            <Card className="bg-dark" style={{ width: "100%" }}>
             <CardHeader color="danger"><h4>News</h4></CardHeader>
                 <CardBody>
                    <NewsCarousel />
