@@ -85,8 +85,8 @@ export default function UserProfile() {
       {/* Feed Section */}
       <Container>
         <GridContainer>
-          <GridItem xs={12} sm={12} md={3}>
-            <Card style={{ width: "100%" }}>
+          <GridItem xs={12} sm={12} md={4}>
+            <Card className="bg-transparent" style={{ width: "100%" }}>
               <img
                 className={classes.cardImgTop}
                 data-src="holder.js/100px180/"
@@ -95,123 +95,103 @@ export default function UserProfile() {
                 src={spotify}
                 data-holder-rendered="true"
               />
-              <CardBody>
+              {/* <CardBody> */}
                 <iframe src="https://open.spotify.com/embed/album/1ATL5GLyefJaxhQzSPVrLX" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              {/* </CardBody> */}
+            </Card>
+          </GridItem>
+          <GridItem xs={12} sm={12} md={5}>
+            <Card style={{ width: "100%" }}>
+              <img
+                className={classes.cardImgTop}
+                data-src="holder.js/100px180/"
+                alt="100%x180"
+                style={{ height: "180px", width: "100%", display: "block" }}
+                src={paperMario}
+                data-holder-rendered="true"
+              />
+              <CardBody>
+                <h4>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                    </p>
+                <Button color="success">Go somewhere</Button>
+              </CardBody>
+            </Card>
+            <Card style={{ width: "100%" }}>
+              <img
+                className={classes.cardImgTop}
+                data-src="holder.js/100px180/"
+                alt="100%x180"
+                style={{ height: "180px", width: "100%", display: "block" }}
+                src={paperMario}
+                data-holder-rendered="true"
+              />
+              <CardBody>
+                <h4>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                    </p>
+                <Button color="success">Go somewhere</Button>
+              </CardBody>
+            </Card>
+            <Card style={{ width: "100%" }}>
+              <img
+                className={classes.cardImgTop}
+                data-src="holder.js/100px180/"
+                alt="100%x180"
+                style={{ height: "180px", width: "100%", display: "block" }}
+                src={paperMario}
+                data-holder-rendered="true"
+              />
+              <CardBody>
+                <h4>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                    </p>
+                <Button color="success">Go somewhere</Button>
+              </CardBody>
+            </Card>
+            <Card style={{ width: "100%" }}>
+              <img
+                className={classes.cardImgTop}
+                data-src="holder.js/100px180/"
+                alt="100%x180"
+                style={{ height: "180px", width: "100%", display: "block" }}
+                src={paperMario}
+                data-holder-rendered="true"
+              />
+              <CardBody>
+                <h4>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                    </p>
+                <Button color="success">Go somewhere</Button>
+              </CardBody>
+            </Card>
+            <Card style={{ width: "100%" }}>
+              <img
+                className={classes.cardImgTop}
+                data-src="holder.js/100px180/"
+                alt="100%x180"
+                style={{ height: "180px", width: "100%", display: "block" }}
+                src={paperMario}
+                data-holder-rendered="true"
+              />
+              <CardBody>
+                <h4>Card title</h4>
+                <p>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                    </p>
+                <Button color="success">Go somewhere</Button>
               </CardBody>
             </Card>
           </GridItem>
-          <GridItem xs={12} sm={12} md={6}>
-            <Card style={{ width: "100%" }}>
-              <img
-                className={classes.cardImgTop}
-                data-src="holder.js/100px180/"
-                alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
-                data-holder-rendered="true"
-              />
-              <CardBody>
-                <h4>Card title</h4>
-                <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                    </p>
-                <Button color="success">Go somewhere</Button>
-              </CardBody>
-            </Card>
-            <Card style={{ width: "100%" }}>
-              <img
-                className={classes.cardImgTop}
-                data-src="holder.js/100px180/"
-                alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
-                data-holder-rendered="true"
-              />
-              <CardBody>
-                <h4>Card title</h4>
-                <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                    </p>
-                <Button color="success">Go somewhere</Button>
-              </CardBody>
-            </Card>
-            <Card style={{ width: "100%" }}>
-              <img
-                className={classes.cardImgTop}
-                data-src="holder.js/100px180/"
-                alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
-                data-holder-rendered="true"
-              />
-              <CardBody>
-                <h4>Card title</h4>
-                <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                    </p>
-                <Button color="success">Go somewhere</Button>
-              </CardBody>
-            </Card>
-            <Card style={{ width: "100%" }}>
-              <img
-                className={classes.cardImgTop}
-                data-src="holder.js/100px180/"
-                alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
-                data-holder-rendered="true"
-              />
-              <CardBody>
-                <h4>Card title</h4>
-                <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                    </p>
-                <Button color="success">Go somewhere</Button>
-              </CardBody>
-            </Card>
-            <Card style={{ width: "100%" }}>
-              <img
-                className={classes.cardImgTop}
-                data-src="holder.js/100px180/"
-                alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
-                data-holder-rendered="true"
-              />
-              <CardBody>
-                <h4>Card title</h4>
-                <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                    </p>
-                <Button color="success">Go somewhere</Button>
-              </CardBody>
-            </Card>
-          </GridItem>
-          {/* <GridItem xs={12} sm={12} md={3}>
-            <Card style={{ width: "100%" }}>
-              <CardHeader color="info">
-                <h4>Chirp Box</h4>
-              </CardHeader>
-              <CardBody>
-                <TextField
-                  id="outlined-multiline-static"
-                  label="ChirpBox"
-                  multiline
-                  rows="5"
-                  defaultValue=""
-                  className={classes.textField}
-                  margin="normal"
-                  variant="outlined"
-                />
-                <Button color="info">Chirp</Button>
-              </CardBody>
-            </Card>
-          </GridItem> */}
           <Chirpbox />
         </GridContainer>
       </Container>
