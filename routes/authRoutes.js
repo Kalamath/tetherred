@@ -13,7 +13,7 @@ router.get('/start', (req, res) => {
 });
 
 router.get('/', (req, res, next) => {
-    console.log('===== user!!======')
+    
     console.log("req.user @ / : " + req.user);
     if (req.user) {
         res.json({ user: req.user })
@@ -24,10 +24,10 @@ router.get('/', (req, res, next) => {
 
 // post route for signing-up new user 
 router.post('/signup', (req, res) => {
-    console.log('user signup');
 
     const { email, username, password } = req.body;
-    console.log("signup req.body :" + req);
+    // console.log("signup req.body :" + req);
+
     // ADD VALIDATION
     User.findOne({ email: email }, (err, user) => {
         if (err) {
@@ -57,8 +57,8 @@ router.post('/signup', (req, res) => {
 router.post(
     '/signin',
     function (req, res, next) {
-        console.log('routes/signin, req.body: ');
-        console.log(req.body);
+        // console.log('routes/signin, req.body: ');
+        // console.log(req.body);
         next()
     },
     passport.authenticate('local'),
@@ -76,7 +76,7 @@ router.post(
 //logout route
 router.post('/logout', (req, res) => {
     if (req.user) {
-        console.log("req.user before logout :" + req.user);
+        // console.log("req.user before logout :" + req.user);
         req.logout();
         res.send({ msg: "logging out" })
     } else {
