@@ -10,7 +10,7 @@ import Card from "../Card/Card.js";
 import CardBody from "../Card/CardBody.js";
 import CardHeader from "../Card/CardHeader.js";
 // import TextField from '@material-ui/core/TextField';
-import NewsCarousel from "../../components/NewsCarousel";
+import SportsCarousel from "../../components/SportsCarousel";
 
 
 export default function SportsBox() {
@@ -20,7 +20,7 @@ export default function SportsBox() {
             <Card className="bg-dark" style={{ width: "100%" }}>
             <CardHeader color="danger"><h4>News</h4></CardHeader>
                 <CardBody>
-                   <NewsCarousel />
+                   <SportsCarousel />
                 </CardBody>
             </Card>
         </GridItem>
