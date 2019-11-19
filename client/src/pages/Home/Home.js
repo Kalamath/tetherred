@@ -1,8 +1,8 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import Radio from "@material-ui/core/Radio";
-import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
+// import Radio from "@material-ui/core/Radio";
+// import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
 // import InputLabel from "@material-ui/core/InputLabel";
 // import Grid from "@material-ui/core/Grid";
 // import Language from "@material-ui/icons/Language";
@@ -29,6 +29,8 @@ import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImages
 import GridContainer from "../../components/Grid/GridContainer.js";
 
 import Chirpbox from "../../components/Chirp";
+import Trending from "../../components/Trending";
+import Advertisement from "../../components/Advertisement";
 
 
 const styles = {
@@ -47,13 +49,12 @@ const useStyles = makeStyles(styles);
 
 export default function CardBasic() {
     const classes = useStyles();
-    const [selectedValue, setSelectedValue] = React.useState(null);
+    // const [selectedValue, setSelectedValue] = React.useState(null);
     return (
         <React.Fragment>
-            
-             {/* <GridContainer>  */}
-             <Carousel />
-                {/* <GridItem xs={12} sm={12} md={1}>
+            {/* <GridContainer>  */}
+            <Carousel />
+            {/* <GridItem xs={12} sm={12} md={1}>
                 </GridItem>
                 <GridItem xs={12} sm={12} md={10}>
                     <Card className={classes.textWhite}>
@@ -81,47 +82,11 @@ export default function CardBasic() {
             {/* </GridContainer>  */}
             <Container>
                 <GridContainer>
-                    <GridItem xs={12} sm={12} md={3}>
-                        <Radio
-                            checked={selectedValue === "a"}
-                            onChange={() => setSelectedValue("a")}
-                            value="a"
-                            name="radio button demo"
-                            aria-label="A"
-                            icon={<FiberManualRecord className={classes.radioUnchecked} />}
-                            checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
-                            classes={{
-                                checked: classes.radio
-                            }}
-                        />
-                        <br />
-                        <Radio
-                            checked={selectedValue === "b"}
-                            onChange={() => setSelectedValue("b")}
-                            value="a"
-                            name="radio button demo"
-                            aria-label="A"
-                            icon={<FiberManualRecord className={classes.radioUnchecked} />}
-                            checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
-                            classes={{
-                                checked: classes.radio
-                            }}
-                        />
-                        <br />
-                        <Radio
-                            checked={selectedValue === "c"}
-                            onChange={() => setSelectedValue("c")}
-                            value="a"
-                            name="radio button demo"
-                            aria-label="A"
-                            icon={<FiberManualRecord className={classes.radioUnchecked} />}
-                            checkedIcon={<FiberManualRecord className={classes.radioChecked} />}
-                            classes={{
-                                checked: classes.radio
-                            }}
-                        />
+                    <GridItem xs={12} sm={12} md={4}>
+                        <Trending />
+                        <Advertisement />
                     </GridItem>
-                    <GridItem xs={12} sm={12} md={6}>
+                    <GridItem xs={12} sm={12} md={5}>
                         <Card style={{ width: "100%" }}>
                             <img
                                 className={classes.cardImgTop}
