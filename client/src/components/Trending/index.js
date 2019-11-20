@@ -1,41 +1,46 @@
 import React from "react";
-// import { Redirect } from './node_modules/react-router-dom';
-// import axios from "axios";
-
-// import GridItem from "../Grid/GridItem.js";
-// import Container from './node_modules/react-bootstrap/Container';
-// import GridContainer from "../Grid/GridContainer.js";
 import Button from "../CustomButtons/Button.js";
 import Card from "../Card/Card.js";
 import CardBody from "../Card/CardBody.js";
 import CardHeader from "../Card/CardHeader.js";
-import TextField from '@material-ui/core/TextField';
+import Table from 'react-bootstrap/Table'
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+// import TableBody from '@material-ui/core/TableBody';
+import logo from '../../assets/imgs/Logo.png'
+import { height } from "@material-ui/system";
+// import { height } from "@material-ui/system";
 
 
 export default function Trending() {
 
     return (
         // <GridItem xs={12} sm={12} md={4}>
-            <Card style={{ width: "100%" }}>
+        <Card style={{ width: "100%" }}>
             <CardHeader color="danger"><h4>Trending</h4></CardHeader>
-                <CardBody>
-                    <TextField
-                        id="outlined-multiline-static"
-                        label="Write Chirp Here"
-                        // defaultValue={this.state.postChirp}
-                        multiline
-                        rows="5"
-                        style={{ width: "100%" }}
-                        // className={classes.textField}
-                        margin="normal"
-                        variant="outlined"
-                        name="chirpbox"
-                    />
-                    <Button color="info">
-                        See More
+            <CardBody>
+                <Table hover>
+                    <TableRow>
+                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                    </TableRow>
+                </Table>
+                <Button color="info" style={{ width: "100%" }}>
+                    See More
                         </Button>
-                </CardBody>
-            </Card>
+            </CardBody>
+        </Card>
         // </GridItem>
     );
 }

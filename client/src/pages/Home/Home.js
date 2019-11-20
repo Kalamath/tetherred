@@ -11,6 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // import Carousel from "../../components/Carousel"
 import GridItem from "../../components/Grid/GridItem.js";
 import Container from 'react-bootstrap/Container';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 // import GridContainer from "../../components/Grid/GridContainer.js";
 // import CustomInput from "../../components/CustomInput/CustomInput.js";
 import Button from "../../components/CustomButtons/Button.js";
@@ -30,10 +31,12 @@ import GridContainer from "../../components/Grid/GridContainer.js";
 
 import Chirpbox from "../../components/Chirps";
 import Trending from "../../components/Trending";
-import Advertisement from "../../components/Advertisement";
+// import Advertisement from "../../components/Advertisement";
 import EntertainmentBox from "../../components/EntertainmentBox";
 import SportsBox from "../../components/SportsBox";
 import NewsBox from "../../components/NewsBox";
+import Suntory from "../../components/Suntory/index.js";
+import Pom from "../../components/Pom/index.js";
 
 
 const styles = {
@@ -56,15 +59,23 @@ export default function CardBasic() {
     return (
         <React.Fragment>
             {/* <GridContainer>  */}
+            <Jumbotron className="bg-transparent">
+
             <GridContainer>
+                <GridItem xs={12} sm={12} md={4}>
+                <NewsBox />
+                </GridItem>
+                <GridItem xs={12} sm={12} md={4}>
 
-            <NewsBox />
-            
-            <EntertainmentBox />
 
-            <SportsBox />
+                <EntertainmentBox />
 
+                </GridItem>
+                <GridItem xs={12} sm={12} md={4}>
+                <SportsBox />
+                </GridItem>
             </GridContainer>
+            </Jumbotron>
 
             {/* Ashton's Carousel */}
             {/* <Carousel /> */}
@@ -99,7 +110,8 @@ export default function CardBasic() {
                 <GridContainer>
                     <GridItem xs={12} sm={12} md={4}>
                         <Trending />
-                        <Advertisement />
+                        <Suntory />
+                        <Pom />
                     </GridItem>
                     <GridItem xs={12} sm={12} md={5}>
                         <Card style={{ width: "100%" }}>
@@ -174,27 +186,43 @@ export default function CardBasic() {
                                 <Button color="success">Go somewhere</Button>
                             </CardBody>
                         </Card>
-                    </GridItem>
-                    {/* <GridItem xs={12} sm={12} md={3}>
                         <Card style={{ width: "100%" }}>
-                            <CardHeader color="info">
-                                <h4>Chirp Box</h4>
-                            </CardHeader>
+                            <img
+                                className={classes.cardImgTop}
+                                data-src="holder.js/100px180/"
+                                alt="100%x180"
+                                style={{ height: "180px", width: "100%", display: "block" }}
+                                src={paperMario}
+                                data-holder-rendered="true"
+                            />
                             <CardBody>
-                                <TextField
-                                    id="outlined-multiline-static"
-                                    label="Write Chirp Here"
-                                    multiline
-                                    rows="5"
-                                    defaultValue=""
-                                    className={classes.textField}
-                                    margin="normal"
-                                    variant="outlined"
-                                />
-                                <Button color="info">Chirp</Button>
+                                <h4>Card title</h4>
+                                <p>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                    </p>
+                                <Button color="success">Go somewhere</Button>
                             </CardBody>
                         </Card>
-                    </GridItem> */}
+                        <Card style={{ width: "100%" }}>
+                            <img
+                                className={classes.cardImgTop}
+                                data-src="holder.js/100px180/"
+                                alt="100%x180"
+                                style={{ height: "180px", width: "100%", display: "block" }}
+                                src={paperMario}
+                                data-holder-rendered="true"
+                            />
+                            <CardBody>
+                                <h4>Card title</h4>
+                                <p>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                    </p>
+                                <Button color="success">Go somewhere</Button>
+                            </CardBody>
+                        </Card>
+                    </GridItem>
                     <Chirpbox />
                 </GridContainer>
             </Container>
