@@ -20,7 +20,7 @@ import GridItem from "../../components/Grid/GridItem.js";
 // import blue from "../../assets/imgs/blue.jpg";
 import paperMario from "../../assets/imgs/paper-mario.webp";
 import spotify from "../../assets/imgs/spotify.png";
-import Chirpbox from "../../components/Chirp";
+import Chirpbox from "../../components/Chirps";
 
 const styles = {
   cardCategoryWhite: {
