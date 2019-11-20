@@ -31,9 +31,9 @@ import GridContainer from "../../components/Grid/GridContainer.js";
 import Chirpbox from "../../components/Chirps";
 import Trending from "../../components/Trending";
 import Advertisement from "../../components/Advertisement";
-import EntertainmentBox from "../../components/EntertainmentBox";
-import SportsBox from "../../components/SportsBox";
-import NewsBox from "../../components/NewsBox";
+// import EntertainmentBox from "../../components/EntertainmentBox";
+// import SportsBox from "../../components/SportsBox";
+// import NewsBox from "../../components/NewsBox";
 
 
 const styles = {
@@ -58,11 +58,11 @@ export default function CardBasic() {
             {/* <GridContainer>  */}
             <GridContainer>
 
-            <NewsBox />
+            {/* <NewsBox /> */}
             
-            <EntertainmentBox />
+            {/* <EntertainmentBox /> */}
 
-            <SportsBox />
+            {/* <SportsBox /> */}
 
             </GridContainer>
 
