@@ -8,7 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import axios from "axios";
 function makeRequest() {
-  return axios.get('/api/news')
+  return axios.get('/api/entertainment')
 
 }
 

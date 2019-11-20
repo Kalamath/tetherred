@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import GridItem from "../../components/Grid/GridItem.js";
 
 import axios from "axios";
-function makeRequest() {
-  return axios.get('/api/news')
+function makenewRequest() {
+  return axios.get('/api/sports');
 
 }
 
@@ -24,7 +24,7 @@ function TopCarousel() {
 
       try {
 
-        const response = await makeRequest();
+        const response = await makenewRequest();
         console.log(response);
         // not sure why but we had to create collection of components or we got
         // stupid error...
@@ -49,7 +49,7 @@ function TopCarousel() {
           )
         }});
         setData(componentCollection);
-        console.log('balfldsjfljsk', componentCollection);
+        console.log('am i on', componentCollection);
       } catch (e) {
         console.log(e);
       }

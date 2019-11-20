@@ -18,7 +18,7 @@ export default function EntertainmentBox() {
     return (
         <GridItem xs={12} sm={12} md={4}>
             <Card className="bg-dark" style={{ width: "100%" }}>
-            <CardHeader color="danger"><h4>News</h4></CardHeader>
+            <CardHeader color="danger"><h4>Entertainment</h4></CardHeader>
                 <CardBody>
                    <EntertainmentCarousel />
                 </CardBody>
