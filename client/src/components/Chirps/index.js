@@ -120,24 +120,27 @@ class Chirps extends React.Component {
 
                         {this.state.allChirps ? this.state.allChirps.map(chirps => {
                             return (
-                                <CardBody key={chirps._id}>
-                                    <TextField
-                                        id="outlined-multiline-static"
-                                        label={chirps.author}
-                                        defaultValue={chirps.body}
-                                        multiline
-                                        rows="5"
-                                        margin="normal"
-                                        variant="outlined"
-                                        name="chirpbox"
-                                    />
-                                </CardBody>
+                                
+                                <CardBody  key={chirps._id}>
+                                    
+                                    <Card style={{ width: "100%" }}>
+                                    <CardHeader color="info">
+                                        <h6>{chirps.author}</h6>
+                                    </CardHeader>
+                                    <CardBody>
+                                        {chirps.body}
+                                    </CardBody>
+                                   
+                               </Card>
+                               </CardBody>
+                             
                             )
                         }) : 'not loaded'}
 
                     </Card>
+                    
                 </div>
-            </GridItem>
+            </GridItem >
         )
     }
 }

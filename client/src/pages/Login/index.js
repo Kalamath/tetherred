@@ -70,14 +70,14 @@ class Login extends React.Component {
               </div>
 
               <div className="col-6">
-                <form className="form-signup">
+                {/* <form className="form-signup"> */}
                   <div className="text-center mb-4">
                     <img className="mb-4" src={Logo} alt="" width="72" height="72" />
                     <h1 className="h3 mb-3 font-weight-normal">Welcome to Tetherred</h1>
                     <h2>Login Here</h2>
                   </div>
 
-                  <div className="form-group">
+                  {/* <div className="form-group"> */}
                     <form onSubmit={this.handleSubmit}>
                           <div className="form-group">
                             <label htmlFor="emailInput">Email</label>
@@ -108,10 +108,10 @@ class Login extends React.Component {
                       <button type="submit" className="btn btn-primary">Login</button>
                     </form>
 
-                  </div>
+                  {/* </div> */}
 
                   {/* <p>© Tetherred 2019</p> */}
-                </form>
+                {/* </form> */}
                 <br />
                 <br />
                 <br />
