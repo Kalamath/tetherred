@@ -28,7 +28,7 @@ import paperMario from "../../assets/imgs/paper-mario.webp";
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 
-import Chirpbox from "../../components/Chirp";
+import Chirpbox from "../../components/Chirps";
 import Trending from "../../components/Trending";
 import Advertisement from "../../components/Advertisement";
 import EntertainmentBox from "../../components/EntertainmentBox";
