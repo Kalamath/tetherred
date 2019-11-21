@@ -8,8 +8,12 @@ router.post("/:id", function (req, res) {
     console.log(req.user);
     UserProfile.create( {
         userId: req.params.id,
-        name: "micheal jackson", //req.body.name
-        description: "The inventor of another moonwalk" //req.body.description
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        dob: req.body.dob,
+        location: req.body.location,
+        hobbies: req.body.hobbies
+
     })
     .then( dbProfile => {
         console.log(`posting userProfile ${dbProfile}`);
