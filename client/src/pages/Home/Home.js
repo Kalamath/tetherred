@@ -8,17 +8,17 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardBody from "../../components/Card/CardBody.js";
-import paperMario from "../../assets/imgs/paper-mario.webp";
+// import paperMario from "../../assets/imgs/paper-mario.webp";
 import hardCodeImage01 from "../../assets/imgs/fakeCardImages/184-700x500.jpg";
 import hardCodeImage02 from "../../assets/imgs/fakeCardImages/423-700x500.jpg";
 import hardCodeImage03 from "../../assets/imgs/fakeCardImages/442-700x500.jpg";
 import hardCodeImage04 from "../../assets/imgs/fakeCardImages/524-700x500.jpg";
 import hardCodeImage05 from "../../assets/imgs/fakeCardImages/557-700x500.jpg";
 import hardCodeImage06 from "../../assets/imgs/fakeCardImages/628-700x500.jpg";
-import hardCodeImage07 from "../../assets/imgs/fakeCardImages/791-700x500.jpg";
-import hardCodeImage08 from "../../assets/imgs/fakeCardImages/841-700x500.jpg";
-import hardCodeImage09 from "../../assets/imgs/fakeCardImages/910-700x500.jpg";
-import hardCodeImage10 from "../../assets/imgs/fakeCardImages/987-700x500.jpg";
+// import hardCodeImage07 from "../../assets/imgs/fakeCardImages/791-700x500.jpg";
+// import hardCodeImage08 from "../../assets/imgs/fakeCardImages/841-700x500.jpg";
+// import hardCodeImage09 from "../../assets/imgs/fakeCardImages/910-700x500.jpg";
+// import hardCodeImage10 from "../../assets/imgs/fakeCardImages/987-700x500.jpg";
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import Chirpbox from "../../components/Chirps";
@@ -29,6 +29,7 @@ import NewsBox from "../../components/NewsBox";
 import Suntory from "../../components/Suntory/index.js";
 import Pom from "../../components/Pom/index.js";
 import People from "../../components/People/index.js";
+import DarkMode from "../../components/DarkMode/index.js";
 
 
 const styles = {
@@ -84,6 +85,7 @@ export default function CardBasic() {
                             <Suntory />
                             <People />
                             <Pom />
+                            <DarkMode />
                         </GridItem>
 
                         <GridItem xs={12} sm={12} md={6}>
