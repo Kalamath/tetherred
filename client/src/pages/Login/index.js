@@ -1,9 +1,6 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-
-// import Col from 'react-bootstrap/Col';
-// import Form from 'react-bootstrap/Form';
+import { Redirect } from 'react-router-dom';
 import Logo from '../../assets/imgs/Logo.png';
 
 class Login extends React.Component {
