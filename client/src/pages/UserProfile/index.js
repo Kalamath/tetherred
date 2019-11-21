@@ -60,7 +60,7 @@ export default function UserProfile() {
                 data-holder-rendered="true"
               />
               {/* <CardBody> */}
-                <iframe src="https://open.spotify.com/embed/album/1ATL5GLyefJaxhQzSPVrLX" title="spotify" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                <iframe src="https://open.spotify.com/embed/album/1ATL5GLyefJaxhQzSPVrLX" title="spotify" width="100%" height="400" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
               {/* </CardBody> */}
             </Card>
           </GridItem>
