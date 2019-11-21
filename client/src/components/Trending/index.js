@@ -6,16 +6,11 @@ import CardHeader from "../Card/CardHeader.js";
 import Table from 'react-bootstrap/Table'
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-// import TableBody from '@material-ui/core/TableBody';
 import logo from '../../assets/imgs/Logo.png'
-import { height } from "@material-ui/system";
-// import { height } from "@material-ui/system";
-
 
 export default function Trending() {
 
     return (
-        // <GridItem xs={12} sm={12} md={4}>
         <Card style={{ width: "100%" }}>
             <CardHeader color="danger"><h4>Trending</h4></CardHeader>
             <CardBody>
@@ -41,7 +36,6 @@ export default function Trending() {
                         </Button>
             </CardBody>
         </Card>
-        // </GridItem>
     );
 }
 

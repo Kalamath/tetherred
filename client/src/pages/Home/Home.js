@@ -1,46 +1,31 @@
 import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// import Radio from "@material-ui/core/Radio";
-// import FiberManualRecord from "@material-ui/icons/FiberManualRecord";
-// import InputLabel from "@material-ui/core/InputLabel";
-// import Grid from "@material-ui/core/Grid";
-// import Language from "@material-ui/icons/Language";
-
 // core components
-// import Carousel from "../../components/Carousel"
 import GridItem from "../../components/Grid/GridItem.js";
-import Container from 'react-bootstrap/Container';
+import Container from '@material-ui/core/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
-// import GridContainer from "../../components/Grid/GridContainer.js";
-// import CustomInput from "../../components/CustomInput/CustomInput.js";
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
-// import CardHeader from "../../components/Card/CardHeader.js";
-// import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
-// import CardIcon from "../../components/Card/CardIcon";
-// import CardFooter from "../../components/Card/CardFooter.js";
-// import TextField from '@material-ui/core/TextField';
-
 import paperMario from "../../assets/imgs/paper-mario.webp";
-// import newsBanner from "../../assets/imgs/latestNews.jpg";
-
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
-
 import Chirpbox from "../../components/Chirps";
 import Trending from "../../components/Trending";
-// import Advertisement from "../../components/Advertisement";
 import EntertainmentBox from "../../components/EntertainmentBox";
 import SportsBox from "../../components/SportsBox";
 import NewsBox from "../../components/NewsBox";
 import Suntory from "../../components/Suntory/index.js";
 import Pom from "../../components/Pom/index.js";
+import People from "../../components/People/index.js";
 
 
 const styles = {
     ...dashboardStyle,
+    root: {
+        backgroundColor: "#212121",
+    },
     cardTitle: {
         marginTop: "0",
         minHeight: "auto",
@@ -61,59 +46,37 @@ export default function CardBasic() {
             {/* <GridContainer>  */}
             <Jumbotron className="bg-transparent">
 
-            <GridContainer>
-                <GridItem xs={12} sm={12} md={4}>
-                <NewsBox />
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
+                <GridContainer>
 
+                    <GridItem xs={12} sm={12} md={4}>
+                        <NewsBox />
+                    </GridItem>
 
-                <EntertainmentBox />
+                    <GridItem xs={12} sm={12} md={4}>
+                        <EntertainmentBox />
+                    </GridItem>
 
-                </GridItem>
-                <GridItem xs={12} sm={12} md={4}>
-                <SportsBox />
-                </GridItem>
-            </GridContainer>
+                    <GridItem xs={12} sm={12} md={4}>
+                        <SportsBox />
+                    </GridItem>
+
+                </GridContainer>
             </Jumbotron>
 
-            {/* Ashton's Carousel */}
-            {/* <Carousel /> */}
 
-            {/* <GridItem xs={12} sm={12} md={1}>
-                </GridItem>
-                <GridItem xs={12} sm={12} md={10}>
-                    <Card className={classes.textWhite}>
-                        <div className={classes.cardImgOverlay}>
-                            <CardHeader color="primary">
-                                <h4>News Title</h4>
-                                <p>
-                                    This is a wider card with supporting text below as a natural lead-in
-                            to additional content. This content is a little bit longer.</p>
-                                <p>Last updated 3 mins ago</p>
-                            </CardHeader>
-                        </div>
-                        <img
-                            className={classes.cardImg}
-                            data-src="holder.js/100px270/#55595c:#373a3c/text:Card image"
-                            alt="100%x270"
-                            style={{ height: "270px", width: "100%", display: "block" }}
-                            src={newsBanner}
-                            data-holder-rendered="true"
-                        />
-                    </Card>
-                </GridItem>
-                <GridItem xs={12} sm={12} md={1}>
-                </GridItem> */}
-            {/* </GridContainer>  */}
-            <Container>
+            <Container fixed>
+            <Jumbotron className="bg-transparent">
+
                 <GridContainer>
-                    <GridItem xs={12} sm={12} md={4}>
+
+                    <GridItem xs={12} sm={12} md={3}>
                         <Trending />
                         <Suntory />
+                        <People />
                         <Pom />
                     </GridItem>
-                    <GridItem xs={12} sm={12} md={5}>
+
+                    <GridItem xs={12} sm={12} md={6}>
                         <Card style={{ width: "100%" }}>
                             <img
                                 className={classes.cardImgTop}
@@ -223,8 +186,11 @@ export default function CardBasic() {
                             </CardBody>
                         </Card>
                     </GridItem>
+
                     <Chirpbox />
+
                 </GridContainer>
+            </Jumbotron>
             </Container>
         </React.Fragment>
     );
