@@ -3,8 +3,10 @@ const router = require("express").Router();
 const userRoutes = require("./authRoutes");
 const chirpRoutes = require("./chirpRoutes");
 const userProfileRoutes = require("./userProfileRoutes");
-const sportsRoutes = require(“./sportsRoutes”);
-const entertainmentRoutes = require(“./entertainmentRoutes”)
+const sportsRoutes = require("./sportsRoutes");
+
+const entertainmentRoutes = require("./entertainmentRoutes");
+
 const newsRoutes = require("./newsRoutes");
 
 
@@ -17,9 +19,9 @@ router.use("/api/chirps", chirpRoutes);
 router.use("/api/profile", userProfileRoutes);
 
 // please dont touch this code
-router.use(“/api”, newsRoutes);
-router.use(“/api”, sportsRoutes);
-router.use(“/api”, entertainmentRoutes);
+router.use("/api", newsRoutes)
+router.use("/api", sportsRoutes);
+router.use("/api", entertainmentRoutes);
 
 // If no API routes are hit, send the React app
 router.use(function (req, res) {

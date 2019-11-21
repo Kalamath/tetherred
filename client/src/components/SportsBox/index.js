@@ -11,7 +11,7 @@ export default function SportsBox() {
     return (
         // <GridItem xs={12} sm={12} md={4}>
             <Card className="bg-dark" style={{ width: "100%" }}>
-            <CardHeader color="primary"><h4>News</h4></CardHeader>
+            <CardHeader color="primary"><h4>Sports</h4></CardHeader>
                 <CardBody>
                    <SportsCarousel />
                 </CardBody>
