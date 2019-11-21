@@ -9,6 +9,16 @@ import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardBody from "../../components/Card/CardBody.js";
 import paperMario from "../../assets/imgs/paper-mario.webp";
+import hardCodeImage01 from "../../assets/imgs/fakeCardImages/184-700x500.jpg";
+import hardCodeImage02 from "../../assets/imgs/fakeCardImages/423-700x500.jpg";
+import hardCodeImage03 from "../../assets/imgs/fakeCardImages/442-700x500.jpg";
+import hardCodeImage04 from "../../assets/imgs/fakeCardImages/524-700x500.jpg";
+import hardCodeImage05 from "../../assets/imgs/fakeCardImages/557-700x500.jpg";
+import hardCodeImage06 from "../../assets/imgs/fakeCardImages/628-700x500.jpg";
+import hardCodeImage07 from "../../assets/imgs/fakeCardImages/791-700x500.jpg";
+import hardCodeImage08 from "../../assets/imgs/fakeCardImages/841-700x500.jpg";
+import hardCodeImage09 from "../../assets/imgs/fakeCardImages/910-700x500.jpg";
+import hardCodeImage10 from "../../assets/imgs/fakeCardImages/987-700x500.jpg";
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import Chirpbox from "../../components/Chirps";
@@ -65,132 +75,126 @@ export default function CardBasic() {
 
 
             <Container fixed>
-            <Jumbotron className="bg-transparent">
+                <Jumbotron className="bg-transparent">
 
-                <GridContainer>
+                    <GridContainer>
 
-                    <GridItem xs={12} sm={12} md={3}>
-                        <Trending />
-                        <Suntory />
-                        <People />
-                        <Pom />
-                    </GridItem>
+                        <GridItem xs={12} sm={12} md={3}>
+                            <Trending />
+                            <Suntory />
+                            <People />
+                            <Pom />
+                        </GridItem>
 
-                    <GridItem xs={12} sm={12} md={6}>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={paperMario}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Card title</h4>
-                                <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                        <GridItem xs={12} sm={12} md={6}>
+                            <Card style={{ width: "100%" }}>
+                                <img
+                                    className={classes.cardImgTop}
+                                    data-src="holder.js/100px180/"
+                                    alt="100%x180"
+                                    style={{ height: "180px", width: "100%", display: "block" }}
+                                    src={hardCodeImage01}
+                                    data-holder-rendered="true"
+                                />
+                                <CardBody>
+                                    <h4>Desert Dune Night Picnic</h4>
+                                    <p>
+                                        Night trips out on the Sahara are the latest romantic getaway for millenial couples.
                     </p>
-                                <Button color="success">Go somewhere</Button>
-                            </CardBody>
-                        </Card>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={paperMario}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Card title</h4>
-                                <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    <Button color="success">Link</Button>
+                                </CardBody>
+                            </Card>
+                            <Card style={{ width: "100%" }}>
+                                <img
+                                    className={classes.cardImgTop}
+                                    data-src="holder.js/100px180/"
+                                    alt="100%x180"
+                                    style={{ height: "180px", width: "100%", display: "block" }}
+                                    src={hardCodeImage02}
+                                    data-holder-rendered="true"
+                                />
+                                <CardBody>
+                                    <h4>Winter Getaways</h4>
+                                    <p>
+                                        A ski resort with a hot tub AND a fondue chocolate fountain? Sign us up!
                     </p>
-                                <Button color="success">Go somewhere</Button>
-                            </CardBody>
-                        </Card>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={paperMario}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Card title</h4>
-                                <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    <Button color="success">Link</Button>
+                                </CardBody>
+                            </Card>
+                            <Card style={{ width: "100%" }}>
+                                <img
+                                    className={classes.cardImgTop}
+                                    data-src="holder.js/100px180/"
+                                    alt="100%x180"
+                                    style={{ height: "180px", width: "100%", display: "block" }}
+                                    src={hardCodeImage03}
+                                    data-holder-rendered="true"
+                                />
+                                <CardBody>
+                                    <h4>Map Accuracy Problems</h4>
+                                    <p>
+                                        Sometimes a physical map is handy when you're running from Jason and in an area without internet.
                     </p>
-                                <Button color="success">Go somewhere</Button>
-                            </CardBody>
-                        </Card>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={paperMario}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Card title</h4>
-                                <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    <Button color="success">Link</Button>
+                                </CardBody>
+                            </Card>
+                            <Card style={{ width: "100%" }}>
+                                <img
+                                    className={classes.cardImgTop}
+                                    data-src="holder.js/100px180/"
+                                    alt="100%x180"
+                                    style={{ height: "180px", width: "100%", display: "block" }}
+                                    src={hardCodeImage04}
+                                    data-holder-rendered="true"
+                                />
+                                <CardBody>
+                                    <h4>Trams are the best commuting option?</h4>
+                                    <p>
+                                        Take this poll and let us know what you think.
                     </p>
-                                <Button color="success">Go somewhere</Button>
-                            </CardBody>
-                        </Card>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={paperMario}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Card title</h4>
-                                <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    <Button color="success">Link</Button>
+                                </CardBody>
+                            </Card>
+                            <Card style={{ width: "100%" }}>
+                                <img
+                                    className={classes.cardImgTop}
+                                    data-src="holder.js/100px180/"
+                                    alt="100%x180"
+                                    style={{ height: "180px", width: "100%", display: "block" }}
+                                    src={hardCodeImage05}
+                                    data-holder-rendered="true"
+                                />
+                                <CardBody>
+                                    <h4>Red Dead Redemption 2 on PC looks AMAZING!!!</h4>
+                                    <p>
+                                        PC MASTER RACE!!!
                     </p>
-                                <Button color="success">Go somewhere</Button>
-                            </CardBody>
-                        </Card>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={paperMario}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Card title</h4>
-                                <p>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                    <Button color="success">Link</Button>
+                                </CardBody>
+                            </Card>
+                            <Card style={{ width: "100%" }}>
+                                <img
+                                    className={classes.cardImgTop}
+                                    data-src="holder.js/100px180/"
+                                    alt="100%x180"
+                                    style={{ height: "180px", width: "100%", display: "block" }}
+                                    src={hardCodeImage06}
+                                    data-holder-rendered="true"
+                                />
+                                <CardBody>
+                                    <h4>Hipfire Photos</h4>
+                                    <p>
+                                        My dad's portrait studio is hiring photographers! DM me to apply!
                     </p>
-                                <Button color="success">Go somewhere</Button>
-                            </CardBody>
-                        </Card>
-                    </GridItem>
+                                    <Button color="success">Link</Button>
+                                </CardBody>
+                            </Card>
+                        </GridItem>
 
-                    <Chirpbox />
+                        <Chirpbox />
 
-                </GridContainer>
-            </Jumbotron>
+                    </GridContainer>
+                </Jumbotron>
             </Container>
         </React.Fragment>
     );
