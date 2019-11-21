@@ -13,13 +13,13 @@ const cardFeedSchema = new mongoose.Schema({
     },
 
     cardLink: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: true
     },
     
     cardPic: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: true
     }
 });
 
