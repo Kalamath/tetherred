@@ -5,6 +5,8 @@ import React from "react";
 import Home from "../Home"
 import axios from "axios";
 
+
+
 class Dashboard extends React.Component {
   
   constructor() {
@@ -63,7 +65,10 @@ render() {
 
 
   return (
+    <div>
+      <br />
       <Home />
+    </div>
   );
 }
 }
