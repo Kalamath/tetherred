@@ -16,7 +16,7 @@ export default function Suntory() {
 
     return (
         // <GridItem xs={12} sm={12} md={4}>
-        <Card style={{ width: "100%" }}>
+        <Card className="bg-dark" style={{ width: "100%" }}>
             <CardHeader color="danger"><h4>Advertisement</h4></CardHeader>
             <CardBody>
                 <img src="https://vignette.wikia.nocookie.net/whiskey/images/7/70/Bill_Murray.jpg/revision/latest?cb=20120203225344" alt="John" style={{ width: "100%" }} />

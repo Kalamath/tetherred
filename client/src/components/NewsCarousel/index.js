@@ -67,8 +67,6 @@ function TopCarousel() {
 
         </Carousel>
 
-      
-    
   );
 }
 

@@ -78,7 +78,7 @@ class Chirps extends React.Component {
         return (
 
             <GridItem xs={12} sm={12} md={3}>
-                <Card style={{ width: "100%" }}>
+                <Card className="bg-dark" style={{ width: "100%" }}>
                     <CardHeader color="info">
                         <h4>Chirp Box</h4>
                     </CardHeader>

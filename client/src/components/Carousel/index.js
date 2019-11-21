@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Carousel from 'react-bootstrap/Carousel'
-// import Container from 'react-bootstrap/Container'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+import Carousel from 'react-bootstrap/Carousel';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
