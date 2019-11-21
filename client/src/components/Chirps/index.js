@@ -2,8 +2,6 @@ import React from "react";
 import axios from "axios";
 
 import GridItem from "../Grid/GridItem.js";
-// import Container from './node_modules/react-bootstrap/Container';
-// import GridContainer from "../Grid/GridContainer.js";
 import Card from "../Card/Card.js";
 import CardHeader from "../Card/CardHeader.js";
 import CardBody from "../Card/CardBody.js";
@@ -68,7 +66,7 @@ class Chirps extends React.Component {
         }, {
             withCredentials: true
         }).then(response => {
-            console.log(`chirp post response ${response}`);
+            console.log(`chirp post response ${response}`);    
         }).catch(err => {
             console.log(err)
         });
@@ -76,10 +74,6 @@ class Chirps extends React.Component {
     };
 
     render() {
-
-        // console.log(this.state.postChirp);
-        console.log(this.state.allChirps);
-
 
         return (
 
@@ -95,10 +89,9 @@ class Chirps extends React.Component {
                             defaultValue={this.state.postChirp}
                             multiline
                             rows="5"
-                            // className={classes.textField}
                             margin="normal"
                             variant="outlined"
-                            name="chirpbox"
+                            name="chirpboxInput"
                             onChange={event => {
                                 const { value } = event.target;
                                 this.setState({ postChirp: value });
@@ -117,10 +110,9 @@ class Chirps extends React.Component {
                         </CardHeader>
                     </Card>
 
-                    {this.state.allChirps ? this.state.allChirps.map(chirps => {
+                    {this.state.allChirps ? this.state.allChirps.map((chirps, index) => {
+                        if(index < 10) {
                         return (
-
-                            // <CardBody  key={chirps._id}>
 
                             <Card key={chirps._id} style={{ width: "100%" }}>
                                 <CardHeader color="info">
@@ -131,12 +123,9 @@ class Chirps extends React.Component {
                                 </CardBody>
 
                             </Card>
-                            //    </CardBody>
 
-                        )
+                        )}
                     }) : 'not loaded'}
-
-                    {/* </Card> */}
                     
                 </div>
             </GridItem >
