@@ -76,12 +76,11 @@ export default function CardBasic() {
 
 
             <Container fixed>
-                <Jumbotron className="bg-transparent">
+                {/* <Jumbotron className="bg-transparent"> */}
 
                     <GridContainer>
 
                         <GridItem xs={12} sm={12} md={3}>
-                            <DarkMode />
                             <Trending />
                             <Suntory />
                             <People />
@@ -196,7 +195,7 @@ export default function CardBasic() {
                         <Chirpbox />
 
                     </GridContainer>
-                </Jumbotron>
+                {/* </Jumbotron> */}
             </Container>
         </React.Fragment>
     );

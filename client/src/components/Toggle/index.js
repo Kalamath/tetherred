@@ -10,12 +10,12 @@ const ToggleContainer = styled.button`
   display: flex;
   justify-content: space-between;
   background: ${({ theme }) => theme.gradient};
-  width: 8rem;
-  height: 3.5rem;
+  width: 4rem;
+  height: 2.5rem;
   margin: 0 auto;
   border-radius: 30px;
   border: 2px solid ${({ theme }) => theme.toggleBorder};
-  font-size: 0.5rem;
+  font-size: 0.2rem;
   padding: 0.5rem;
   overflow: hidden;
   cursor: pointer;
