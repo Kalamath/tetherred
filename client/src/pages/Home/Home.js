@@ -81,11 +81,11 @@ export default function CardBasic() {
                     <GridContainer>
 
                         <GridItem xs={12} sm={12} md={3}>
+                            <DarkMode />
                             <Trending />
                             <Suntory />
                             <People />
                             <Pom />
-                            <DarkMode />
                         </GridItem>
 
                         <GridItem xs={12} sm={12} md={6}>

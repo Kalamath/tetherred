@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Logo from '../../assets/imgs/Logo.png';
+// import DarkMode from '../../components/DarkMode'
 
 class Login extends React.Component {
   constructor() {

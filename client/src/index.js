@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import App from './App';
-// import { MyThemeProvider, } from "./ThemeContext";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import * as serviceWorker from './serviceWorker';

@@ -2,11 +2,10 @@ import React from "react";
 
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import DarkMode from '../DarkMode'
 
 import logo from '../../assets/imgs/TetherredFullWhite.png';
 
-
+import DarkMode from '../DarkMode'
 
 class Header extends React.Component {
 
@@ -46,9 +45,9 @@ class Header extends React.Component {
           <Navbar.Collapse className="justify-content-end">
             <Nav className="justify-content-end">
 
-              <Nav.Link className="text-white" href="/dashboard">Home</Nav.Link>
-              <Nav.Link className="text-white" href="/profile">Profile</Nav.Link>
-              <Nav.Link className="text-white" href="/logout">Logout</Nav.Link>
+              <Nav.Link className="text" href="/dashboard">Home</Nav.Link>
+              <Nav.Link className="text" href="/profile">Profile</Nav.Link>
+              <Nav.Link className="text" href="/logout">Logout</Nav.Link>
               <DarkMode />
             </Nav>
           </Navbar.Collapse>
@@ -59,8 +58,8 @@ class Header extends React.Component {
             <Navbar.Collapse className="justify-content-end">
               <Nav className="justify-content-end">
 
-                <Nav.Link className="text-white" href="/">Login</Nav.Link>
-                <Nav.Link className="text-white" href="/signup">Sign Up</Nav.Link>
+                <Nav.Link className="text" href="/">Login</Nav.Link>
+                <Nav.Link className="text" href="/signup">Sign Up</Nav.Link>
 
               </Nav>
             </Navbar.Collapse>

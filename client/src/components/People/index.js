@@ -18,19 +18,19 @@ export default function People() {
                 <Table hover>
                     <TableBody>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Somebodies Mom</TableCell>
+                            <TableCell className="text-white"><img alt="icon" src={logo} style={{ width: "20%" }} />Somebodies Mom</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Someone's Cousin</TableCell>
+                            <TableCell className="text-white"><img alt="icon" src={logo} style={{ width: "20%" }} />Someone's Cousin</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />My Friend</TableCell>
+                            <TableCell><img alt="icon" src={logo} style={{ width: "20%" }} />My Friend</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Your Friend</TableCell>
+                            <TableCell><img alt="icon" src={logo} style={{ width: "20%" }} />Your Friend</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Our Friend</TableCell>
+                            <TableCell><img alt="icon" src={logo} style={{ width: "20%" }} />Our Friend</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>

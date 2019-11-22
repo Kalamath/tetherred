@@ -14,7 +14,6 @@ import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Signup from './pages/Signup';
 import Profile from "./pages/Profile";
-// import DarkMode from './components/DarkMode';
 
 
 class App extends React.Component {
@@ -86,7 +85,6 @@ class App extends React.Component {
             <Logout
               updateUser={this.updateUser}
             />} />
-            {/* <DarkMode /> */}
         <Footer />
       </Router>
     );

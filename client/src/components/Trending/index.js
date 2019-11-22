@@ -18,19 +18,19 @@ export default function Trending() {
                 <Table hover>
                     <TableBody>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                            <TableCell className="text-white">1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                            <TableCell className="text-white">1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                            <TableCell className="text-white">1<img className="text" alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                            <TableCell className="text-white">1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
                         </TableRow>
                         <TableRow>
-                            <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
+                            <TableCell className="text-white">1<img alt="icon" src={logo} style={{ width: "20%" }} />Tetherred</TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
