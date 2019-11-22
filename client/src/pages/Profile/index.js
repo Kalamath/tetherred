@@ -107,13 +107,6 @@ class Profile extends React.Component {
 
             return (
                 <React.Fragment>
-                    {/* <div className="container">
-                        <div className="alert alert-success">
-                            welcome to the profile page of {this.state.name}
-                            <p> Here's a short description "{this.state.description}"</p>
-                        </div>
-                        <button className="btn btn-info" onClick={this.updateProfile}> update profile </button>
-                    </div> */}
                     <div>
                         <GridContainer>
                         <GridItem xs={12} sm={12} md={1}></GridItem>
@@ -122,9 +115,9 @@ class Profile extends React.Component {
                             <img
                                 // className={classes.cardImgTop}
                                 data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={blue}
+                                alt="OVO"
+                                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "cover" }}
+                                src="https://wallpaperplay.com/walls/full/d/6/c/4305.jpg"
                                 data-holder-rendered="true"
                             />
                             <CardAvatar profile>

@@ -49,6 +49,7 @@ export default function CustomizedInputs() {
                 variant="outlined"
                 id="custom-css-outlined-input"
                 multiline
+                fullWidth
                 rows="5"
                 margin="normal"
             />

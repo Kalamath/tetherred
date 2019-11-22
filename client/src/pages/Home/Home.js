@@ -9,17 +9,12 @@ import Button from '../../components/CustomButtons/Button';
 // import Button from 'react-bootstrap/Button';
 import Card from "../../components/Card/Card.js";
 import CardBody from "../../components/Card/CardBody.js";
-// import paperMario from "../../assets/imgs/paper-mario.webp";
 import hardCodeImage01 from "../../assets/imgs/fakeCardImages/184-700x500.jpg";
 import hardCodeImage02 from "../../assets/imgs/fakeCardImages/423-700x500.jpg";
 import hardCodeImage03 from "../../assets/imgs/fakeCardImages/442-700x500.jpg";
 import hardCodeImage04 from "../../assets/imgs/fakeCardImages/524-700x500.jpg";
 import hardCodeImage05 from "../../assets/imgs/fakeCardImages/557-700x500.jpg";
 import hardCodeImage06 from "../../assets/imgs/fakeCardImages/628-700x500.jpg";
-// import hardCodeImage07 from "../../assets/imgs/fakeCardImages/791-700x500.jpg";
-// import hardCodeImage08 from "../../assets/imgs/fakeCardImages/841-700x500.jpg";
-// import hardCodeImage09 from "../../assets/imgs/fakeCardImages/910-700x500.jpg";
-// import hardCodeImage10 from "../../assets/imgs/fakeCardImages/987-700x500.jpg";
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import Chirpbox from "../../components/Chirps";
@@ -30,11 +25,8 @@ import NewsBox from "../../components/Carousel's/NewsBox";
 import Suntory from "../../components/Advertisements/Suntory";
 import Pom from "../../components/Advertisements/Pom";
 import People from "../../components/People/index.js";
+import Post from "../../components/Post/index.js";
 import Icon from '@material-ui/core/Icon';
-import InputGroup from 'react-bootstrap/InputGroup';
-import TextField from '@material-ui/core/TextField';
-// import DarkMode from "../../components/DarkMode/index.js";
-
 
 const styles = {
     ...dashboardStyle,
@@ -63,15 +55,15 @@ export default function CardBasic() {
 
                 <GridContainer>
 
-                    <GridItem xs={12} sm={12} md={4}>
+                    <GridItem xs={12} sm={4} md={4}>
                         <NewsBox />
                     </GridItem>
 
-                    <GridItem xs={12} sm={12} md={4}>
+                    <GridItem xs={12} sm={4} md={4}>
                         <EntertainmentBox />
                     </GridItem>
 
-                    <GridItem xs={12} sm={12} md={4}>
+                    <GridItem xs={12} sm={4} md={4}>
                         <SportsBox />
                     </GridItem>
 
@@ -91,25 +83,9 @@ export default function CardBasic() {
                     </GridItem>
 
                     <GridItem xs={12} sm={12} md={6}>
-                        <Card className="bg-dark">
+                        <Card className="bg-dark border border-secondary">
                             <CardBody>
-                                <InputGroup>
-                                    <TextField
-                                        id="outlined-full-width"
-                                        label="Create Post"
-                                        style={{ width: "60%" }}
-                                        placeholder="What's Up?"
-                                        margin="normal"
-                                        InputLabelProps={{
-                                            shrink: true,
-                                        }}
-                                        variant="outlined"
-                                    />
-                                    <InputGroup.Append>
-                                        <Button variant="dark"><Icon className="fa fa-image" style={{ width: "100%" }}></Icon></Button>
-                                        <Button variant="dark"><Icon className="fa fa-link" style={{ width: "100%" }}></Icon></Button>
-                                    </InputGroup.Append>
-                                </InputGroup>
+                                <Post />
                             </CardBody>
                         </Card>
                         <Card className="" style={{ width: "100%" }}>

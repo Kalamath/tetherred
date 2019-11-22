@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "../Card/Card.js";
 import Divider from '@material-ui/core/Divider';
-// import CardContent from '@material-ui/core/CardContent';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
@@ -10,8 +9,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 
 import mario from '../../assets/imgs/faces/face-3.jpg'
-
-// import avatar1 from '../../assets/imgs/faces/face-3.jpg'
 
 export default function People() {
 
@@ -51,16 +48,9 @@ export default function People() {
                     <Divider variant="inset" component="li" />
                     <ListItem button>
                         <ListItemAvatar>
-                                <Avatar alt="mario" src={mario} />
+                                <Avatar alt="Ashton" src="https://ca.slack-edge.com/TK0LLTYSK-UJSC3J1FD-2917183f4f40-512" />
                             </ListItemAvatar>
-                        <ListItemText primary="Sent mail" />
-                    </ListItem>
-                    <Divider variant="inset" component="li" />
-                    <ListItem button>
-                        <ListItemAvatar>
-                                <Avatar alt="mario" src={mario} />
-                            </ListItemAvatar>
-                        <ListItemText primary="Sent mail" />
+                        <ListItemText primary="Ashton Roth : Back End Developer : Project Manager" />
                     </ListItem>
                 </List>
             {/* </CardContent> */}
