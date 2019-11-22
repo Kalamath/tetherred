@@ -107,7 +107,6 @@ class Profile extends React.Component {
 
             return (
                 <React.Fragment>
-                    <div>
                         <GridContainer>
                         <GridItem xs={12} sm={12} md={1}></GridItem>
                         <GridItem xs={12} sm={12} md={10}>
@@ -117,7 +116,7 @@ class Profile extends React.Component {
                                 data-src="holder.js/100px180/"
                                 alt="OVO"
                                 style={{ height: "auto", width: "100%", display: "block", backgroundSize: "cover" }}
-                                src="https://wallpaperplay.com/walls/full/d/6/c/4305.jpg"
+                                src="https://cs2033npate224.files.wordpress.com/2016/04/cropped-ovoheader.png"
                                 data-holder-rendered="true"
                             />
                             <CardAvatar profile>
@@ -142,8 +141,6 @@ class Profile extends React.Component {
                         </GridItem>
                         <GridItem xs={12} sm={12} md={1}></GridItem>
                         </GridContainer>
-                    </div>
-
                     <div>
                         <UserProfile />
                     </div>

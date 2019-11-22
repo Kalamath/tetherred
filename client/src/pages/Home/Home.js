@@ -51,7 +51,7 @@ export default function CardBasic() {
     return (
         <React.Fragment>
             {/* <GridContainer>  */}
-            <Jumbotron className="bg-transparent">
+            {/* <Jumbotron className="bg-transparent"> */}
 
                 <GridContainer>
 
@@ -68,7 +68,7 @@ export default function CardBasic() {
                     </GridItem>
 
                 </GridContainer>
-            </Jumbotron>
+            {/* </Jumbotron> */}
 
             <Container fixed>
                 {/* <Jumbotron className="bg-transparent"> */}
