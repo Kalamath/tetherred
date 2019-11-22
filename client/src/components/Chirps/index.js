@@ -97,7 +97,7 @@ class Chirps extends React.Component {
                                 this.setState({ postChirp: value });
                             }}
                         />
-                        <Button color="info" onClick={this.handleSubmit} style={{ width: "100%" }}>
+                        <Button class="btn btn-outline-primary" onClick={this.handleSubmit} style={{ width: "100%" }}>
                             Chirp
                         </Button>
                     </CardBody>
