@@ -9,6 +9,10 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
+// import { Avatar } from "@material-ui/core";
+import Avatar from '@material-ui/core/Avatar';
+
+import mario from '../../assets/imgs/faces/face-3.jpg'
 
 export default function Trending() {
 
@@ -20,27 +24,37 @@ export default function Trending() {
                 <CardContent>
                     <List className="text-white">
                         <ListItem button>
-                            <ListItemAvatar></ListItemAvatar>
+                            <ListItemAvatar>
+                                <Avatar alt="mario" src={mario} />
+                            </ListItemAvatar>
+                            <ListItemText primary="Aubrey Graham" />
+                        </ListItem>
+                        <Divider variant="inset" component="li" />
+                        <ListItem button>
+                            <ListItemAvatar>
+                                <Avatar alt="mario" src={mario} />
+                            </ListItemAvatar>
                             <ListItemText primary="Sent mail" />
                         </ListItem>
                         <Divider variant="inset" component="li" />
                         <ListItem button>
-                            <ListItemAvatar></ListItemAvatar>
+                            <ListItemAvatar>
+                                <Avatar alt="mario" src={mario} />
+                            </ListItemAvatar>
                             <ListItemText primary="Sent mail" />
                         </ListItem>
                         <Divider variant="inset" component="li" />
                         <ListItem button>
-                            <ListItemAvatar></ListItemAvatar>
+                            <ListItemAvatar>
+                                <Avatar alt="mario" src={mario} />
+                            </ListItemAvatar>
                             <ListItemText primary="Sent mail" />
                         </ListItem>
                         <Divider variant="inset" component="li" />
                         <ListItem button>
-                            <ListItemAvatar></ListItemAvatar>
-                            <ListItemText primary="Sent mail" />
-                        </ListItem>
-                        <Divider variant="inset" component="li" />
-                        <ListItem button>
-                            <ListItemAvatar></ListItemAvatar>
+                            <ListItemAvatar>
+                                <Avatar alt="mario" src={mario} />
+                            </ListItemAvatar>
                             <ListItemText primary="Sent mail" />
                         </ListItem>
                     </List>

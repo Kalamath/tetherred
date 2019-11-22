@@ -29,6 +29,8 @@ import NewsBox from "../../components/Carousel's/NewsBox";
 import Suntory from "../../components/Advertisements/Suntory";
 import Pom from "../../components/Advertisements/Pom";
 import People from "../../components/People/index.js";
+import Icon from '@material-ui/core/Icon';
+
 // import DarkMode from "../../components/DarkMode/index.js";
 
 
@@ -101,7 +103,8 @@ export default function CardBasic() {
                                     <p>
                                         Night trips out on the Sahara are the latest romantic getaway for millenial couples.
                     </p>
-                                    <Button color="success">Link</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 17 Comments</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
                                 </CardBody>
                             </Card>
                             <Card style={{ width: "100%" }}>
@@ -118,7 +121,8 @@ export default function CardBasic() {
                                     <p>
                                         A ski resort with a hot tub AND a fondue chocolate fountain? Sign us up!
                     </p>
-                                    <Button color="success">Link</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 32 Comments</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
                                 </CardBody>
                             </Card>
                             <Card style={{ width: "100%" }}>
@@ -135,7 +139,8 @@ export default function CardBasic() {
                                     <p>
                                         Sometimes a physical map is handy when you're running from Jason and in an area without internet.
                     </p>
-                                    <Button color="success">Link</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 13 Comments</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
                                 </CardBody>
                             </Card>
                             <Card style={{ width: "100%" }}>
@@ -152,7 +157,8 @@ export default function CardBasic() {
                                     <p>
                                         Take this poll and let us know what you think.
                     </p>
-                                    <Button color="success">Link</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 9 Comments</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
                                 </CardBody>
                             </Card>
                             <Card style={{ width: "100%" }}>
@@ -169,7 +175,8 @@ export default function CardBasic() {
                                     <p>
                                         PC MASTER RACE!!!
                     </p>
-                                    <Button color="success">Link</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 2 Comments</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
                                 </CardBody>
                             </Card>
                             <Card style={{ width: "100%" }}>
@@ -186,7 +193,8 @@ export default function CardBasic() {
                                     <p>
                                         My dad's portrait studio is hiring photographers! DM me to apply!
                     </p>
-                                    <Button color="success">Link</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 5 Comments</Button>
+                                    <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
                                 </CardBody>
                             </Card>
                         </GridItem>
