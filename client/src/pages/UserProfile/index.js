@@ -8,8 +8,17 @@ import CardBody from "../../components/Card/CardBody.js";
 import Container from 'react-bootstrap/Container';
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-import Post from "../../components/Post";
-import paperMario from "../../assets/imgs/faces/paper-mario.webp";
+import paperMario from "../../assets/imgs/paper-mario.webp";
+import hardCodeImage01 from "../../assets/imgs/fakeCardImages/184-700x500.jpg";
+import hardCodeImage02 from "../../assets/imgs/fakeCardImages/423-700x500.jpg";
+import hardCodeImage03 from "../../assets/imgs/fakeCardImages/442-700x500.jpg";
+import hardCodeImage04 from "../../assets/imgs/fakeCardImages/524-700x500.jpg";
+import hardCodeImage05 from "../../assets/imgs/fakeCardImages/557-700x500.jpg";
+import hardCodeImage06 from "../../assets/imgs/fakeCardImages/628-700x500.jpg";
+import hardCodeImage07 from "../../assets/imgs/fakeCardImages/791-700x500.jpg";
+import hardCodeImage08 from "../../assets/imgs/fakeCardImages/841-700x500.jpg";
+import hardCodeImage09 from "../../assets/imgs/fakeCardImages/910-700x500.jpg";
+import hardCodeImage10 from "../../assets/imgs/fakeCardImages/987-700x500.jpg";
 import spotify from "../../assets/imgs/spotify.png";
 import Chirpbox from "../../components/Chirps";
 
@@ -60,7 +69,7 @@ export default function UserProfile() {
                 data-holder-rendered="true"
               />
               {/* <CardBody> */}
-                <iframe src="https://open.spotify.com/embed/album/1ATL5GLyefJaxhQzSPVrLX" title="spotify" width="100%" height="400" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              <iframe src="https://open.spotify.com/embed/album/1ATL5GLyefJaxhQzSPVrLX" title="spotify" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
               {/* </CardBody> */}
             </Card>
           </GridItem>
@@ -76,16 +85,15 @@ export default function UserProfile() {
                 data-src="holder.js/100px180/"
                 alt="100%x180"
                 style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
+                src={hardCodeImage01}
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Card title</h4>
+                <h4>Desert Dune Night Picnic</h4>
                 <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                  Night trips out on the Sahara are the latest romantic getaway for millenial couples.
                     </p>
-                <Button color="success">Go somewhere</Button>
+                <Button color="success">Link</Button>
               </CardBody>
             </Card>
             <Card style={{ width: "100%" }}>
@@ -94,16 +102,15 @@ export default function UserProfile() {
                 data-src="holder.js/100px180/"
                 alt="100%x180"
                 style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
+                src={hardCodeImage02}
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Card title</h4>
+                <h4>Winter Getaways</h4>
                 <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                  A ski resort with a hot tub AND a fondue chocolate fountain? Sign us up!
                     </p>
-                <Button color="success">Go somewhere</Button>
+                <Button color="success">Link</Button>
               </CardBody>
             </Card>
             <Card style={{ width: "100%" }}>
@@ -112,16 +119,15 @@ export default function UserProfile() {
                 data-src="holder.js/100px180/"
                 alt="100%x180"
                 style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
+                src={hardCodeImage03}
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Card title</h4>
+                <h4>Map Accuracy Problems</h4>
                 <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                  Sometimes a physical map is handy when you're running from Jason and in an area without internet.
                     </p>
-                <Button color="success">Go somewhere</Button>
+                <Button color="success">Link</Button>
               </CardBody>
             </Card>
             <Card style={{ width: "100%" }}>
@@ -130,16 +136,15 @@ export default function UserProfile() {
                 data-src="holder.js/100px180/"
                 alt="100%x180"
                 style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
+                src={hardCodeImage04}
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Card title</h4>
+                <h4>Trams are the best commuting option?</h4>
                 <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                  Take this poll and let us know what you think.
                     </p>
-                <Button color="success">Go somewhere</Button>
+                <Button color="success">Link</Button>
               </CardBody>
             </Card>
             <Card style={{ width: "100%" }}>
@@ -148,16 +153,32 @@ export default function UserProfile() {
                 data-src="holder.js/100px180/"
                 alt="100%x180"
                 style={{ height: "180px", width: "100%", display: "block" }}
-                src={paperMario}
+                src={hardCodeImage05}
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Card title</h4>
+                <h4>Red Dead Redemption 2 on PC looks AMAZING!!!</h4>
                 <p>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
+                  PC MASTER RACE!!!
                     </p>
-                <Button color="success">Go somewhere</Button>
+                <Button color="success">Link</Button>
+              </CardBody>
+            </Card>
+            <Card style={{ width: "100%" }}>
+              <img
+                className={classes.cardImgTop}
+                data-src="holder.js/100px180/"
+                alt="100%x180"
+                style={{ height: "180px", width: "100%", display: "block" }}
+                src={hardCodeImage06}
+                data-holder-rendered="true"
+              />
+              <CardBody>
+                <h4>Hipfire Photos</h4>
+                <p>
+                  My dad's portrait studio is hiring photographers! DM me to apply!
+                    </p>
+                <Button color="success">Link</Button>
               </CardBody>
             </Card>
           </GridItem>
