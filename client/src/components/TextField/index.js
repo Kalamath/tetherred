@@ -4,6 +4,7 @@ import {
     makeStyles,
 } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import '../TextField/index.css'
 
 const CssTextField = withStyles({
     root: {
@@ -15,13 +16,13 @@ const CssTextField = withStyles({
         },
         '& .MuiOutlinedInput-root': {
             '& fieldset': {
-                borderColor: 'grey',
+                borderColor: 'primary',
             },
             '&:hover fieldset': {
-                borderColor: 'teal',
+                borderColor: 'white',
             },
             '&.Mui-focused fieldset': {
-                borderColor: 'teal',
+                borderColor: 'white',
             },
         },
     },
@@ -31,7 +32,6 @@ const useStyles = makeStyles(theme => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
-        color: 'white'
     },
     margin: {
         margin: theme.spacing(1),

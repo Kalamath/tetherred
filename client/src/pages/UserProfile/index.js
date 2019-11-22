@@ -8,19 +8,11 @@ import CardBody from "../../components/Card/CardBody.js";
 import Container from 'react-bootstrap/Container';
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-import paperMario from "../../assets/imgs/paper-mario.webp";
-import hardCodeImage01 from "../../assets/imgs/fakeCardImages/184-700x500.jpg";
-import hardCodeImage02 from "../../assets/imgs/fakeCardImages/423-700x500.jpg";
-import hardCodeImage03 from "../../assets/imgs/fakeCardImages/442-700x500.jpg";
-import hardCodeImage04 from "../../assets/imgs/fakeCardImages/524-700x500.jpg";
-import hardCodeImage05 from "../../assets/imgs/fakeCardImages/557-700x500.jpg";
-import hardCodeImage06 from "../../assets/imgs/fakeCardImages/628-700x500.jpg";
-import hardCodeImage07 from "../../assets/imgs/fakeCardImages/791-700x500.jpg";
-import hardCodeImage08 from "../../assets/imgs/fakeCardImages/841-700x500.jpg";
-import hardCodeImage09 from "../../assets/imgs/fakeCardImages/910-700x500.jpg";
-import hardCodeImage10 from "../../assets/imgs/fakeCardImages/987-700x500.jpg";
 import spotify from "../../assets/imgs/spotify.png";
 import Chirpbox from "../../components/Chirps";
+import Post from "../../components/Post";
+
+import Rihanna from "../../assets/imgs/fakeCardImages/rihanna.jpg"
 
 const styles = {
   cardCategoryWhite: {
@@ -63,14 +55,12 @@ export default function UserProfile() {
               <img
                 className={classes.cardImgTop}
                 data-src="holder.js/100px180/"
-                alt="100%x180"
+                alt="Spotify"
                 style={{ height: "100%", width: "100%", display: "block" }}
                 src={spotify}
                 data-holder-rendered="true"
               />
-              {/* <CardBody> */}
               <iframe src="https://open.spotify.com/embed/album/1ATL5GLyefJaxhQzSPVrLX" title="spotify" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-              {/* </CardBody> */}
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={5}>
@@ -79,106 +69,84 @@ export default function UserProfile() {
                 <Post />
               </CardBody>
             </Card>
+
             <Card style={{ width: "100%" }}>
               <img
                 className={classes.cardImgTop}
                 data-src="holder.js/100px180/"
                 alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={hardCodeImage01}
+                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "contain" }}
+                src="http://silencenogood.net/wordpress/wp-content/uploads/2013/10/Drake-Too-Much-banner.jpg"
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Desert Dune Night Picnic</h4>
-                <p>
-                  Night trips out on the Sahara are the latest romantic getaway for millenial couples.
-                    </p>
-                <Button color="success">Link</Button>
+                <h4>My Head In the Clouds : Memoirs by Drake</h4>
+                <p>A shocking memoir from October's Very Own</p>
+                <Button className="bg-transparent text-dark">Link</Button>
               </CardBody>
             </Card>
+
             <Card style={{ width: "100%" }}>
               <img
                 className={classes.cardImgTop}
                 data-src="holder.js/100px180/"
                 alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={hardCodeImage02}
+                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "contain" }}
+                src="https://bit.ly/2OaBYm8"
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Winter Getaways</h4>
-                <p>
-                  A ski resort with a hot tub AND a fondue chocolate fountain? Sign us up!
-                    </p>
-                <Button color="success">Link</Button>
+                <h4>Takashi Murakami x OVO</h4>
+                <p>Way back in July, Drake was spotted rocking a unique and eye-catching October’s Very Own x Takashi Murakami hoodie. Since then we’ve all been wondering where, or when, we could get our...</p>
+                <Button className="bg-transparent text-dark">Link</Button>
               </CardBody>
             </Card>
+
             <Card style={{ width: "100%" }}>
               <img
                 className={classes.cardImgTop}
                 data-src="holder.js/100px180/"
                 alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={hardCodeImage03}
+                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "contain" }}
+                src={Rihanna}
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Map Accuracy Problems</h4>
-                <p>
-                  Sometimes a physical map is handy when you're running from Jason and in an area without internet.
-                    </p>
-                <Button color="success">Link</Button>
+                <h4>Shining Bright Like A Diamond</h4>
+                <p>"I make way more money than Drake." - Rihanna says Drake is only sorta rich.</p>
+                <Button className="bg-transparent text-dark">Link</Button>
               </CardBody>
             </Card>
+
             <Card style={{ width: "100%" }}>
               <img
                 className={classes.cardImgTop}
                 data-src="holder.js/100px180/"
                 alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={hardCodeImage04}
+                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "contain" }}
+                src="https://carbonmade-media.accelerator.net/31130675;1280x426.jpeg"
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Trams are the best commuting option?</h4>
-                <p>
-                  Take this poll and let us know what you think.
-                    </p>
-                <Button color="success">Link</Button>
+                <h4>ESports are Huge!</h4>
+                <p>100 Thieves snag a major new investor.</p>
+                <Button className="bg-transparent text-dark">Link</Button>
               </CardBody>
             </Card>
+
             <Card style={{ width: "100%" }}>
               <img
                 className={classes.cardImgTop}
                 data-src="holder.js/100px180/"
                 alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={hardCodeImage05}
+                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "contain" }}
+                src="https://ewedit.files.wordpress.com/2019/07/euphoria-03.jpg?w=3200&h=1576"
                 data-holder-rendered="true"
               />
               <CardBody>
-                <h4>Red Dead Redemption 2 on PC looks AMAZING!!!</h4>
-                <p>
-                  PC MASTER RACE!!!
-                    </p>
-                <Button color="success">Link</Button>
-              </CardBody>
-            </Card>
-            <Card style={{ width: "100%" }}>
-              <img
-                className={classes.cardImgTop}
-                data-src="holder.js/100px180/"
-                alt="100%x180"
-                style={{ height: "180px", width: "100%", display: "block" }}
-                src={hardCodeImage06}
-                data-holder-rendered="true"
-              />
-              <CardBody>
-                <h4>Hipfire Photos</h4>
-                <p>
-                  My dad's portrait studio is hiring photographers! DM me to apply!
-                    </p>
-                <Button color="success">Link</Button>
+                <h4>Euphoria is a drug induced HIT</h4>
+                <p>The Season 1 Finale leaves us with questions, suspicions and dizzyness.</p>
+                <Button className="bg-transparent text-dark">Link</Button>
               </CardBody>
             </Card>
           </GridItem>

@@ -57,9 +57,7 @@ export default function Trending() {
                             <ListItemText primary="Kanye West" />
                         </ListItem>
                     </List>
-                <Button class="btn btn-outline-light" style={{ width: "100%" }}>
-                    See More
-                        </Button>
+                <Button class="btn btn-outline-light" style={{ width: "100%" }}>See More</Button>
             </CardBody>
         </Card>
     );

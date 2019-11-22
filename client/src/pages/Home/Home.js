@@ -160,7 +160,7 @@ export default function CardBasic() {
                                 className={classes.cardImgTop}
                                 data-src="holder.js/100px180/"
                                 alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
+                                style={{ height: "auto", width: "100%", display: "block" }}
                                 src={hardCodeImage04}
                                 data-holder-rendered="true"
                             />
