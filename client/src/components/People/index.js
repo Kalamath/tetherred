@@ -1,12 +1,6 @@
 import React from "react";
-// import Button from "../CustomButtons/Button.js";
-// import Card from "../Card/Card.js";
-import Card from '@material-ui/core/Card';
-// import CardBody from "../Card/CardBody.js";
-// import CardHeader from "../Card/CardHeader.js";
+import Card from "../Card/Card.js";
 import Divider from '@material-ui/core/Divider';
-
-// import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -20,15 +14,15 @@ export default function People() {
 
     return (
         // 
-        <Card>
-            {/* <CardHeader>Trending</CardHeader> */}
+        <Card className="bg-secondary">
             <CardContent>
                 <List
+                    className="text-white"
                     component="nav"
                     aria-labelledby="nested-list-subheader"
                     subheader={
-                        <ListSubheader component="div" id="nested-list-subheader">
-                            People You May Know
+                        <ListSubheader className="text-white" component="div" id="nested-list-subheader">
+                            PEOPLE YOU MAY KNOW
                   </ListSubheader>}
                 >
                     <ListItem button>

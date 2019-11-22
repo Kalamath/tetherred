@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Carousel from 'react-bootstrap/Carousel'
-// import Container from 'react-bootstrap/Container'
-// import Jumbotron from 'react-bootstrap/Jumbotron'
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import GridContainer from "../../components/Grid/GridContainer.js";
-// import GridItem from "../../components/Grid/GridItem.js";
 
 import axios from "axios";
 function makeRequest() {
@@ -37,13 +33,13 @@ function TopCarousel() {
               <img
                 className="d-block w-100"
                 src={item.image}
-                style={{ width: "100%", height: 300, objectFit: "cover", opacity: 1 }} 
+                style={{ width: "100%", height: 300, objectFit: "cover", opacity: 0.4 }} 
                 alt=""
               />
               <Carousel.Caption>
-                  <h1
+                  <h3
                     className="text"
-                  >{item.title}</h1>
+                  >{item.title}</h3>
               </Carousel.Caption>
             </Carousel.Item>
           )

@@ -27,13 +27,13 @@ function TopCarousel() {
                 <img 
                 className="d-block w-100"
                 src={item.image}
-                style={{ width: "100%", height: 300, objectFit: "cover", opacity: 1 }}
+                style={{ width: "100%", height: 300, objectFit: "cover", opacity: 0.4 }}
                 alt=""
                 />
              <Carousel.Caption>
-                  <h1
+                  <h3
                   className="text"
-                 >{item.title}</h1>
+                 >{item.title}</h3>
              </Carousel.Caption>
              </Carousel.Item>
          )

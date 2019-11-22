@@ -23,13 +23,13 @@ import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImages
 import GridContainer from "../../components/Grid/GridContainer.js";
 import Chirpbox from "../../components/Chirps";
 import Trending from "../../components/Trending";
-import EntertainmentBox from "../../components/EntertainmentBox";
-import SportsBox from "../../components/SportsBox";
-import NewsBox from "../../components/NewsBox";
-import Suntory from "../../components/Suntory/index.js";
-import Pom from "../../components/Pom/index.js";
+import EntertainmentBox from "../../components/Carousel's/EntertainmentBox";
+import SportsBox from "../../components/Carousel's/SportsBox";
+import NewsBox from "../../components/Carousel's/NewsBox";
+import Suntory from "../../components/Advertisements/Suntory";
+import Pom from "../../components/Advertisements/Pom";
 import People from "../../components/People/index.js";
-import DarkMode from "../../components/DarkMode/index.js";
+// import DarkMode from "../../components/DarkMode/index.js";
 
 
 const styles = {
@@ -73,7 +73,6 @@ export default function CardBasic() {
 
                 </GridContainer>
             </Jumbotron>
-
 
             <Container fixed>
                 {/* <Jumbotron className="bg-transparent"> */}
