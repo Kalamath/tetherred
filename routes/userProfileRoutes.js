@@ -27,7 +27,7 @@ router.get("/:id", function( req, res) {
     // console.log("req.user @ profile get" + req.user);
     UserProfile.findOne({ userId: req.params.id})
     .then( dbProfile => {
-        console.log(`res for get profile ${dbProfile}`);
+        // console.log(`res for get profile ${dbProfile}`);
         res.send(dbProfile);
     }).catch( err => {
         console.log(err);
