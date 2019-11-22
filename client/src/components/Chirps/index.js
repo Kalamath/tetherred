@@ -74,9 +74,7 @@ class Chirps extends React.Component {
     };
 
     render() {
-
         return (
-
             <GridItem xs={12} sm={12} md={3}>
                 <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
                     <CardHeader color="info">
@@ -85,19 +83,14 @@ class Chirps extends React.Component {
                     <CardBody>
                         <TextField
                             id="outlined-multiline-static"
-                            // label="Write Chirp Here"
                             defaultValue={this.state.postChirp}
-                            // multiline
-                            // rows="5"
-                            // margin="normal"
-                            // variant="outlined"
                             name="chirpboxInput"
                             onChange={event => {
                                 const { value } = event.target;
                                 this.setState({ postChirp: value });
                             }}
                         />
-                        <Button color="info" onClick={this.handleSubmit} style={{ width: "100%" }}>
+                        <Button class="btn btn-outline-secondary" onClick={this.handleSubmit} style={{ width: "100%" }}>
                             Chirp
                         </Button>
                     </CardBody>
@@ -109,11 +102,9 @@ class Chirps extends React.Component {
                             <h4>What's Chirpin'</h4>
                         </CardHeader>
                     </Card>
-
                     {this.state.allChirps ? this.state.allChirps.map((chirps, index) => {
                         if (index < 10) {
                             return (
-
                                 <Card className="bg-dark border border-secondary" key={chirps._id} style={{ width: "100%" }}>
                                     <CardHeader color="info">
                                         <h6>{chirps.author}</h6>

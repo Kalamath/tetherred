@@ -6,7 +6,7 @@ import Fade from '@material-ui/core/Fade';
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardBody from '../Card/CardBody.js';
-import avatar from "../../assets/imgs/faces/face-3.jpg";
+// import avatar from "../../assets/imgs/faces/face-3.jpg";
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
 

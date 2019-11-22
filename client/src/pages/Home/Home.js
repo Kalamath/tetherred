@@ -9,11 +9,7 @@ import Button from '../../components/CustomButtons/Button';
 import Card from "../../components/Card/Card.js";
 import CardBody from "../../components/Card/CardBody.js";
 import hardCodeImage01 from "../../assets/imgs/fakeCardImages/184-700x500.jpg";
-import hardCodeImage02 from "../../assets/imgs/fakeCardImages/423-700x500.jpg";
-import hardCodeImage03 from "../../assets/imgs/fakeCardImages/442-700x500.jpg";
 import hardCodeImage04 from "../../assets/imgs/fakeCardImages/524-700x500.jpg";
-import hardCodeImage05 from "../../assets/imgs/fakeCardImages/557-700x500.jpg";
-import hardCodeImage06 from "../../assets/imgs/fakeCardImages/628-700x500.jpg";
 import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import Chirpbox from "../../components/Chirps";
@@ -52,21 +48,21 @@ export default function CardBasic() {
             {/* <GridContainer>  */}
             {/* <Jumbotron className="bg-transparent"> */}
 
-                <GridContainer>
+            <GridContainer>
 
-                    <GridItem xs={12} sm={4} md={4}>
-                        <NewsBox />
-                    </GridItem>
+                <GridItem xs={12} sm={4} md={4}>
+                    <NewsBox />
+                </GridItem>
 
-                    <GridItem xs={12} sm={4} md={4}>
-                        <EntertainmentBox />
-                    </GridItem>
+                <GridItem xs={12} sm={4} md={4}>
+                    <EntertainmentBox />
+                </GridItem>
 
-                    <GridItem xs={12} sm={4} md={4}>
-                        <SportsBox />
-                    </GridItem>
+                <GridItem xs={12} sm={4} md={4}>
+                    <SportsBox />
+                </GridItem>
 
-                </GridContainer>
+            </GridContainer>
             {/* </Jumbotron> */}
 
             <Container fixed>
@@ -111,61 +107,7 @@ export default function CardBasic() {
                                 data-src="holder.js/100px180/"
                                 alt="100%x180"
                                 style={{ height: "180px", width: "100%", display: "block" }}
-                                src={hardCodeImage02}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Winter Getaways</h4>
-                                <p>
-                                    A ski resort with a hot tub AND a fondue chocolate fountain? Sign us up!
-                    </p>
-                                <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 32 Comments</Button>
-                                <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
-                            </CardBody>
-                        </Card>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={hardCodeImage03}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Map Accuracy Problems</h4>
-                                <p>
-                                    Sometimes a physical map is handy when you're running from Jason and in an area without internet.
-                    </p>
-                                <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 13 Comments</Button>
-                                <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
-                            </CardBody>
-                        </Card>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={hardCodeImage04}
-                                data-holder-rendered="true"
-                            />
-                            <CardBody>
-                                <h4>Trams are the best commuting option?</h4>
-                                <p>
-                                    Take this poll and let us know what you think.
-                    </p>
-                                <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 9 Comments</Button>
-                                <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
-                            </CardBody>
-                        </Card>
-                        <Card style={{ width: "100%" }}>
-                            <img
-                                className={classes.cardImgTop}
-                                data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={hardCodeImage05}
+                                src="https://bit.ly/2XFA4NF"
                                 data-holder-rendered="true"
                             />
                             <CardBody>
@@ -183,7 +125,61 @@ export default function CardBasic() {
                                 data-src="holder.js/100px180/"
                                 alt="100%x180"
                                 style={{ height: "180px", width: "100%", display: "block" }}
-                                src={hardCodeImage06}
+                                src="https://media.giphy.com/media/fP1wyl45HJGBW/giphy.gif"
+                                data-holder-rendered="true"
+                            />
+                            <CardBody>
+                                <h4>Winter Getaways</h4>
+                                <p>
+                                    A ski resort with a hot tub AND a fondue chocolate fountain? Sign us up!
+                    </p>
+                                <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 32 Comments</Button>
+                                <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
+                            </CardBody>
+                        </Card>
+                        <Card style={{ width: "100%" }}>
+                            <img
+                                className={classes.cardImgTop}
+                                data-src="holder.js/100px180/"
+                                alt="100%x180"
+                                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "contain" }}
+                                src="https://i.gifer.com/9yCP.gif"
+                                data-holder-rendered="true"
+                            />
+                            <CardBody>
+                                <h4>Map Accuracy Problems</h4>
+                                <p>
+                                    Sometimes a physical map is handy when you're running from Jason and in an area without internet.
+                    </p>
+                                <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 13 Comments</Button>
+                                <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
+                            </CardBody>
+                        </Card>
+                        <Card style={{ width: "100%" }}>
+                            <img
+                                className={classes.cardImgTop}
+                                data-src="holder.js/100px180/"
+                                alt="100%x180"
+                                style={{ height: "auto", width: "100%", display: "block" }}
+                                src={hardCodeImage04}
+                                data-holder-rendered="true"
+                            />
+                            <CardBody>
+                                <h4>Trams are the best commuting option?</h4>
+                                <p>
+                                    Take this poll and let us know what you think.
+                    </p>
+                                <Button className="bg-transparent text-dark"><Icon className="fa fa-comments"></Icon> 9 Comments</Button>
+                                <Button className="bg-transparent text-dark"><Icon className="fa fa-share"></Icon> Share</Button>
+                            </CardBody>
+                        </Card>
+                        <Card style={{ width: "100%" }}>
+                            <img
+                                className={classes.cardImgTop}
+                                data-src="holder.js/100px180/"
+                                alt="100%x180"
+                                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "contain" }}
+                                src="https://www.thecasefarm.co.uk/wp-content/uploads/2017/07/Talia-banner-new.jpg"
                                 data-holder-rendered="true"
                             />
                             <CardBody>
