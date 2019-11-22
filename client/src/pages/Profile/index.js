@@ -8,7 +8,6 @@ import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
 
 import avatar from "../../assets/imgs/faces/face-3.jpg";
-import blue from "../../assets/imgs/blue.jpg";
 import GridContainer from "../../components/Grid/GridContainer";
 import GridItem from "../../components/Grid/GridItem.js";
 import Modal from "../../components/Modal";
@@ -95,44 +94,38 @@ class Profile extends React.Component {
 
             return (
                 <React.Fragment>
-                    <div>
                         <GridContainer>
-                            <GridItem xs={12} sm={12} md={1}></GridItem>
-                            <GridItem xs={12} sm={12} md={10}>
-                                <Card profile>
-                                    <img
-                                        // className={classes.cardImgTop}
-                                        data-src="holder.js/100px180/"
-                                        alt="100%x180"
-                                        style={{ height: "180px", width: "100%", display: "block" }}
-                                        src={blue}
-                                        data-holder-rendered="true"
-                                    />
-                                    <CardAvatar profile>
-                                        <a href="#pablo" onClick={e => e.preventDefault()}>
-                                            <img src={avatar} alt="..." />
-                                        </a>
-                                    </CardAvatar>
-                                    <CardBody profile>
-                                        {/* <h6 className={classes.cardCategory}>OVO</h6> */}
-                                        <h4>{this.state.firstname} {this.state.lastname}</h4>
+                        <GridItem xs={12} sm={12} md={1}></GridItem>
+                        <GridItem xs={12} sm={12} md={10}>
+                        <Card profile>
+                            <img
+                                // className={classes.cardImgTop}
+                                data-src="holder.js/100px180/"
+                                alt="OVO"
+                                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "cover" }}
+                                src="https://cs2033npate224.files.wordpress.com/2016/04/cropped-ovoheader.png"
+                                data-holder-rendered="true"
+                            />
+                            <CardAvatar profile>
+                                <a href="#pablo" onClick={e => e.preventDefault()}>
+                                    <img src={avatar} alt="..." />
+                                </a>
+                            </CardAvatar>
+                            <CardBody profile>
+                                {/* <h6 className={classes.cardCategory}>OVO</h6> */}
+                                <h4>{this.state.firstname} {this.state.lastname}</h4>
                                         <p style={{}}>
                                             <strong>Dob:</strong> {this.state.dob}
                                             <strong> Lives in: </strong> {this.state.location}
                                         </p>
                                         <p><strong> Hobbies/Interest:</strong> {this.state.hobbies} </p>
-
-                                        <Button color="success" round onClick={this.updateProfile}>
-                                            Follow
-                                </Button>
+                                <Button color="success" round onClick={this.updateProfile}>Follow</Button>
                                         <Modal />
                                     </CardBody>
                                 </Card>
                             </GridItem>
                             <GridItem xs={12} sm={12} md={1}></GridItem>
                         </GridContainer>
-                    </div>
-
                     <div>
                         <UserProfile />
                     </div>

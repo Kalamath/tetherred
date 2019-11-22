@@ -1,40 +1,59 @@
 import React from "react";
-import Button from "../CustomButtons/Button.js";
 import Card from "../Card/Card.js";
-import CardBody from "../Card/CardBody.js";
-import CardHeader from "../Card/CardHeader.js";
-import Table from 'react-bootstrap/Table'
-import TableRow from '@material-ui/core/TableRow';
-import TableCell from '@material-ui/core/TableCell';
-import logo from '../../assets/imgs/Logo.png'
+import Divider from '@material-ui/core/Divider';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemAvatar from '@material-ui/core/ListItemAvatar';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import ListItemText from '@material-ui/core/ListItemText';
+import Avatar from '@material-ui/core/Avatar';
+
+// import mario from '../../assets/imgs/faces/face-3.jpg'
 
 export default function People() {
 
     return (
-        <Card style={{ width: "100%" }}>
-            <CardHeader color="danger"><h4>People You May Know</h4></CardHeader>
-            <CardBody>
-                <Table hover>
-                    <TableRow>
-                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Somebodies Mom</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Someone's Cousin</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />My Friend</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Your Friend</TableCell>
-                    </TableRow>
-                    <TableRow>
-                        <TableCell>1<img alt="icon" src={logo} style={{ width: "20%" }} />Our Friend</TableCell>
-                    </TableRow>
-                </Table>
-                <Button color="info" style={{ width: "100%" }}>
-                    See More
-                        </Button>
-            </CardBody>
+        // 
+        <Card className="bg-dark border border-secondary">
+            {/* <CardContent> */}
+                <List
+                    className="text-white"
+                    component="nav"
+                    aria-labelledby="nested-list-subheader"
+                    subheader={
+                        <ListSubheader fixed className="text-white" component="div" id="nested-list-subheader">
+                            PEOPLE YOU MAY KNOW
+                  </ListSubheader>}
+                >
+                    <ListItem button>
+                        <ListItemAvatar>
+                                <Avatar alt="Syeda" src="https://avatars2.githubusercontent.com/u/50857238?s=460&v=4" />
+                            </ListItemAvatar>
+                        <ListItemText primary="Syeda Zaidi : Back End Developer" />
+                    </ListItem>
+                    <Divider variant="inset" component="li" />
+                    <ListItem button>
+                        <ListItemAvatar>
+                                <Avatar alt="Martell" src="https://avatars1.githubusercontent.com/u/24293243?s=460&v=4" />
+                            </ListItemAvatar>
+                        <ListItemText primary="Martell Harding : Front End Developer" />
+                    </ListItem>
+                    <Divider variant="inset" component="li" />
+                    <ListItem button>
+                        <ListItemAvatar>
+                                <Avatar alt="Gabe" src="https://avatars2.githubusercontent.com/u/48465631?s=460&v=4" />
+                            </ListItemAvatar>
+                        <ListItemText primary="Gabriel de Leon : Front End Developer" />
+                    </ListItem>
+                    <Divider variant="inset" component="li" />
+                    <ListItem button>
+                        <ListItemAvatar>
+                                <Avatar alt="Ashton" src="https://ca.slack-edge.com/TK0LLTYSK-UJSC3J1FD-2917183f4f40-512" />
+                            </ListItemAvatar>
+                        <ListItemText primary="Ashton Roth : Back End Developer : Project Manager" />
+                    </ListItem>
+                </List>
+            {/* </CardContent> */}
         </Card>
     );
 }

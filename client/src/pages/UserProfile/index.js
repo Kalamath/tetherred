@@ -8,7 +8,8 @@ import CardBody from "../../components/Card/CardBody.js";
 import Container from 'react-bootstrap/Container';
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-import paperMario from "../../assets/imgs/paper-mario.webp";
+import Post from "../../components/Post";
+import paperMario from "../../assets/imgs/faces/paper-mario.webp";
 import spotify from "../../assets/imgs/spotify.png";
 import Chirpbox from "../../components/Chirps";
 
@@ -41,7 +42,6 @@ export default function UserProfile() {
         <GridItem xs={12} sm={12} md={1}>
         </GridItem>
         <GridItem xs={12} sm={12} md={10}>
-          
         </GridItem>
         <GridItem xs={12} sm={12} md={1}>
         </GridItem>
@@ -65,6 +65,11 @@ export default function UserProfile() {
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={5}>
+            <Card className="bg-dark border border-secondary">
+              <CardBody>
+                <Post />
+              </CardBody>
+            </Card>
             <Card style={{ width: "100%" }}>
               <img
                 className={classes.cardImgTop}

@@ -66,7 +66,6 @@ class App extends React.Component {
     return (
       <Router>
         <Header updateUser={this.updateUser} loggedIn={this.state.loggedIn} />
-        <br />
         <Route path="/" exact={true} render={() =>
           <Login
             updateUser={this.updateUser}
