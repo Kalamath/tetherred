@@ -65,7 +65,6 @@ export default function TransitionsModal() {
 
     const handleClose = () => {
         setOpen(false);
-        window.location.reload();
     };
 
     const handleSubmit = () => {
@@ -81,7 +80,9 @@ export default function TransitionsModal() {
             withCredentials: true
         })
             .then(response => {
-                console.log(`resp from profile post call ${response}`)
+                console.log(`resp from profile post call ${response}`);
+                setOpen(false);
+                window.location.reload();
             }).catch(err => {
                 console.log(err)
             });
@@ -170,7 +171,7 @@ export default function TransitionsModal() {
                                 </div>
                                 <Button color="info" round onClick={handleSubmit}> Submit </Button>
                                 <Button color="primary" round onClick={handleClose}>
-                                    Close
+                                    Cancel
                                 </Button>
                             </CardBody>
                         </Card>
