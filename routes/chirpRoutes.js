@@ -21,8 +21,8 @@ const Chirps = require("../db/chirps");
     // posts new chirps from db.Chirps 
     //routes to "/api/chirps"
     router.post("/post", function (req, res) {
-        console.log(`username ${req.user.username}`);
-        console.log(req.body);
+        // console.log(`username ${req.user.username}`);
+        // console.log(req.body);
         Chirps.create({
             author: req.user.username,
             body: req.body.body

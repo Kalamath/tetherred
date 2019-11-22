@@ -4,20 +4,10 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
-// import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
-// import CardHeader from "../../components/Card/CardHeader.js";
 import Container from 'react-bootstrap/Container';
-// import CardFooter from "../../components/Card/CardFooter.js";
-// import CardHeader from "../../components/Card/CardHeader.js";
-// import CustomInput from "../../components/CustomInput/CustomInput.js";
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-// import InputLabel from "@material-ui/core/InputLabel";
-// import TextField from '@material-ui/core/TextField';
-
-// import avatar from "../../assets/imgs/faces/face-3.jpg";
-// import blue from "../../assets/imgs/blue.jpg";
 import paperMario from "../../assets/imgs/paper-mario.webp";
 import hardCodeImage01 from "../../assets/imgs/fakeCardImages/184-700x500.jpg";
 import hardCodeImage02 from "../../assets/imgs/fakeCardImages/423-700x500.jpg";
@@ -61,33 +51,6 @@ export default function UserProfile() {
         <GridItem xs={12} sm={12} md={1}>
         </GridItem>
         <GridItem xs={12} sm={12} md={10}>
-          {/* <Card profile>
-            <img
-              className={classes.cardImgTop}
-              data-src="holder.js/100px180/"
-              alt="100%x180"
-              style={{ height: "180px", width: "100%", display: "block" }}
-              src={blue}
-              data-holder-rendered="true"
-            />
-            <CardAvatar profile>
-              <a href="#pablo" onClick={e => e.preventDefault()}>
-                <img src={avatar} alt="..." />
-              </a>
-            </CardAvatar>
-            <CardBody profile>
-              <h6 className={classes.cardCategory}>OVO</h6>
-              <h4 className={classes.cardTitle}>Aubrey Graham</h4>
-              <p className={classes.description}>
-                Don{"'"}t be scared of the truth because we need to restart the
-                human foundation in truth And I love you like Kanye loves Kanye
-                I love Rick Owens’ bed design but the back is...
-          </p>
-              <Button color="success" round>
-                Follow
-          </Button>
-            </CardBody>
-          </Card> */}
         </GridItem>
         <GridItem xs={12} sm={12} md={1}>
         </GridItem>
@@ -111,6 +74,11 @@ export default function UserProfile() {
             </Card>
           </GridItem>
           <GridItem xs={12} sm={12} md={5}>
+            <Card className="bg-dark border border-secondary">
+              <CardBody>
+                <Post />
+              </CardBody>
+            </Card>
             <Card style={{ width: "100%" }}>
               <img
                 className={classes.cardImgTop}

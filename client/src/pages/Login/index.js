@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import Logo from '../../assets/imgs/Logo.png';
+// import DarkMode from '../../components/DarkMode'
 
 class Login extends React.Component {
   constructor() {
@@ -23,8 +24,8 @@ class Login extends React.Component {
   }
   handleSubmit(event) {
     event.preventDefault();
-    console.log('handleSubmit');
-    console.log(this.state.email);
+    // console.log('handleSubmit');
+    // console.log(this.state.email);
     axios.post('/api/sessions/signin', {
       email: this.state.email,
       password: this.state.password
@@ -32,8 +33,8 @@ class Login extends React.Component {
       withCredentials: true
     })
       .then(response => {
-        console.log('login response: ')
-        console.log(response)
+        // console.log('login response: ')
+        // console.log(response)
         if (response.status === 200) {
           // update App.js state
           this.props.updateUser({

@@ -8,7 +8,6 @@ import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
 
 import avatar from "../../assets/imgs/faces/face-3.jpg";
-import blue from "../../assets/imgs/blue.jpg";
 import GridContainer from "../../components/Grid/GridContainer";
 import GridItem from "../../components/Grid/GridItem.js";
 import Modal from "../../components/Modal";
@@ -21,8 +20,11 @@ class Profile extends React.Component {
         this.state = {
             loggedIn: false,
             id: null,
-            name: null,
-            description: null
+            firstname: '',
+            lastname: '',
+            dob: '',
+            location: '',
+            hobbies: '',
         }
 
         this.getUser = this.getUser.bind(this)
@@ -42,17 +44,13 @@ class Profile extends React.Component {
         axios.get('/api/sessions', {
             withCredentials: true
         }).then(response => {
-            console.log('Get user response: ')
-            console.log(response.data);
-            // console.log("req.user "+ req.user);
+            // console.log('Get user response: ')
+            // console.log(response.data);
             if (response.data.user) {
-                console.log('Get User: There is a user saved in the server session: ')
-
                 this.setState({
                     loggedIn: true,
                     id: response.data.user._id
                 });
-                console.log(`id from state ${this.state.id}`);
                 this.getUserProfile();
             } else {
                 console.log('Get user: no user');
@@ -70,26 +68,15 @@ class Profile extends React.Component {
         }).then(response => {
             console.log(response.data);
             this.setState({
-                name: response.data.name,
-                description: response.data.description
+                firstname: response.data.firstname,
+                lastname: response.data.lastname,
+                dob: response.data.dob,
+                location: response.data.location,
+                hobbies: response.data.hobbies
             })
         }).catch(err => {
             console.log(err);
         });
-    };
-
-    updateProfile = () => {
-        const url = `/api/profile/${this.state.id}`;
-        console.log(url);
-
-        axios.post(url, {}, {
-            withCredentials: true
-        })
-            .then(response => {
-                console.log(`resp from profile post call ${response}`)
-            }).catch(err => {
-                console.log(err)
-            });
     };
 
 
@@ -107,14 +94,6 @@ class Profile extends React.Component {
 
             return (
                 <React.Fragment>
-                    {/* <div className="container">
-                        <div className="alert alert-success">
-                            welcome to the profile page of {this.state.name}
-                            <p> Here's a short description "{this.state.description}"</p>
-                        </div>
-                        <button className="btn btn-info" onClick={this.updateProfile}> update profile </button>
-                    </div> */}
-                    <div>
                         <GridContainer>
                         <GridItem xs={12} sm={12} md={1}></GridItem>
                         <GridItem xs={12} sm={12} md={10}>
@@ -122,9 +101,9 @@ class Profile extends React.Component {
                             <img
                                 // className={classes.cardImgTop}
                                 data-src="holder.js/100px180/"
-                                alt="100%x180"
-                                style={{ height: "180px", width: "100%", display: "block" }}
-                                src={blue}
+                                alt="OVO"
+                                style={{ height: "auto", width: "100%", display: "block", backgroundSize: "cover" }}
+                                src="https://cs2033npate224.files.wordpress.com/2016/04/cropped-ovoheader.png"
                                 data-holder-rendered="true"
                             />
                             <CardAvatar profile>
@@ -134,23 +113,19 @@ class Profile extends React.Component {
                             </CardAvatar>
                             <CardBody profile>
                                 {/* <h6 className={classes.cardCategory}>OVO</h6> */}
-                                <h4 className={this.state.name}>Aubrey Graham</h4>
-                                <p className={this.state.description}>
-                                    Don{"'"}t be scared of the truth because we need to restart the
-                                    human foundation in truth And I love you like Kanye loves Kanye
-                                    I love Rick Owens’ bed design but the back is...
-                                </p>
-                                <Button color="success" round onClick={this.updateProfile}>
-                                    Follow
-                                </Button>
-                                <Modal />
-                            </CardBody>
-                        </Card>
-                        </GridItem>
-                        <GridItem xs={12} sm={12} md={1}></GridItem>
+                                <h4>{this.state.firstname} {this.state.lastname}</h4>
+                                        <p style={{}}>
+                                            <strong>Dob:</strong> {this.state.dob}
+                                            <strong> Lives in: </strong> {this.state.location}
+                                        </p>
+                                        <p><strong> Hobbies/Interest:</strong> {this.state.hobbies} </p>
+                                <Button color="success" round onClick={this.updateProfile}>Follow</Button>
+                                        <Modal />
+                                    </CardBody>
+                                </Card>
+                            </GridItem>
+                            <GridItem xs={12} sm={12} md={1}></GridItem>
                         </GridContainer>
-                    </div>
-
                     <div>
                         <UserProfile />
                     </div>

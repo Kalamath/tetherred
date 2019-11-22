@@ -6,7 +6,7 @@ const passport = require("../config/passport/passport");
 
 // Session start call
 router.get('/start', (req, res) => {
-    console.log("req @ /start" + req.user);
+    // console.log("req @ /start" + req.user);
     res.json({
         isLoggedIn: req.session.isLoggedIn || false
     })
@@ -14,7 +14,7 @@ router.get('/start', (req, res) => {
 
 router.get('/', (req, res, next) => {
     
-    console.log("req.user @ / : " + req.user);
+    // console.log("req.user @ / : " + req.user);
     if (req.user) {
         res.json({ user: req.user })
     } else {
@@ -26,7 +26,6 @@ router.get('/', (req, res, next) => {
 router.post('/signup', (req, res) => {
 
     const { email, username, password } = req.body;
-    // console.log("signup req.body :" + req);
 
     // ADD VALIDATION
     User.findOne({ email: email }, (err, user) => {

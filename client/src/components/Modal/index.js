@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
@@ -8,6 +8,7 @@ import Card from "../../components/Card/Card.js";
 import CardBody from '../Card/CardBody.js';
 import avatar from "../../assets/imgs/faces/face-3.jpg";
 import TextField from '@material-ui/core/TextField';
+import axios from 'axios';
 
 const useStyles = makeStyles(theme => ({
     modal: {
@@ -34,7 +35,29 @@ const useStyles = makeStyles(theme => ({
 
 export default function TransitionsModal() {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
+    const [userid, setUserid] = useState('');
+    const [firstname, setFirstname] = useState('');
+    const [lastname, setLastname] = useState('');
+    const [dob, setDob] = useState('');
+    const [location, setLocation] = useState('');
+    const [hobbies, setHobbies] = useState('');
+
+
+    useEffect(() => {
+        axios.get('/api/sessions', {
+            withCredentials: true
+        }).then(response => {
+            if (response.data.user) {
+                // console.log(response.data.user._id);
+                setUserid(response.data.user._id)
+            } else {
+                console.log('Get user: no user');
+                setUserid(null);
+            }
+        })
+    }, []);
+
 
     const handleOpen = () => {
         setOpen(true);
@@ -43,6 +66,28 @@ export default function TransitionsModal() {
     const handleClose = () => {
         setOpen(false);
     };
+
+    const handleSubmit = () => {
+        console.log(`id from state`);
+        console.log(userid)
+        axios.post(`/api/profile/${userid}`, {
+            firstname: firstname,
+            lastname: lastname,
+            dob: dob,
+            location: location,
+            hobbies: hobbies,
+        }, {
+            withCredentials: true
+        })
+            .then(response => {
+                console.log(`resp from profile post call ${response}`);
+                setOpen(false);
+                window.location.reload();
+            }).catch(err => {
+                console.log(err)
+            });
+
+    }
 
     return (
         <div>
@@ -69,27 +114,64 @@ export default function TransitionsModal() {
                             <CardBody>
                                 <div>
                                     <TextField
-                                    id="standard-basic"
-                                    className={classes.textField}
-                                    label="First Name"
-                                    margin="normal"
+                                        id="first-name"
+                                        className={classes.textField}
+                                        label="First Name"
+                                        margin="normal"
+                                        value={firstname}
+                                        onChange={event => {
+
+                                            setFirstname(event.target.value);
+                                        }}
                                     />
                                     <TextField
-                                    id="standard-basic"
-                                    className={classes.textField}
-                                    label="Last Name"
-                                    margin="normal"
+                                        id="last-name"
+                                        className={classes.textField}
+                                        label="Last Name"
+                                        margin="normal"
+                                        value={lastname}
+                                        onChange={event => {
+
+                                            setLastname(event.target.value);
+                                        }}
+                                    />
+                                    <TextField
+                                        id="dob"
+                                        className={classes.textField}
+                                        label="Date of Birth (MM-DD)"
+                                        margin="normal"
+                                        value={dob}
+                                        onChange={event => {
+
+                                            setDob(event.target.value);
+                                        }}
+                                    />
+                                    <TextField
+                                        id="location"
+                                        className={classes.textField}
+                                        label="Lives In"
+                                        margin="normal"
+                                        value={location}
+                                        onChange={event => {
+
+                                            setLocation(event.target.value);
+                                        }}
+                                    />
+                                    <TextField
+                                        id="hobbies"
+                                        className={classes.textField}
+                                        label="Hobbies/Interests"
+                                        margin="normal"
+                                        value={hobbies}
+                                        onChange={event => {
+
+                                            setHobbies(event.target.value);
+                                        }}
                                     />
                                 </div>
-                                <img src={avatar} alt="drake" style={{}} />
-                                <h1 id="transition-modal-title">Aubrey Graham</h1>
-                                <p id="transition-modal-description">Don{"'"}t be scared of the truth because we need to restart the
-                                                        human foundation in truth And I love you like Kanye loves Kanye
-                                    I love Rick Owens’ bed design but the back is...</p>
-                                    
-                                {/* Change the onClick to the proper route */}
+                                <Button color="info" round onClick={handleSubmit}> Submit </Button>
                                 <Button color="primary" round onClick={handleClose}>
-                                    Update
+                                    Cancel
                                 </Button>
                             </CardBody>
                         </Card>

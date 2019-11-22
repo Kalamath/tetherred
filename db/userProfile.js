@@ -7,13 +7,25 @@ const UserProfileSchema = new mongoose.Schema({
         required: true
     },
 
-    name: {
+    firstname: {
         type: String,
         required: true
     },
 
-    description: {
+    lastname: {
         type: String,
+    },
+
+    dob: {
+        type: String,
+    },
+
+    location: {
+        type: String
+    },
+
+    hobbies: {
+        type: String
     }
 
 });
