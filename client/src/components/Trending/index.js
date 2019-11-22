@@ -18,7 +18,7 @@ export default function Trending() {
 
     return (
 
-        <Card className="bg-secondary" style={{ width: "100%" }}>
+        <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
             <CardHeader color="danger"><h4>Trending</h4></CardHeader>
             <CardBody>
                 <CardContent>
@@ -29,7 +29,7 @@ export default function Trending() {
                             </ListItemAvatar>
                             <ListItemText primary="Aubrey Graham" />
                         </ListItem>
-                        <Divider variant="inset" component="li" />
+                        <Divider className="text-white" variant="inset" component="li" />
                         <ListItem button>
                             <ListItemAvatar>
                                 <Avatar alt="mario" src={mario} />

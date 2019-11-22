@@ -7,7 +7,7 @@ import SportsCarousel from "../../Carousel's/SportsCarousel";
 export default function SportsBox() {
 
     return (
-            <Card className="bg-secondary" style={{ width: "100%" }}>
+            <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
             <CardHeader color="primary"><h4>Sports</h4></CardHeader>
                 <CardBody>
                    <SportsCarousel />

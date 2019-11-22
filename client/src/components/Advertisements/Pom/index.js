@@ -6,7 +6,7 @@ import CardBody from "../../Card/CardBody";
 export default function Suntory() {
 
     return (
-        <Card className="bg-secondary" style={{ width: "100%" }}>
+        <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
             <CardBody className="text-white">
                 ADVERTISEMENT
                 <img src="https://i.gifer.com/9Gm7.gif" alt="Pom" style={{ width: "100%" }} />

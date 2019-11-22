@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../Card/Card.js";
 import Divider from '@material-ui/core/Divider';
-import CardContent from '@material-ui/core/CardContent';
+// import CardContent from '@material-ui/core/CardContent';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
@@ -17,14 +17,14 @@ export default function People() {
 
     return (
         // 
-        <Card className="bg-secondary">
+        <Card className="bg-dark border border-secondary">
             {/* <CardContent> */}
                 <List
                     className="text-white"
                     component="nav"
                     aria-labelledby="nested-list-subheader"
                     subheader={
-                        <ListSubheader className="text-white" component="div" id="nested-list-subheader">
+                        <ListSubheader fixed className="text-white" component="div" id="nested-list-subheader">
                             PEOPLE YOU MAY KNOW
                   </ListSubheader>}
                 >
@@ -34,7 +34,7 @@ export default function People() {
                             </ListItemAvatar>
                         <ListItemText primary="Syeda Zaidi : Back End Developer" />
                     </ListItem>
-                    <Divider style={{ color: "white"}} variant="inset" component="li" />
+                    <Divider variant="inset" component="li" />
                     <ListItem button>
                         <ListItemAvatar>
                                 <Avatar alt="Martell" src="https://avatars1.githubusercontent.com/u/24293243?s=460&v=4" />

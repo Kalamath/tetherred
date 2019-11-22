@@ -5,7 +5,7 @@ import GridItem from "../Grid/GridItem.js";
 import Card from "../Card/Card.js";
 import CardHeader from "../Card/CardHeader.js";
 import CardBody from "../Card/CardBody.js";
-import TextField from '@material-ui/core/TextField';
+import TextField from '../TextField';
 import Button from "../CustomButtons/Button.js";
 
 
@@ -66,7 +66,7 @@ class Chirps extends React.Component {
         }, {
             withCredentials: true
         }).then(response => {
-            console.log(`chirp post response ${response}`);    
+            console.log(`chirp post response ${response}`);
         }).catch(err => {
             console.log(err)
         });
@@ -78,55 +78,56 @@ class Chirps extends React.Component {
         return (
 
             <GridItem xs={12} sm={12} md={3}>
-                <Card className="bg-secondary" style={{ width: "100%" }}>
+                <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
                     <CardHeader color="info">
                         <h4>Chirp Box</h4>
                     </CardHeader>
                     <CardBody>
                         <TextField
                             id="outlined-multiline-static"
-                            label="Write Chirp Here"
+                            // label="Write Chirp Here"
                             defaultValue={this.state.postChirp}
-                            multiline
-                            rows="5"
-                            margin="normal"
-                            variant="outlined"
+                            // multiline
+                            // rows="5"
+                            // margin="normal"
+                            // variant="outlined"
                             name="chirpboxInput"
                             onChange={event => {
                                 const { value } = event.target;
                                 this.setState({ postChirp: value });
                             }}
                         />
-                        <Button color="info" onClick={this.handleSubmit} >
+                        <Button color="info" onClick={this.handleSubmit} style={{ width: "100%" }}>
                             Chirp
                         </Button>
                     </CardBody>
                 </Card>
                 {/* Pop Up Chirp Here */}
                 <div>
-                    <Card style={{ width: "100%" }}>
+                    <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
                         <CardHeader color="primary">
-                            <h4>what's Chirpin'</h4>
+                            <h4>What's Chirpin'</h4>
                         </CardHeader>
                     </Card>
 
                     {this.state.allChirps ? this.state.allChirps.map((chirps, index) => {
-                        if(index < 10) {
-                        return (
+                        if (index < 10) {
+                            return (
 
-                            <Card key={chirps._id} style={{ width: "100%" }}>
-                                <CardHeader color="info">
-                                    <h6>{chirps.author}</h6>
-                                </CardHeader>
-                                <CardBody>
-                                    {chirps.body}
-                                </CardBody>
+                                <Card className="bg-dark border border-secondary" key={chirps._id} style={{ width: "100%" }}>
+                                    <CardHeader color="info">
+                                        <h6>{chirps.author}</h6>
+                                    </CardHeader>
+                                    <CardBody>
+                                        {chirps.body}
+                                    </CardBody>
 
-                            </Card>
+                                </Card>
 
-                        )}
+                            )
+                        }
                     }) : 'not loaded'}
-                    
+
                 </div>
             </GridItem >
         )

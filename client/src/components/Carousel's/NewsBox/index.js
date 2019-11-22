@@ -7,7 +7,7 @@ import NewsCarousel from "../../Carousel's/NewsCarousel";
 export default function NewsBox() {
 
     return (
-            <Card className="bg-secondary" style={{ width: "100%" }}>
+            <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
             <CardHeader color="primary"><h4>News</h4></CardHeader>
                 <CardBody>
                    <NewsCarousel />

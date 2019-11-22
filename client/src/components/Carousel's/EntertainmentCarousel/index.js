@@ -25,15 +25,15 @@ function TopCarousel() {
             return (
               <Carousel.Item key={index} className="containDiv">
                 <img 
-                className="d-block w-100"
+                className="d-block w-100 border border-secondary"
                 src={item.image}
                 style={{ width: "100%", height: 300, objectFit: "cover", opacity: 0.4 }}
                 alt=""
                 />
              <Carousel.Caption>
-                  <h3
+                  <h4
                   className="text"
-                 >{item.title}</h3>
+                 >{item.title}</h4>
              </Carousel.Caption>
              </Carousel.Item>
          )

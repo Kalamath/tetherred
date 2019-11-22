@@ -6,7 +6,7 @@ import CardBody from "../../Card/CardBody";
 export default function Suntory() {
 
     return (
-        <Card className="bg-secondary" style={{ width: "100%" }}>
+        <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
             <CardBody className="text-white">
             ADVERTISEMENT
                 <img src="https://vignette.wikia.nocookie.net/whiskey/images/7/70/Bill_Murray.jpg/revision/latest?cb=20120203225344" alt="John" style={{ width: "100%" }} />
