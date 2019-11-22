@@ -4,7 +4,6 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import GridItem from "../../components/Grid/GridItem.js";
 import Container from '@material-ui/core/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
 import Button from '../../components/CustomButtons/Button';
 // import Button from 'react-bootstrap/Button';
 import Card from "../../components/Card/Card.js";

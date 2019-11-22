@@ -8,7 +8,7 @@ import ListSubheader from '@material-ui/core/ListSubheader';
 import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 
-import mario from '../../assets/imgs/faces/face-3.jpg'
+// import mario from '../../assets/imgs/faces/face-3.jpg'
 
 export default function People() {
 

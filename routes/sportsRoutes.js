@@ -11,9 +11,9 @@ function sportsRequest(){
 }
 
 router.get("/sports", function( req, res ) {
-    console.log('am i being');
+    // console.log('am i being');
     sportsRequest().then(function(data){
-        console.log(data);
+        // console.log(data);
         //bring in title, url image, url
         const sportsNews = data.articles.map(function(article){
             if (article.title){
@@ -24,7 +24,7 @@ router.get("/sports", function( req, res ) {
             }
             }
         });
-        console.log(sportsNews);
+        // console.log(sportsNews);
         res.json(sportsNews);
     }).catch(function(error){
         console.log(error);

@@ -11,7 +11,7 @@ function newsRequest(){
 }
 
 router.get("/news", function( req, res) {
-    console.log('am i being');
+    // console.log('am i being');
         newsRequest().then(function(data){
             //bring in title, url image, url
             const topNews = data.articles.map(function(article){
@@ -23,7 +23,7 @@ router.get("/news", function( req, res) {
                 }
                 }
             });
-            console.log(topNews); 
+            // console.log(topNews); 
             res.json(topNews); 
         }).catch(function(error){
             console.log(error); 

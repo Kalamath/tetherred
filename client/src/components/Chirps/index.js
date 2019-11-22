@@ -43,7 +43,7 @@ class Chirps extends React.Component {
             }).then(response => {
                 this.setState({ allChirps: response.data, loading: false }, () => {
                     setTimeout(this.getChirps, 2000);
-                    console.log(this.state.allChirps);
+                    // console.log(this.state.allChirps);
                 });
             }).catch(err => {
                 console.log(`error at API call ${err}`);
@@ -60,7 +60,7 @@ class Chirps extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log(this.state.postChirp);
+        // console.log(this.state.postChirp);
         axios.post("/api/chirps/post", {
             body: this.state.postChirp
         }, {
