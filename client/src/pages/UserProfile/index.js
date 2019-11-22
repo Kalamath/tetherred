@@ -9,7 +9,7 @@ import Container from 'react-bootstrap/Container';
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
 import Post from "../../components/Post";
-import paperMario from "../../assets/imgs/paper-mario.webp";
+import paperMario from "../../assets/imgs/faces/paper-mario.webp";
 import spotify from "../../assets/imgs/spotify.png";
 import Chirpbox from "../../components/Chirps";
 
