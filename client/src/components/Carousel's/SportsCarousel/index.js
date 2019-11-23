@@ -17,7 +17,7 @@ function TopCarousel() {
     (async function () {
       try {
         const response = await makenewRequest();
-        console.log(response);
+        // console.log(response);
         // not sure why but we had to create collection of components or we got
         // stupid error...
         const componentCollection = response.data.map((item, index) => {
@@ -40,7 +40,7 @@ function TopCarousel() {
           }
         });
         setData(componentCollection);
-        console.log('am i on', componentCollection);
+        // console.log('am i on', componentCollection);
       } catch (e) {
         console.log(e);
       }

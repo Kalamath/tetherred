@@ -84,6 +84,7 @@ class Chirps extends React.Component {
                     </CardHeader>
                     <CardBody>
                         <TextField
+                            inputProps={{ style: { fontFamily: 'calibri', color: 'white'}}}
                             label="Write Chirp Here"
                             variant="outlined"
                             id="custom-css-outlined-input"
@@ -115,7 +116,7 @@ class Chirps extends React.Component {
                             return (
                                 <Card className="bg-dark border border-secondary" key={chirps._id} style={{ width: "100%" }}>
                                     <CardHeader color="info">
-                                        <h6>{chirps.author}</h6>
+                                        <h6>@{chirps.author}</h6>
                                     </CardHeader>
                                     <CardBody style={{color: 'white'}}>
                                         {chirps.body}
