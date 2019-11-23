@@ -8,7 +8,7 @@ export default function SportsBox() {
 
     return (
             <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
-            <CardHeader color="primary"><h4>Sports</h4></CardHeader>
+            <CardHeader color="danger"><h4>Sports</h4></CardHeader>
                 <CardBody>
                    <SportsCarousel />
                 </CardBody>

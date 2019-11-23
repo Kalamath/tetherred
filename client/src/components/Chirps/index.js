@@ -9,7 +9,6 @@ import CardBody from "../Card/CardBody.js";
 import TextField from '@material-ui/core/TextField';
 import GridItem from "../Grid/GridItem";
 
-
 class Chirps extends React.Component {
 
     constructor(props) {
@@ -30,7 +29,6 @@ class Chirps extends React.Component {
     componentDidMount() {
         this.getChirps();
     };
-
 
     getChirps() {
 
@@ -106,9 +104,9 @@ class Chirps extends React.Component {
                 </Card>
                 {/* Pop Up Chirp Here */}
                 <div>
-                    <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
-                        <CardHeader color="primary">
-                            <h4>What's Chirpin'</h4>
+                    <Card className="bg-dark text-white border border-secondary" style={{ width: "100%" }}>
+                        <CardHeader>
+                            <h4>What's Chirpin'?</h4>
                         </CardHeader>
                     </Card>
                     {this.state.allChirps ? this.state.allChirps.map((chirps, index) => {

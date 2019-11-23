@@ -8,7 +8,7 @@ export default function EntertainmentBox() {
 
     return (
             <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
-            <CardHeader color="primary"><h4>Entertainment</h4></CardHeader>
+            <CardHeader color="danger"><h4>Entertainment</h4></CardHeader>
                 <CardBody>
                    <EntertainmentCarousel />
                 </CardBody>
