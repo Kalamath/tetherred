@@ -12,9 +12,17 @@
 ![home](https://github.com/Kalamath/tetherred/blob/master/client/src/assets/imgs/Home.png)
 ![profile](https://github.com/Kalamath/tetherred/blob/master/client/src/assets/imgs/Profile.png)
 
-### What Was Used
+### Technologies Used
 
 * React
+* Material UI
+* Passport JS
+* React Bootstrap Carousel
+* Mongo DB
+* News API
+* Spotify API
+* Sessions
+* bCrypt
 
 ### Components To Be Added
 
