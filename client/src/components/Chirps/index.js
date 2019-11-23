@@ -5,7 +5,7 @@ import GridItem from "../Grid/GridItem.js";
 import Card from "../Card/Card.js";
 import CardHeader from "../Card/CardHeader.js";
 import CardBody from "../Card/CardBody.js";
-import TextField from '../TextField';
+import TextField from '@material-ui/core/TextField';
 import Button from "../CustomButtons/Button.js";
 
 
@@ -67,6 +67,7 @@ class Chirps extends React.Component {
             withCredentials: true
         }).then(response => {
             console.log(`chirp post response ${response}`);
+            this.setState({ postChirp: ''})
         }).catch(err => {
             console.log(err)
         });
@@ -82,9 +83,15 @@ class Chirps extends React.Component {
                     </CardHeader>
                     <CardBody>
                         <TextField
-                            id="outlined-multiline-static"
-                            defaultValue={this.state.postChirp}
+                            label="Write Chirp Here"
+                            variant="outlined"
+                            id="custom-css-outlined-input"
+                            multiline
+                            fullWidth
+                            rows="5"
+                            margin="normal"
                             name="chirpboxInput"
+                            value={this.state.postChirp}
                             onChange={event => {
                                 const { value } = event.target;
                                 this.setState({ postChirp: value });
@@ -109,7 +116,7 @@ class Chirps extends React.Component {
                                     <CardHeader color="info">
                                         <h6>{chirps.author}</h6>
                                     </CardHeader>
-                                    <CardBody>
+                                    <CardBody style={{color: 'white'}}>
                                         {chirps.body}
                                     </CardBody>
 
