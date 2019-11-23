@@ -2,25 +2,25 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // core components
-import GridItem from "../../components/Grid/GridItem.js";
-import Container from '@material-ui/core/Container';
 import Button from '../../components/CustomButtons/Button';
-// import Button from 'react-bootstrap/Button';
 import Card from "../../components/Card/Card.js";
 import CardBody from "../../components/Card/CardBody.js";
+import Chirpbox from "../../components/Chirps";
+import Container from '@material-ui/core/Container';
+import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
+import EntertainmentBox from "../../components/Carousel's/EntertainmentBox";
+import GridContainer from "../../components/Grid/GridContainer.js";
+import GridItem from "../../components/Grid/GridItem.js";
 import hardCodeImage01 from "../../assets/imgs/fakeCardImages/184-700x500.jpg";
 import hardCodeImage04 from "../../assets/imgs/fakeCardImages/524-700x500.jpg";
-import dashboardStyle from "../../assets/jss/material-dashboard-react/cardImagesStyles.js";
-import GridContainer from "../../components/Grid/GridContainer.js";
-import Chirpbox from "../../components/Chirps";
-import Trending from "../../components/Trending";
-import EntertainmentBox from "../../components/Carousel's/EntertainmentBox";
-import SportsBox from "../../components/Carousel's/SportsBox";
 import NewsBox from "../../components/Carousel's/NewsBox";
-import Suntory from "../../components/Advertisements/Suntory";
 import Pom from "../../components/Advertisements/Pom";
 import People from "../../components/People/index.js";
 import Post from "../../components/Post/index.js";
+import SportsBox from "../../components/Carousel's/SportsBox";
+import Suntory from "../../components/Advertisements/Suntory";
+import Trending from "../../components/Trending";
+// Material UI
 import Icon from '@material-ui/core/Icon';
 
 const styles = {

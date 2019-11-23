@@ -1,17 +1,17 @@
 import React from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
 // core components
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardBody from "../../components/Card/CardBody.js";
+import Chirpbox from "../../components/Chirps";
 import Container from 'react-bootstrap/Container';
 import GridContainer from "../../components/Grid/GridContainer.js";
 import GridItem from "../../components/Grid/GridItem.js";
-import spotify from "../../assets/imgs/spotify.png";
-import Chirpbox from "../../components/Chirps";
 import Post from "../../components/Post";
-
+import spotify from "../../assets/imgs/spotify.png";
+// @material-ui/core components
+import { makeStyles } from "@material-ui/core/styles";
+// Images
 import Rihanna from "../../assets/imgs/fakeCardImages/rihanna.jpg"
 
 const styles = {

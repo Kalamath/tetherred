@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
 
-import GridItem from "../Grid/GridItem.js";
+// Components
+import Button from "../CustomButtons/Button.js";
 import Card from "../Card/Card.js";
 import CardHeader from "../Card/CardHeader.js";
 import CardBody from "../Card/CardBody.js";
+import GridItem from "../Grid/GridItem.js";
 import TextField from '../TextField';
-import Button from "../CustomButtons/Button.js";
 
 
 class Chirps extends React.Component {
@@ -90,7 +91,7 @@ class Chirps extends React.Component {
                                 this.setState({ postChirp: value });
                             }}
                         />
-                        <Button class="btn btn-outline-secondary" onClick={this.handleSubmit} style={{ width: "100%" }}>
+                        <Button className="btn btn-outline-secondary" onClick={this.handleSubmit} style={{ width: "100%" }}>
                             Chirp
                         </Button>
                     </CardBody>

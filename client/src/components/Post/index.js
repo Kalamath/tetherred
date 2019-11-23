@@ -1,11 +1,12 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import InputBase from '@material-ui/core/InputBase';
+// Material UI
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
+import InputBase from '@material-ui/core/InputBase';
 import InsertLinkIcon from '@material-ui/icons/InsertLink';
 import InsertPhotoIcon from '@material-ui/icons/InsertPhoto';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,7 +44,7 @@ export default function CustomizedInputBase() {
         <InsertPhotoIcon />
       </IconButton>
       <Divider className={classes.divider} orientation="vertical" />
-      <IconButton color="" className={classes.iconButton} aria-label="link">
+      <IconButton className={classes.iconButton} aria-label="link">
         <InsertLinkIcon />
       </IconButton>
     </Paper>
