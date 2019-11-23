@@ -8,8 +8,8 @@ class Header extends React.Component {
 
   render() {
     const loggedIn = this.props.loggedIn;
-    console.log('header render, props: ')
-    console.log(this.props);
+    // console.log('header render, props: ')
+    // console.log(this.props);
 
 
     return (

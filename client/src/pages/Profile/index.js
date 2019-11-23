@@ -64,7 +64,7 @@ class Profile extends React.Component {
         axios.get(`/api/profile/${this.state.id}`, {
             withCredentials: true
         }).then(response => {
-            console.log(response.data);
+            // console.log(response.data);
             this.setState({
                 firstname: response.data.firstname,
                 lastname: response.data.lastname,

@@ -7,7 +7,7 @@ import Card from "../Card/Card.js";
 import CardHeader from "../Card/CardHeader.js";
 import CardBody from "../Card/CardBody.js";
 import TextField from '@material-ui/core/TextField';
-import Button from "../CustomButtons/Button.js";
+import GridItem from "../Grid/GridItem";
 
 
 class Chirps extends React.Component {
