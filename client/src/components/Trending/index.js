@@ -21,7 +21,7 @@ export default function Trending() {
     return (
 
         <Card className="bg-dark border border-secondary" style={{ width: "100%" }}>
-            <CardHeader color="danger"><h4>Trending</h4></CardHeader>
+            <CardHeader color="primary"><h4>Trending</h4></CardHeader>
             <CardBody>
                     <List className="text-white">
                         <ListItem button>
