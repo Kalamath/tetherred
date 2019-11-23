@@ -1,8 +1,8 @@
 import React from "react";
+import DarkMode from '../DarkMode'
+import logo from '../../assets/imgs/TetherredFullWhite.png';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../../assets/imgs/TetherredFullWhite.png';
-import DarkMode from '../DarkMode'
 
 class Header extends React.Component {
 

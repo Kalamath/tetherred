@@ -1,14 +1,15 @@
 import React from "react";
 import axios from "axios";
-import UserProfile from "../UserProfile";
+
+import avatar from "../../assets/imgs/faces/face-3.jpg";
 import Button from "../../components/CustomButtons/Button.js";
 import Card from "../../components/Card/Card.js";
 import CardAvatar from "../../components/Card/CardAvatar.js";
 import CardBody from "../../components/Card/CardBody.js";
-import avatar from "../../assets/imgs/faces/face-3.jpg";
 import GridContainer from "../../components/Grid/GridContainer";
 import GridItem from "../../components/Grid/GridItem.js";
 import Modal from "../../components/Modal";
+import UserProfile from "../UserProfile";
 
 class Profile extends React.Component {
 

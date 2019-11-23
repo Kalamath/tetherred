@@ -23,7 +23,7 @@ export default function People() {
                     component="nav"
                     aria-labelledby="nested-list-subheader"
                     subheader={
-                        <ListSubheader fixed className="text-white" component="div" id="nested-list-subheader">
+                        <ListSubheader className="text-white" component="div" id="nested-list-subheader">
                             PEOPLE YOU MAY KNOW
                   </ListSubheader>}
                 >
@@ -43,19 +43,19 @@ export default function People() {
                     <Divider variant="inset" component="li" />
                     <ListItem button>
                         <ListItemAvatar>
+                            <Avatar alt="Ashton" src="https://ca.slack-edge.com/TK0LLTYSK-UJSC3J1FD-2917183f4f40-512" />
+                        </ListItemAvatar>
+                        <ListItemText primary="Ashton Roth : Back End Developer : Project Manager" />
+                    </ListItem>
+                    <ListItem button>
+                        <ListItemAvatar>
                             <Avatar alt="Gabe" src="https://avatars2.githubusercontent.com/u/48465631?s=460&v=4" />
                         </ListItemAvatar>
                         <ListItemText primary="Gabriel de Leon : Front End Developer" />
                     </ListItem>
                     <Divider variant="inset" component="li" />
-                    <ListItem button>
-                        <ListItemAvatar>
-                            <Avatar alt="Ashton" src="https://ca.slack-edge.com/TK0LLTYSK-UJSC3J1FD-2917183f4f40-512" />
-                        </ListItemAvatar>
-                        <ListItemText primary="Ashton Roth : Back End Developer : Project Manager" />
-                    </ListItem>
                 </List>
-                <Button class="btn btn-outline-light" style={{ width: "100%" }}>See More</Button>
+                <Button className="btn btn-outline-light" style={{ width: "100%" }}>See More</Button>
             </CardBody>
         </Card>
     );

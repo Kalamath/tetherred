@@ -1,15 +1,17 @@
 import React from "react";
+// Components
 import Button from "../CustomButtons/Button.js";
 import Card from "../Card/Card.js";
 import CardBody from "../Card/CardBody.js";
 import CardHeader from "../Card/CardHeader.js";
+// Material UI
+import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
-import Avatar from '@material-ui/core/Avatar';
-
+// Images
 import drake from '../../assets/imgs/faces/face-3.jpg'
 import mario from '../../assets/imgs/faces/paper-mario.webp'
 
@@ -57,7 +59,7 @@ export default function Trending() {
                             <ListItemText primary="Kanye West" />
                         </ListItem>
                     </List>
-                <Button class="btn btn-outline-light" style={{ width: "100%" }}>See More</Button>
+                <Button className="btn btn-outline-light" style={{ width: "100%" }}>See More</Button>
             </CardBody>
         </Card>
     );
