@@ -9,8 +9,8 @@
 ### GIF - The App
 
 ![login](https://github.com/Kalamath/tetherred/blob/master/client/src/assets/imgs/Login.png)
-![home](https://github.com/Kalamath/tetherred/blob/master/client/src/assets/imgs/Home.png)
-![profile](https://github.com/Kalamath/tetherred/blob/master/client/src/assets/imgs/Profile.png)
+![home](https://github.com/Kalamath/tetherred/blob/master/client/src/assets/imgs/Home.gif)
+![profile](https://github.com/Kalamath/tetherred/blob/master/client/src/assets/imgs/Profile.gif)
 
 ### What Was Used
 
